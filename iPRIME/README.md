@@ -4,9 +4,9 @@ This repository will host the R scripts used to build the diabetes dementia inci
 
 1. Data source: 358,406 patient records from the Clinical Practice Research Datalink (CPRD).
 2. Inclusion criteria: Individuals diagnosed with dementia after age 65 after January 1, 1990, who have not taken risperidone before their diagnosis
-This flowchart below outlines the data prepararion steps and the number of instances under each step
 
-The below diagram outlines the data processing steps involved in creating these cohorts.
+   
+This flowchart below outlines the data processing steps and the number of instances under each step
 
 ```mermaid
 flowchart TD
