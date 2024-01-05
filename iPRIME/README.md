@@ -51,7 +51,7 @@ flowchart TD
 
 ```
 
-
+The table below shows the descriptive statistics of study cohort
 
 ```latex
 \begin{table}[!ht]
@@ -80,6 +80,34 @@ flowchart TD
 \end{table}
 
 ```
+
+
+
+
+
+
+
+
+
+
+<img width="879" alt="SurvialAnalysisBySex" src="https://github.com/Exeter-Diabetes/Dementia/assets/145013232/a029df48-84ca-44f5-87fb-ebd1359d6dc1">
+<img width="808" alt="SurvialAnalysisByAgeCat" src="https://github.com/Exeter-Diabetes/Dementia/assets/145013232/c73fa165-0118-4781-9007-d22e73ce2c10">
+<img width="390" alt="Over65_regstartdateB4obs90_days_death_pie_chart" src="https://github.com/Exeter-Diabetes/Dementia/assets/145013232/6a3d36ad-e6ea-444c-b667-3e06620b3a18">
+
+
+![Over65_regstartdateB4obs90_diff_plot](https://github.com/Exeter-Diabetes/Dementia/assets/145013232/5e626a1d-13a4-4831-ad04-ee9632303b70)
+![Over65_regstartdateB4obs90_days_stroke_cat_plot](https://github.com/Exeter-Diabetes/Dementia/assets/145013232/b7c59aab-20ea-4878-8c21-f4e81f51b2f8)
+![Over65_regstartdateB4obs90_days_NumberOfDeath](https://github.com/Exeter-Diabetes/Dementia/assets/145013232/c96e4291-b438-44db-bcad-654d892794c7)
+![Over65_regstartdateB4obs90_days_age_plot](https://github.com/Exeter-Diabetes/Dementia/assets/145013232/4c0e0c98-10c2-4788-afc8-58484d8b3855)
+
+
+
+
+
+
+
+
+
 
 
 
