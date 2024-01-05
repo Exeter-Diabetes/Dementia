@@ -10,40 +10,41 @@ This flowchart below outlines the data processing steps and the number of instan
 
 ```mermaid
 flowchart TD
-    A[Diabetes dementia cohort codelist ] -->|All patients with dementia: Selected first observation| B(n = 378,614 records)
-    B[n = 378,614 records ] -->| All patients diagnosed at the age of 65 or above, starting from 1990-01-01  | C(n = 358,406 records)
-    C[358,406 records ] -->| Excluding patients who died before 1990-01-01, **114**   | D(n = 358,292 records)
-    D[358,292 records ] -->| Excluding patients who were registered before date of birth, **8,751**1,163 >= -1**    | F(n = 350,705 records)
-    F[n = 350,705 records ] -->| Excluding Difference in time: Start and End of follow up < 0 , **4091**  | K(n = 346,614 records)
-    K[n = 346,614 records ] -->| Obsdate < regstartdate  | G(n = 122,0628 records)
-    K[n = 346,614 records ] -->| Obsdate == regstartdate  | H(n = 3,805 records)
-    K[n = 346,614 records ] -->| Obsdate > regstartdate  | I(n = 218,644 records)
-    K[n = 346,614 records ] -->| Patients with stroke  | IZ(n = 218,644 records)
-    IZ[n = 1,565 records ] -->| ischaemic  | IK(n = 1,429 records)
-    IZ[n = 1,565 records ] -->| haemorrhagic   | IJ(n = 136 records)
-    I[n = 218,644  records ] -->| Obsdate > regstartdate + 90 days  | J(n = 199,047 records)
-    J[n = 199,047  records ] -->| Patients on risperidone  | N(n = 18,667 records)
-    N[n = 18,667  records ] -->| Patients prescribed risperidone after dementia diagnosis  | P(n = 15,401 records)
-    P[n = 15,401  records ] -->| Patients with stroke  | Q(n = 87 records)
-    Q[n = 87  records ] -->| ischaemic   | R(n = 76 records)
-    Q[n = 87  records ] -->| haemorrhagic      | T(n = 11 records)
+    A[Diabetes dementia cohort codelist ] -->|All patients with dementia: Selected first observation| B(n = 378,614 patients)
+    B[n = 378,614 patients ] -->| All patients diagnosed at the age of 65 or above, starting from 1990-01-01  | C(n = 358,406 patients)
+    C[358,406 patients ] -->| Excluding patients who died before 1990-01-01, **114**   | D(n = 358,292 patients)
+    D[358,292 patients ] -->| Excluding patients who were registered before date of birth, **8,751**1,163 >= -1**    | F(n = 350,705 patients)
+    F[n = 350,705 patients ] -->| Excluding Difference in time: Start and End of follow up < 0 , **4091**  | K(n = 346,614 patients)
+    K[n = 346,614 patients ] -->| Obsdate < regstartdate  | G(n = 122,0628 patients)
+    K[n = 346,614 patients ] -->| Obsdate == regstartdate  | H(n = 3,805 patients)
+    K[n = 346,614 patients ] -->| Obsdate > regstartdate  | I(n = 218,644 patients)
+    K[n = 346,614 patients ] -->| Patients with stroke  | IZ(n = 218,644 patients)
+    IZ[n = 1,565 patients ] -->| ischaemic  | IK(n = 1,429 patients)
+    IZ[n = 1,565 patients ] -->| haemorrhagic   | IJ(n = 136 patients)
+    I[n = 218,644  patients ] -->| Obsdate > regstartdate + 90 days  | J(n = 199,047 patients)
+    J[n = 199,047  patients ] -->| Patients on risperidone  | N(n = 18,667 patients)
+    N[n = 18,667  patients ] -->| Patients prescribed risperidone after dementia diagnosis  | P(n = 15,401 patients)
+    P[n = 15,401  patients ] -->| Patients with stroke  | Q(n = 87 patients)
+    Q[n = 87  patients ] -->| ischaemic   | R(n = 76 patients)
+    Q[n = 87  patients ] -->| haemorrhagic      | T(n = 11 patients)
 
 
     
 
-    G[n = 122,0628 records ] -->| Patients on risperidone  | X(n = 17,680 records)
-    X[n = 17,680  records ] -->| Patients prescribed risperidone after dementia diagnosis  | Z(n = 17,205 records)
-    Z[n = 17,205  records ] -->| Patients with stroke  | Y(n = 51 records)
-    Y[n = 51  records ] -->| ischaemic   | U(n = 45 records)
-    Y[n = 51  records ] -->| haemorrhagic      | V(n = 6 records)
+    G[n = 122,0628 patients ] -->| Patients on risperidone  | X(n = 17,680 patients)
+    X[n = 17,680  patients ] -->| Patients prescribed risperidone after dementia diagnosis  | Z(n = 17,205 patients)
+    Z[n = 17,205  patients ] -->| Patients with stroke  | Y(n = 51 patients)
+    Y[n = 51  patients ] -->| ischaemic   | U(n = 45 patients)
+    Y[n = 51  patients ] -->| haemorrhagic      | V(n = 6 patients)
 
 
 
-    H[ n = 3,805 records ] -->| Patients on risperidone  | XV(n = 459 records)
-    XV[n = 459 records ] -->| Patients prescribed risperidone after dementia diagnosis  | ZV(n = 418 records)
-    ZV[n = 418 records ] -->| Patients with stroke  | YV(n = 0 records)
-    YV[n = 0 records ] -->| ischaemic   | UV(n = 0 records)
-    YV[n = 0 records ] -->| haemorrhagic      | VV(n = 0 records)
+    H[ n = 3,805 patients ] -->| Patients on risperidone  | XV(n = 459 patients)
+    XV[n = 459 patients ] -->| Patients prescribed risperidone after dementia diagnosis  | ZV(n = 418 patients)
+    ZV[n = 418 patients ] -->| Patients with stroke  | YV(n = 0 patients)
+    YV[n = 0 patients ] -->| ischaemic   | UV(n = 0 patients)
+    YV[n = 0 patients ] -->| haemorrhagic      | VV(n = 0 patients)
+
 
 
 
