@@ -50,6 +50,39 @@ flowchart TD
 
 ```
 
+
+
+```latex
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+        ​ & \textbf{Overall}​ \\ \hline
+               \textbf{n}​ &      192776​ \\ \hline
+        \textbf{Age of diagnosis (mean (SD))} &      82.23 (7.05)​ \\ \hline
+        \textbf{Year of diagnosis category (\%)} & ​ \\ \hline
+             1 (1990 - 1995)​ &      7787 (4.0)​ \\
+             2​ (1996 - 2000) &      12954 (6.7)​ \\ 
+             3​  (2001 - 2005)&      27539 (14.3)​ \\ 
+             4​ (2006 - 2010)&      36404 (18.9)​ \\ 
+             5​ (2011 - 2015) &      54028 (28.0)​ \\ 
+             6​ (2016 - 2020) &      53968 (28.0)​ \\ 
+             7​ (2021+) &      96 (0.0)​ \\ \hline
+        \textbf{Age category (\%)}​ & ​ \\ \hline
+            65-74​ &     28772 (14.9)​ \\ 
+            75-84​ &     87858 (45.6)​ \\ 
+            85-94​ &     69899 (36.3)​ \\ 
+            95+ ​ &     6247 (3.2)​ \\ \hline
+        Sex = M (\%)​ &     68875 (35.7)​ \\ \hline
+        Died (\%) &       90605(47)  \\ \hline
+    \end{tabular}
+\end{table}
+
+```
+
+
+
+
 ## Introduction
 
 This repository contains the R scripts used by the Exeter Diabetes team to produce three cohorts and their associated biomarker/comorbidity/sociodemographic data from a CPRD Aurum dataset: 
