@@ -2,10 +2,17 @@
 
 This repository will host the R scripts used to build the diabetes dementia incident cohort
 
-1. Data source: 358,406 patient records from the Clinical Practice Research Datalink (CPRD).
-2. Inclusion criteria: Individuals diagnosed with dementia after age 65 after January 1, 1990, who have not taken risperidone before their diagnosis.
-3. Of the 346,614 patients diagnosed with dementia, 1565 suffered a stroke.
- ![Over65_regstartdateB4obs90_days_stroke_cat_plot](https://github.com/Exeter-Diabetes/Dementia/assets/145013232/b7c59aab-20ea-4878-8c21-f4e81f51b2f8)
+Below we provide an overview of the methodology used to create the Diabetes Dementia Incidence Cohort using data from the Clinical Practice Research Datalink (CPRD).
+
+Originally, the CPRD dataset included a total of 378,614 patients diagnosed with dementia. To refine our cohort, we focused on individuals diagnosed after January 1, 1990, who were 65 years of age or older at the time of diagnosis. By applying this criterion, we were able to filter out 358,406 eligible patients from the dataset.
+
+Exclusion criteria were applied to further narrow down the cohort: Individuals who died before January 10, 1990 (114 patients), individuals who were registered more than 12 months before their date of birth (7588), and individuals with a negative difference between the start and end of the follow-up period (4,091 patients) were excluded. After all these steps, we have 346,614 patients diagnosed with dementia, 1565 suffered a stroke.
+![Over65_regstartdateB4obs90_days_stroke_cat_plot](https://github.com/Exeter-Diabetes/Dementia/assets/145013232/b7c59aab-20ea-4878-8c21-f4e81f51b2f8)
+
+Within the remaining dataset, we specifically examined those patients who were diagnosed with dementia after registration. Of the 218 644 patients meeting these criteria, 199 047 were diagnosed three months after registration. Within this subgroup, 18,667 patients were prescribed the drug risperidone, with 15,401 receiving the prescription after being diagnosed with dementia.
+
+Of these 15,401 patients, only 87 suffered a stroke, of which 76 were ischemic and 11 were hemorrhagic strokes. In contrast, of the 199,047 patients who were diagnosed with dementia after registration but not prescribed risperidone, 1,028 suffered a stroke, 953 of which were ischemic and 95 hemorrhagic strokes.
+ 
 
    
 This flowchart below outlines the data processing steps and the number of instances under each step
@@ -62,6 +69,8 @@ flowchart TD
 
 
 ```
+
+
 
 The table below shows the descriptive statistics of study cohort
 
