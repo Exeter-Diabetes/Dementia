@@ -39,7 +39,14 @@ flowchart TD
     P[n = 15,401  patients ] -->| Patients with stroke  | Q(n = 87 patients)
     Q[n = 87  patients ] -->| ischaemic   | R(n = 76 patients)
     Q[n = 87  patients ] -->| haemorrhagic      | T(n = 11 patients)
+    
+    R[n = 76  patients ] -->| Stroke prior to risperidone| RZ(n = 45 patients)
+    R[n = 76  patients ] -->| Stroke in year after first risperidone prescription| RY(n = 11 patients)
+    R[n = 76  patients ] -->| Died in year after first risperidone prescriptio| RV(n = 17 patients)
 
+    T[n = 11  patients ] -->| Stroke prior to risperidone| RZS(n = 8 patients)
+    T[n = 11  patients ] -->| Stroke in year after first risperidone prescription| RYS(n = 1 patients)
+    T[n = 11  patients ] -->| Died in year after first risperidone prescription| RVS(n = 3 patients)
     G[n = 122,0628  patients ] -->| Patients with stroke but not on risperidone  | NS(n = 332 patients)
     NS[n = 332  patients ] -->| ischaemic   | RS(n = 309  patients)
     NS[n = 332  patients ] -->| haemorrhagic      | TS(n = 23 patients)
@@ -61,9 +68,6 @@ flowchart TD
     ZV[n = 418 patients ] -->| Patients with stroke  | YV(n = 0 patients)
     YV[n = 0 patients ] -->| ischaemic   | UV(n = 0 patients)
     YV[n = 0 patients ] -->| haemorrhagic      | VV(n = 0 patients)
-
-
-
 
 
 
