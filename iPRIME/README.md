@@ -134,7 +134,20 @@ This plot shows Survival analysis stratified by age categories.
 
 # Patients on Risperidone
 #### These are patients who started taking risperidone after being diagnosed with dementia
-
+```latex
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+        Risperidone cohort & ~ \\ \hline
+        N & 15401 \\ \hline
+        Stroke ever & 87 \\ \hline
+        Stroke prior to risperidone & 53 \\ \hline
+        Stroke in year after first risperidone prescription & 12 \\ \hline
+        Died in year after first risperidone prescription & 20 \\ \hline
+    \end{tabular}
+\end{table}
+```
 The following graph shows the number of patients who have suffered a stroke while taking risperidone
 ![Risperidone_stroke_cat_plot_positiveMonths](https://github.com/Exeter-Diabetes/Dementia/assets/145013232/769f4cb7-0ad6-4a5f-8750-921cf39539e6)
 
