@@ -1,3 +1,239 @@
+# Dementia dementia incident cohort
+
+This repository will host the R scripts used to build the diabetes dementia incident cohort
+
+Below we provide an overview of the methodology used to create the Dementia Dementia Incidence Cohort using data from the Clinical Practice Research Datalink (CPRD).
+
+Originally, the CPRD dataset included a total of 361,187 patients diagnosed with dementia. To refine our cohort, we focused on individuals diagnosed after January 1, 1990, who were 65 years of age or older at the time of diagnosis. By applying this criterion, we were able to filter out 344,204 eligible patients from the dataset.
+
+Exclusion criteria were applied to further narrow down the cohort: Individuals who died before January 10, 1990 (90 patients), individuals who were registered more than 12 months before their date of birth (7,296), and individuals with a negative difference between the start and end of the follow-up period (3,729 patients) were excluded. After all these steps, we have 333,089 patients diagnosed with dementia, 1565 suffered a stroke.
+
+Within the remaining dataset, we specifically examined those patients who were diagnosed with dementia after registration. Of the 210,393 patients meeting these criteria, 191,574 were diagnosed three months after registration. Within this subgroup, 18,098 patients were prescribed the drug risperidone, with 14,944 receiving the prescription after being diagnosed with dementia.
+
+Of these 14,944 patients, only 420 suffered a stroke, of which 385 were ischemic and 35 were hemorrhagic strokes. In contrast, of the 191,574 patients who were diagnosed with dementia after registration but not prescribed risperidone, 3,733 suffered a stroke, 3,315 of which were ischemic and 418 hemorrhagic strokes.
+ 
+
+   
+This flowchart below outlines the data processing steps and the number of instances under each step
+
+
+
+```mermaid
+flowchart TD
+    A[Dementia dementia cohort codelist ] -->|All patients with dementia: Selected first observation| B(n = 361,187 patients)
+    B[n = 361,187 patients ] -->| All patients diagnosed at the age of 65 or above, starting from 1990-01-01  | C(n = 344,204 patients)
+    C[n = 344,204 patients ] -->| Excluding patients who died before 1990-01-01, **90**   | D(n = 344,114 patients)
+    D[n = 344,114 patients ] -->| Excluding patients who were registered before date of birth, **7,296**    | F(n = 336,818 patients)
+    F[n = 336,818 patients ] -->| Excluding Difference in time: Start and End of follow up < 0 , **3,729**  | K(n = 333,089 patients)
+    K[n = 333,089 patients ] -->| Obsdate < regstartdate  | G(n = 117,192 patients)
+    K[n = 333,089 patients ] -->| Obsdate == regstartdate  | H(n = 3,612 patients)
+    K[n = 333,089 patients ] -->| Obsdate > regstartdate  | I(n = 210,393 patients)
+    K[n = 333,089 patients ] -->| Patients with stroke  | IZ(n = 8,941 patients)
+    IZ[n = 8,941 patients ] -->| ischaemic  | IK(n = 7,987 patients)
+    IZ[n = 8,941 patients ] -->| haemorrhagic   | IJ(n = 954 patients)
+    I[n = 210,393 patients ] -->| Obsdate > regstartdate + 90 days  | J(n = 191,574 patients)
+    J[n = 191,574 patients ] -->| Patients on risperidone  | N(n = 18,098 patients)
+    J[n = 191,574 patients ] -->| Patients with stroke but not on risperidone  | NK(n = 3,733 patients)
+    NK[n = 3,733 patients ] -->| ischaemic   | RK(n = 3,315  patients)
+    NK[n = 3,733 patients ] -->| haemorrhagic      | TK(n = 418 patients)
+    N[n = 18,098 patients ] -->| Patients prescribed risperidone after dementia diagnosis  | P(n = 14,944 patients)
+    P[n = 14,944 patients ] -->| Patients with stroke  | Q(n = 420 patients)
+    Q[n = 420  patients ] -->| ischaemic   | R(n = 385 patients)
+    Q[n = 420  patients ] -->| haemorrhagic      | T(n = 35 patients)
+    
+    R[n = 385  patients ] -->| Stroke prior to risperidone| RZ(n = 277 patients)
+    R[n = 385  patients ] -->| Stroke in year after first risperidone prescription| RY(n = 129 patients)
+    R[n = 385  patients ] -->| Died in year after first risperidone prescription| RV(n = 188 patients)
+
+    T[n = 35  patients ] -->| Stroke prior to risperidone| RZS(n = 55 patients)
+    T[n = 35  patients ] -->| Stroke in year after first risperidone prescription| RYS(n = 13 patients)
+    T[n = 35  patients ] -->| Died in year after first risperidone prescription| RVS(n = 32 patients)
+    G[n = 117,192  patients ] -->| Patients with stroke but not on risperidone  | NS(n = 3,550 patients)
+    NS[n = 3,550  patients ] -->| ischaemic   | RS(n = 3,165  patients)
+    NS[n = 3,550  patients ] -->| haemorrhagic      | TS(n = 385 patients)
+    
+    H[n = 3,612 patients ] -->| Patients with stroke but not on risperidone  | NP(n = 78 patient)
+    NP[n = 78  patient ] -->| ischaemic   | RP(n = 72  patient)
+    NP[n = 78  patient ] -->| haemorrhagic      | TP(n = 6 patients)
+
+    G[n = 117,192 patients ] -->| Patients on risperidone  | X(n = 17,159 patients)
+    X[n = 17,159  patients ] -->| Patients prescribed risperidone after dementia diagnosis  | Z(n = 16,701 patients)
+    Z[n = 16,701  patients ] -->| Patients with stroke  | Y(n = 51 patients)
+    Y[n = 592  patients ] -->| ischaemic   | U(n = 515 patients)
+    Y[n = 592  patients ] -->| haemorrhagic      | V(n = 77 patients)
+
+
+
+    H[ n = 3,612 patients ] -->| Patients on risperidone  | XV(n = 425 patients)
+    XV[n = 425 patients ] -->| Patients prescribed risperidone after dementia diagnosis  | ZV(n = 387 patients)
+    ZV[n = 387 patients ] -->| Patients with stroke  | YV(n = 15 patients)
+    YV[n = 15 patients ] -->| ischaemic   | UV(n = 15 patients)
+    YV[n = 15 patients ] -->| haemorrhagic      | VV(n = 0 patients)
+
+    U[n = 515 patients ] -->| Stroke prior to risperidone| RZK(n = 176 patients)
+    U[n = 515 patients ] -->| Stroke in year after first risperidone prescription| RYK(n = 116 patients)
+    U[n = 515 patients ] -->| Died in year after first risperidone prescription| RVK(n = 132 patients)
+
+
+    V[n = 77 patients ] -->| Stroke prior to risperidone| RZSR(n = 16 patients)
+    V[n = 77 patients ] -->| Stroke in year after first risperidone prescription| RYSR(n = 13 patients)
+    V[n = 77 patients ] -->| Died in year after first risperidone prescription| RVSR(n = 8 patients)
+
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Diabetes Dementia Incident Cohort 
 
 This repository will host the R scripts used to build the diabetes dementia incident cohort
