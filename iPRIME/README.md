@@ -305,6 +305,7 @@ flowchart TD
     YV[n = 0 patients ] -->| ischaemic   | UV(n = 0 patients)
     YV[n = 0 patients ] -->| haemorrhagic      | VV(n = 0 patients)
 ```
+The table below shows the descriptive statistics of study cohort
 
 | ​                                        | Overall|
 |------------------------------------------|-----------------|
@@ -333,35 +334,8 @@ flowchart TD
 
 
 
-The table below shows the descriptive statistics of study cohort
 
-```latex
-\begin{table}[!ht]
-    \centering
-    \begin{tabular}{|l|l|}
-    \hline
-        ​ & \textbf{Overall}​ \\ \hline
-               \textbf{n}​ &      199047​ \\ \hline
-        \textbf{Age of diagnosis (mean (SD))} &      82.25 (7.05)​ \\ \hline
-        \textbf{Year of diagnosis category (\%)} & ​ \\ \hline
-             1 (1990 - 1995)​ &      7787 (3.9)​ \\
-             2​ (1996 - 2000) &      12954 (6.5)​ \\ 
-             3​  (2001 - 2005)&      27539 (13.8)​ \\ 
-             4​ (2006 - 2010)&      36404 (18.3)​ \\ 
-             5​ (2011 - 2015) &      54028 (27.1)​ \\ 
-             6​ (2016 - 2020) &      56572 (28.4)​ \\ 
-             7​ (2021+) &      3763 (1.9)​ \\ \hline
-        \textbf{Age category (\%)}​ & ​ \\ \hline
-            65-74​ &     29586 (14.9)​ \\ 
-            75-84​ &     90628 (45.5)​ \\ 
-            85-94​ &     72325 (36.3)​ \\ 
-            95+ ​ &     6508 (3.3)​ \\ \hline
-        Sex = M (\%)​ &     71237 (35.8)​ \\ \hline
-        Died (\%) &       90423(45)  \\ \hline
-    \end{tabular}
-\end{table}
 
-```
 The plot below shows the age distribution of the final cohort
 ![Over65_regstartdateB4obs90_days_age_plot](https://github.com/Exeter-Diabetes/Dementia/assets/145013232/4c0e0c98-10c2-4788-afc8-58484d8b3855)
 
@@ -391,19 +365,14 @@ This plot shows Survival analysis stratified by age categories.
 
 # Patients on Risperidone
 #### These are patients who started taking risperidone after being diagnosed with dementia
-```latex
-\begin{table}[!ht]
-    \centering
-    \begin{tabular}{|l|l|}
-    \hline
-        Risperidone cohort & ~ \\ \hline
-        N & 15401 \\ \hline
-        Stroke ever & 87 \\ \hline
-        Stroke prior to risperidone & 53 \\ \hline
-        Stroke in year after first risperidone prescription & 12 \\ \hline
-        Died in year after first risperidone prescription & 20 \\ \hline
-    \end{tabular}
-\end{table}
+```
+| Risperidone cohort                                  | ~     |
+|-----------------------------------------------------|-------|
+| N                                                   | 15401 |
+| Stroke ever                                         | 87    |
+| Stroke prior to risperidone                         | 53    |
+| Stroke in year after first risperidone prescription | 12    |
+| Died in year after first risperidone prescription   | 20    |
 ```
 The following graph shows the number of patients who have suffered a stroke while taking risperidone
 ![Risperidone_stroke_cat_plot_positiveMonths](https://github.com/Exeter-Diabetes/Dementia/assets/145013232/769f4cb7-0ad6-4a5f-8750-921cf39539e6)
