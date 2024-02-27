@@ -2,6 +2,8 @@
 library(readr)
 library(tidyverse)
 library(stringi)
+library(dplyr)
+library(stringr)
 
 # Load product dictionary
 CPRDAurumProduct <- read_delim("C:/Users/njc232/OneDrive - University of Exeter/Documents/ProductCodelist/CPRDAurumProduct.txt", 
@@ -18,23 +20,7 @@ print(terms)
 prodcodelist <- CPRDAurumProduct[grep(paste(terms, collapse='|'), CPRDAurumProduct$Term.from.EMIS, ignore.case=TRUE), ]
 
 
-# Create a new column "Generic Name" in the data frame and fill it with corresponding generic names
-View(prodcodelist)
-# Loop through each term and assign the corresponding generic name
-# Loop through each term and assign the corresponding generic name
-# for (i in seq_along(terms)) {
-#   matches <- prodcodelist$Term.from.EMIS %in% terms[i]
-#   if (any(matches)) {
-#     data$`Generic Name`[i] <- prodcodelist$Term.from.EMIS[matches][1]
-#   }
-# }
 
-View(data)
-
-library(dplyr)
-library(stringr)
-
-# Assuming your tables are tibbles
 prodcodelist <- as_tibble(prodcodelist)
 data <- as_tibble(data)
 
@@ -58,7 +44,6 @@ for (i in seq(nrow(prodcodelist))) {
 }
 prodcodelist$ProdCodeId <- paste0(prodcodelist$ProdCodeId, "#")
 prodcodelist$dmdid <- paste0(prodcodelist$dmdid, "#")
-# Print the modified prodcodelist
 print(prodcodelist)
 
 # # Save as CSV file
