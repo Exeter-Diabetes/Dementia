@@ -13,6 +13,9 @@ Ethnicity <- Ethnicity %>% analysis_ethn$cached("ethnicity")
 # Ethnicity <- Ethnicity %>% analysis$cached("ethnicity_copied")
 
 
+# table2 <- table2 %>% analysis$cached("dementia_testing_observation2Table")
+# table2 %>% count()    ##### n = 2789727
+
 ######### Reading all dementia dementia patient ######################################################
 table <- table %>% analysis$cached("dementia_dementia_all_patients_final")
 table %>% count()    ##### n = 1528238
