@@ -5,6 +5,8 @@ library(dplyr)
 library(lubridate)
 rm(list=ls())
 library(bit64)
+library(MatchIt)
+
 cprd = CPRDData$new(cprdEnv = "test-remote-full", cprdConf = "~/.aurum.yaml")
 analysis = cprd$analysis("Joshua")
 
@@ -41,15 +43,10 @@ TreatmentGroup <- R_after_12Months %>%
    group_by(patid) %>%
    slice_min(order_by = issuedate)%>%
   distinct(patid, .keep_all = TRUE) %>%
-  mutate(risperidone = 1)
-
-
-
-
-# View(TreatmentGroup %>% select(issuedate, other_drug_issuedate, drug_name, obsdate, other_drug_issuedate_180Days_later, risperidone) )
-# View(TreatmentGroup %>% collect())
-
-
+  mutate(
+    risperidone = 1,
+    Prescribed_other_antipsychotic_Prior = as.numeric(!is.na(other_drug_issuedate) & other_drug_issuedate < issuedate))
+    
 
 
 
@@ -92,7 +89,8 @@ ControlPartition_other_antiP <- ControlPartition_risp %>%
   group_by(patid) %>%
   slice_min(order_by = issuedate)%>%
   distinct(patid, .keep_all = TRUE) %>%
-  mutate(risperidone = 0)
+  mutate(risperidone = 0,
+         Prescribed_other_antipsychotic_Prior = as.numeric(!is.na(other_drug_issuedate) & other_drug_issuedate < issuedate))
 
 
 
@@ -102,7 +100,7 @@ ControlPartition_other_antiP <- ControlPartition_risp %>%
 # View(ControlPartition_other_antiP %>% select(issuedate, other_drug_issuedate, drug_name, obsdate, other_drug_issuedate_180Days_later))
 
 
-variables = c("patid","consid", "obsdate", "gender","yob","mob","regstartdate", "regenddate","cprd_ddate", "lcd","region", "ethnicity_5cat","ethnicity_16cat", "ethnicity_qrisk2","missing_ethnicity", "diagnosedbefore", "died","gender_decode","dob", "date_of_birth", "age_diagnosis","Diff_start_endOfFollowup","endoffollowup", "age_category", "year_of_diagnosis", "YrOfDiag_cat","risperidone", "other_drug_issuedate", "year_of_diagnosis", "issuedate", "other_drug_issuedate_180Days_later")
+variables = c("patid","consid", "obsdate", "gender","yob","mob","regstartdate", "regenddate","cprd_ddate", "lcd","region", "ethnicity_5cat","ethnicity_16cat", "ethnicity_qrisk2","missing_ethnicity", "diagnosedbefore", "died","gender_decode","dob", "date_of_birth", "age_diagnosis","Diff_start_endOfFollowup","endoffollowup", "age_category", "year_of_diagnosis", "YrOfDiag_cat","risperidone", "other_drug_issuedate", "year_of_diagnosis", "issuedate", "other_drug_issuedate_180Days_later", "Prescribed_other_antipsychotic_Prior")
 
 
 
@@ -216,64 +214,7 @@ for (i in comorbids) {
      distinct(patid, .keep_all = TRUE) %>%
       select(-pre_index_date_earliest_date_variable,-pre_index_date_latest_date_variable, -post_index_date_date_variable)
   }
-  
-  
-  # print(paste("working out pre- and post-obsdate date code occurrences for", i))
-  # 
-  # comod <- paste0("raw_", i, "_medcodes")
-  # print(comod)
-  # comorbids_data <- comorbids_data %>% analysis_allPatid$cached(name = comod)
-  # comorbids_partition <- comorbids_data %>% filter(obsdate <= "2004-12-31")
-  # 
-  # common_patids <- semi_join(comorbids_partition, table, by = "patid") 
-  # print(common_patids)
-  # 
-  # print("almost there")
-  # pre_index_date_earliest_date_variable <- paste0("pre_index_date_earliest_", i)
-  # pre_index_date_latest_date_variable <- paste0("pre_index_date_latest_", i)
-  # post_index_date_date_variable <- paste0("post_index_date_first_", i)
-  # comod <- paste0("raw_", i, "_medcodes")
-  # obsdate_var <- paste0("obsdate_", tolower(i))
-  # if (tolower(i) == "stroke") {
-  #   combined_data <- combined_data %>%
-  #     left_join(common_patids %>% filter(!is.na(obsdate)) %>% select(patid, stroke_cat, obsdate) %>% collect(), by = "patid",
-  #               relationship = "many-to-many")%>%
-  #       # common_patids %>% 
-  #       # filter(!is.na(obsdate)) %>%
-  #       #   collect() %>%, by = "patid")
-  #         # select(patid, stroke_cat, obsdate) %>%
-  #     mutate(!!paste0("obsdate_", tolower(i)) := obsdate.y, obsdate = obsdate.x) %>%
-  #     select(-obsdate.y, -obsdate.x) %>%
-  #     mutate(!!paste0("comorbidity_", tolower(i)) := ifelse(!is.na(!!sym(obsdate_var)), 1, 0))
-  #   pre_index_date <- combined_data %>%
-  #     filter(!!sym(obsdate_var) <= issuedate) %>%
-  #     group_by(patid) %>%
-  #     summarise(
-  #       pre_index_date_earliest_date_variable = min(!!sym(obsdate_var), na.rm = TRUE),
-  #       pre_index_date_latest_date_variable = max(!!sym(obsdate_var), na.rm = TRUE)
-  #     ) %>%
-  #     ungroup()
-  #        
-  #   post_index_date <- combined_data %>%
-  #     filter(!!sym(obsdate_var) > issuedate) %>%
-  #     group_by(patid) %>%
-  #     summarise(post_index_date_date_variable = min(!!sym(obsdate_var), na.rm = TRUE)) %>%
-  #     ungroup()
-  #   
-  #   
-  #   combined_data <- combined_data %>%
-  #     left_join(pre_index_date, by = "patid") %>%
-  #     mutate(
-  #       !!paste0("pre_index_date_", tolower(i)) := !is.na(pre_index_date_earliest_date_variable),
-  #       !!paste0("pre_index_date_earliest_", tolower(i)) := pre_index_date_earliest_date_variable
-  #     ) %>%
-  #     left_join(post_index_date, by = "patid") %>%
-  #     mutate(
-  #       !!paste0("post_index_date_", tolower(i)) := !is.na(post_index_date_date_variable),
-  #       !!paste0("post_index_date_first_", tolower(i)) := post_index_date_date_variable
-  #     ) #%>%
-  #     # distinct(patid, .keep_all = TRUE) 
-     
+
   
   
   else {
@@ -349,7 +290,7 @@ for (i in comorbids) {
     # "dbp",
     # "sbp"
   )
-  
+  FullData <- combined_data
   
   # Pull out all raw biomarker values and cache
   
@@ -370,85 +311,149 @@ for (i in comorbids) {
     common_patids <- semi_join(biomarkers_partition, table, by = "patid") %>% collect()
     print(common_patids)
     
-    # combined_data <- combined_data %>% 
-    #   left_join(common_patids, by = "patid") %>% 
-    #   group_by(patid) %>% 
-    #   mutate(
-    #     # !!missing_variable := is.na(date), 
-    #     !!date_variable := date, 
-    #     !!testvalue_variable := ifelse(!is.na(testvalue), testvalue, NA)) %>% 
-    #   # filter(!is.na(date)) %>%
-    #   filter(date <= issuedate) %>% 
-    #   filter(date == max(date, na.rm = TRUE))# %>% 
-      # distinct(patid, .keep_all = TRUE)
-      # select(patid, !!date_variable, !!testvalue_variable)%>%    
-      # analysis_Josh$cached(paste0("risperidone_biomarker_cohort_", tolower(i)), unique_indexes="patid")
-      # 
+  
     latest_bio <- common_patids %>%
-      left_join(combined_data, by = "patid") %>%
+      left_join(FullData, by = "patid") %>%
       filter(date <= issuedate) %>%
+      group_by(patid) %>%
       filter(date == max(date, na.rm = TRUE)) %>%
-      ungroup()
+      ungroup() %>%
+      select(patid, date, testvalue) %>%
+      rename(!!date_variable := date, !!testvalue_variable := testvalue)
     
     
     
-    combined_data <- combined_data %>%
-      left_join(latest_bio %>% select(patid, !!date_variable, !!testvalue_variable), by = "patid")
-    
-    # comorbids_partition <- comorbids_data %>% filter(obsdate <= "2004-12-31")
-    # 
-    # common_patids <- semi_join(comorbids_partition, table, by = "patid") 
-    # print(common_patids)
-    # 
-    # print("almost there")
-    # pre_index_date_earliest_date_variable <- paste0("pre_index_date_earliest_", i)
-    # pre_index_date_latest_date_variable <- paste0("pre_index_date_latest_", i)
-    # post_index_date_date_variable <- paste0("post_index_date_first_", i)
-    # comod <- paste0("raw_", i, "_medcodes")
-    # obsdate_var <- paste0("obsdate_", tolower(i))
-    # if (tolower(i) == "stroke") {
-    #   combined_data <- combined_data %>%
-    #     left_join(common_patids %>% 
-    #                 filter(!is.na(obsdate)) %>%
-    #                 select(patid, stroke_cat, obsdate) %>%
-    #                 group_by(patid) %>%
-    #                 ungroup() %>%
-    #                 collect(), 
-    #               by = "patid", relationship = "many-to-many") %>%
-    #     mutate(!!paste0("obsdate_", tolower(i)) := obsdate.y, obsdate = obsdate.x) %>%
-    #     select(-obsdate.y, -obsdate.x) %>%
-    #     mutate(!!paste0("comorbidity_", tolower(i)) := ifelse(!is.na(!!sym(obsdate_var)), 1, 0))
-    #   
-    #   pre_index_date <- combined_data %>%
-    #     filter(!!sym(obsdate_var) <= issuedate) %>%
-    #     group_by(patid) %>%
-    #     summarise(
-    #       pre_index_date_earliest_date_variable = min(!!sym(obsdate_var), na.rm = TRUE),
-    #       pre_index_date_latest_date_variable = max(!!sym(obsdate_var), na.rm = TRUE)
-    #     ) %>%
-    #     ungroup()
-    #   
-    #   post_index_date <- combined_data %>%
-    #     filter(!!sym(obsdate_var) > issuedate) %>%
-    #     group_by(patid) %>%
-    #     summarise(post_index_date_date_variable = min(!!sym(obsdate_var), na.rm = TRUE)) %>%
-    #     ungroup()
-    #   
-    #   combined_data <- combined_data %>%
-    #     left_join(pre_index_date, by = "patid") %>%
-    #     mutate(
-    #       !!paste0("pre_index_date_", tolower(i)) := as.numeric(!is.na(pre_index_date_earliest_date_variable)),
-    #       # !!paste0("pre_index_date_earliest_", tolower(i)) := pre_index_date_earliest_date_variable
-    #     ) %>%
-    #     left_join(post_index_date, by = "patid") %>%
-    #     mutate(
-    #       !!paste0("post_index_date_", tolower(i)) := as.numeric(!is.na(post_index_date_date_variable)),
-    #       # !!paste0("post_index_date_first_", tolower(i)) := post_index_date_date_variable
-    #     )%>%
-    #     distinct(patid, .keep_all = TRUE) %>%
-    #     select(-pre_index_date_earliest_date_variable,-pre_index_date_latest_date_variable, -post_index_date_date_variable)
-    # }
-    # 
-    
+    FullData <- FullData %>%
+      left_join(latest_bio, by = "patid")
+ 
   }
-  View(combined_data)
+  
+  
+  FullData <- FullData %>%
+    mutate(
+      BMI = case_when(
+        is.na(testvalue_bmi) ~ "Missing",
+        testvalue_bmi < 18.5 ~ "Underweight",
+        testvalue_bmi >= 18.5 & testvalue_bmi < 25 ~ "Normal",
+        testvalue_bmi >= 25 & testvalue_bmi < 30 ~ "Overweight",
+        testvalue_bmi >= 30 & testvalue_bmi < 40 ~ "Obesity",
+        testvalue_bmi >= 40 ~ "Severely Obese",
+      )
+    )
+  
+  View(FullData)
+  
+  TempData <- FullData %>%
+    filter(is.na(BMI))
+  View(TempData)
+  
+  
+  
+  
+  ############################################################################################################################################## Alcohol #####################################################
+  analysis = cprd$analysis("Joshua")
+  
+  raw_alcohol_medcodes <- raw_alcohol_medcodes %>% analysis$cached("dementia_dementia_alcohol_levels") %>% filter(obsdate_alcohol < "2004-12-31") %>% collect()   #### 1,036,735 
+  # View(raw_alcohol_medcodes)
+  
+  index_dates <- FullData %>%
+    select(patid, obsdate, date_of_birth, lcd, cprd_ddate, regenddate)
+  
+  
+  
+  pre_index_date_alcohol_codes <- index_dates %>%
+    inner_join(raw_alcohol_medcodes, by = "patid") %>%
+    filter(
+      (date_of_birth < obsdate_alcohol | obsdate_alcohol < lcd | obsdate_alcohol < cprd_ddate | obsdate_alcohol <= regenddate) &
+        (as.numeric(obsdate_alcohol - obsdate) / 365.25) <= 7
+    )%>% select(patid, alcohol_cat, obsdate_alcohol)
+  
+  
+  # View(pre_index_date_alcohol_codes)
+  
+  
+  
+  ## Find if ever previously a 'harmful' drinker (category 3)
+  harmful_drinker_ever <- pre_index_date_alcohol_codes %>%
+    filter(alcohol_cat=="AlcoholConsumptionLevel3") %>%
+    distinct(patid) %>%
+    mutate(harmful_drinker_ever=1L)
+  # View(harmful_drinker_ever)
+  
+  
+  ## Find most recent code
+  ### If different categories on same day, use highest
+  most_recent_code <- pre_index_date_alcohol_codes %>%
+    mutate(alcohol_cat_numeric = ifelse(alcohol_cat=="AlcoholConsumptionLevel0", 0L,
+                                        ifelse(alcohol_cat=="AlcoholConsumptionLevel1", 1L,
+                                               ifelse(alcohol_cat=="AlcoholConsumptionLevel2", 2L,
+                                                      ifelse(alcohol_cat=="AlcoholConsumptionLevel3", 3L, NA))))) %>%
+    group_by(patid) %>%
+    filter(obsdate_alcohol==max(obsdate_alcohol, na.rm=TRUE)) %>%
+    filter(alcohol_cat_numeric==max(alcohol_cat_numeric, na.rm=TRUE)) %>%
+    ungroup() 
+  # View(most_recent_code)
+  
+  
+  
+  
+  
+  ## Pull together
+  alcohol_cat <- index_dates %>%
+    left_join(harmful_drinker_ever, by="patid") %>%
+    left_join(most_recent_code, by="patid") %>%
+    mutate(alcohol_cat_numeric=ifelse(!is.na(harmful_drinker_ever) & harmful_drinker_ever==1, 3L, alcohol_cat_numeric),
+           
+           alcohol_cat=case_when(
+             is.na(alcohol_cat_numeric) ~ "Missing",
+             alcohol_cat_numeric==0 ~ "None",
+             alcohol_cat_numeric==1 ~ "Within limits",
+             alcohol_cat_numeric==2 ~ "Excess",
+             alcohol_cat_numeric==3 ~ "Harmful"
+           )) %>%
+    select(patid, alcohol_cat)%>%
+    distinct(patid, .keep_all = TRUE)
+  
+  # View(alcohol_cat)
+  
+  
+  unique_patids <- n_distinct(alcohol_cat$patid)
+  print(unique_patids)
+  
+  
+  
+  duplicated_rows <- alcohol_cat[duplicated(alcohol_cat$patid) | duplicated(alcohol_cat$patid, fromLast = TRUE), ]
+  
+  # View(duplicated_rows)
+  
+  FullData <- FullData %>%
+    left_join(alcohol_cat, by="patid")
+  
+  
+  
+  ############################################################################################################################################## Prescriptions  #####################################################
+  
+  
+################################# Matching #########################################
+  
+m.out2 <- matchit(risperidone ~ + gender + age_diagnosis +comorbidity_angina + comorbidity_heartfailure + comorbidity_hypertension + comorbidity_myocardialinfarction + comorbidity_stroke + comorbidity_tia + comorbidity_falls + comorbidity_lowerlimbfracture + comorbidity_ihd + comorbidity_pad + comorbidity_af + comorbidity_revasc+ comorbidity_diabetes + BMI + Prescribed_other_antipsychotic_Prior + alcohol_cat, data = FullData,
+                  method = "nearest", distance = "glm", link = "probit", replace = TRUE, caliper = 0.05, ratio = 5)
+m.out2
+
+
+
+summary(m.out2, un = FALSE)
+
+
+
+plot(summary(m.out2))
+
+# Assuming m.out2 is the matchit object
+matched_data <- match.data(m.out2)
+
+# Save the matched data to a CSV file
+# write.csv(matched_data, "matched_data.csv", row.names = FALSE)
+
+# View the matched data
+View(matched_data)
+
