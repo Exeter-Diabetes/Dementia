@@ -33,12 +33,13 @@ TreatmentGroup <- R_after_12Months %>%
   left_join(anti_psychotic %>% select(patid, issuedate, drug_name), by = "patid") %>%
   collect() %>%
   mutate(
-    other_drug_issuedate_180Days_later = as.Date(ifelse(!is.na(issuedate.y), issuedate.y + 180, NA))
+    other_drug_issuedate_90Days_later = as.Date(ifelse(!is.na(issuedate.y), issuedate.y + 90, NA))
   ) %>%
   filter(
     is.na(issuedate.y) |
-      (issuedate.y <= issuedate.x & issuedate.x <= other_drug_issuedate_180Days_later & drug_name %in% c("quetiapine"))|
-      (issuedate.x - issuedate.y) > 180)%>%
+      # (issuedate.y <= issuedate.x & issuedate.x <= other_drug_issuedate_180Days_later & drug_name %in% c("quetiapine"))|
+      (issuedate.y <= issuedate.x & issuedate.x <= other_drug_issuedate_90Days_later)|
+      (issuedate.x - issuedate.y) > 90)%>%
   rename(issuedate = issuedate.x, other_drug_issuedate = issuedate.y) %>%
    group_by(patid) %>%
    slice_min(order_by = issuedate)%>%
@@ -78,12 +79,13 @@ ControlPartition_other_antiP <- ControlPartition_risp %>%
   collect() %>%
   mutate(
     issuedate = as.Date(replicate(n(), sample(seq(as.Date("2004-01-01"), as.Date("2004-12-31"), by = "day"), 1))),
-    other_drug_issuedate_180Days_later = as.Date(ifelse(!is.na(issuedate.y), issuedate.y + 180, NA))
+    other_drug_issuedate_90Days_later = as.Date(ifelse(!is.na(issuedate.y), issuedate.y + 90, NA))
   ) %>%
   filter(
          is.na(issuedate.y) | 
-           (issuedate.y <= issuedate & issuedate <= other_drug_issuedate_180Days_later & drug_name %in% c("quetiapine"))| 
-           (issuedate - issuedate.y) > 180)%>%
+           # (issuedate.y <= issuedate & issuedate <= other_drug_issuedate_180Days_later & drug_name %in% c("quetiapine"))| 
+           (issuedate.y <= issuedate & issuedate <= other_drug_issuedate_90Days_later)| 
+           (issuedate - issuedate.y) > 90)%>%
   rename(other_drug_issuedate = issuedate.y) %>%
   
   group_by(patid) %>%
@@ -100,7 +102,7 @@ ControlPartition_other_antiP <- ControlPartition_risp %>%
 # View(ControlPartition_other_antiP %>% select(issuedate, other_drug_issuedate, drug_name, obsdate, other_drug_issuedate_180Days_later))
 
 
-variables = c("patid","consid", "obsdate", "gender","yob","mob","regstartdate", "regenddate","cprd_ddate", "lcd","region", "ethnicity_5cat","ethnicity_16cat", "ethnicity_qrisk2","missing_ethnicity", "diagnosedbefore", "died","gender_decode","dob", "date_of_birth", "age_diagnosis","Diff_start_endOfFollowup","endoffollowup", "age_category", "year_of_diagnosis", "YrOfDiag_cat","risperidone", "other_drug_issuedate", "year_of_diagnosis", "issuedate", "other_drug_issuedate_180Days_later", "Prescribed_other_antipsychotic_Prior")
+variables = c("patid","consid", "obsdate", "gender","yob","mob","regstartdate", "regenddate","cprd_ddate", "lcd","region", "ethnicity_5cat","ethnicity_16cat", "ethnicity_qrisk2","missing_ethnicity", "diagnosedbefore", "died","gender_decode","dob", "date_of_birth", "age_diagnosis","Diff_start_endOfFollowup","endoffollowup", "age_category", "year_of_diagnosis", "YrOfDiag_cat","risperidone", "other_drug_issuedate", "year_of_diagnosis", "issuedate", "other_drug_issuedate_90Days_later", "Prescribed_other_antipsychotic_Prior")
 
 
 
@@ -435,7 +437,7 @@ for (i in comorbids) {
   
   
 ################################# Matching #########################################
-  
+   
 m.out2 <- matchit(risperidone ~ + gender + age_diagnosis +comorbidity_angina + comorbidity_heartfailure + comorbidity_hypertension + comorbidity_myocardialinfarction + comorbidity_stroke + comorbidity_tia + comorbidity_falls + comorbidity_lowerlimbfracture + comorbidity_ihd + comorbidity_pad + comorbidity_af + comorbidity_revasc+ comorbidity_diabetes + BMI + Prescribed_other_antipsychotic_Prior + alcohol_cat, data = FullData,
                   method = "nearest", distance = "glm", link = "probit", replace = TRUE, caliper = 0.05, ratio = 5)
 m.out2

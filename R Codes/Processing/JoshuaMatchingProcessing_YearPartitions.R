@@ -27,11 +27,13 @@ anti_psychotic <- anti_psychotic %>% analysis$cached("Other_Antipsychotic_Prescr
 R_after_12Months <- R_after_12Months %>% analysis$cached("risperidone_after_dementiaDiagnoses") 
 # R_after_12Months %>% count()    ##### n = 22252
 
-variables = c("patid","consid", "obsdate", "gender","yob","mob","regstartdate", "regenddate","cprd_ddate", "lcd","region", "ethnicity_5cat","ethnicity_16cat", "ethnicity_qrisk2","missing_ethnicity", "diagnosedbefore", "died","gender_decode","dob", "date_of_birth", "age_diagnosis","Diff_start_endOfFollowup","endoffollowup", "age_category", "year_of_diagnosis", "YrOfDiag_cat","risperidone", "other_drug_issuedate", "year_of_diagnosis", "issuedate", "other_drug_issuedate_180Days_later", "Prescribed_other_antipsychotic_Prior")
+variables = c("patid","consid", "obsdate", "gender","yob","mob","regstartdate", "regenddate","cprd_ddate", "lcd","region", "ethnicity_5cat","ethnicity_16cat", "ethnicity_qrisk2","missing_ethnicity", "diagnosedbefore", "died","gender_decode","dob", "date_of_birth", "age_diagnosis","Diff_start_endOfFollowup","endoffollowup", "age_category", "year_of_diagnosis", "YrOfDiag_cat","risperidone", "other_drug_issuedate", "year_of_diagnosis", "issuedate", "other_drug_issuedate_90Days_later", "Prescribed_other_antipsychotic_Prior")
 
 
 # Create an empty list to store matched data frames
 matched_data_list <- list()
+
+sink("summary_output.txt", append = TRUE)
 
 for (year in 2004:2021) {
   print(paste("Processing data for year", year))
@@ -39,19 +41,21 @@ for (year in 2004:2021) {
   
   ###### Treatment group #################################
   # prescribed R in year
-  #
+  # extra exclusion of anyone prescribed any other antipsychotic (excluding Quetiapine) in the 180 days prior to Risperidone start date
   TreatmentGroup <- R_after_12Months %>%
     select(-drug_name) %>%
     filter(((issuedate) >= paste0(year, "-01-01")) & ((issuedate) <= paste0(year, "-12-31"))) %>%
     left_join(anti_psychotic %>% select(patid, issuedate, drug_name), by = "patid") %>%
     collect() %>%
     mutate(
-      other_drug_issuedate_180Days_later = as.Date(ifelse(!is.na(issuedate.y), issuedate.y + 180, NA))
+      other_drug_issuedate_90Days_later = as.Date(ifelse(!is.na(issuedate.y), issuedate.y + 90, NA))
     ) %>%
     filter(
       is.na(issuedate.y) |
-        (issuedate.y <= issuedate.x & issuedate.x <= other_drug_issuedate_180Days_later & drug_name %in% c("quetiapine"))|
-        (issuedate.x - issuedate.y) > 180)%>%
+        # (issuedate.y <= issuedate.x & issuedate.x <= other_drug_issuedate_180Days_later & drug_name %in% c("quetiapine"))|
+        (issuedate.y <= issuedate.x & issuedate.x <= other_drug_issuedate_90Days_later)|
+        
+        (issuedate.x - issuedate.y) > 90)%>%
     rename(issuedate = issuedate.x, other_drug_issuedate = issuedate.y) %>%
     group_by(patid) %>%
     slice_min(order_by = issuedate)%>%
@@ -81,16 +85,17 @@ for (year in 2004:2021) {
   # after assigning random index date, exclude anyone prescribed any other antipsychotic (excluding Quetiapine) in the 180 days prior to the assigned index date
   ControlPartition_other_antiP <- ControlPartition_risp %>%
     left_join(anti_psychotic %>% select(patid, issuedate, drug_name), by = "patid") %>%
-    filter(!(!is.na(issuedate.y) & issuedate.y > "2004-12-31")) %>%
+    filter(!(!is.na(issuedate.y) & issuedate.y > paste0(year, "-12-31"))) %>%
     collect() %>%
     mutate(
-      issuedate = as.Date(replicate(n(), sample(seq(as.Date("2004-01-01"), as.Date("2004-12-31"), by = "day"), 1))),
-      other_drug_issuedate_180Days_later = as.Date(ifelse(!is.na(issuedate.y), issuedate.y + 180, NA))
+      issuedate = as.Date(replicate(n(), sample(seq(as.Date(paste0(year, "-01-01")), as.Date(paste0(year, "-12-31")), by = "day"), 1))),
+      other_drug_issuedate_90Days_later = as.Date(ifelse(!is.na(issuedate.y), issuedate.y + 90, NA))
     ) %>%
     filter(
       is.na(issuedate.y) | 
-        (issuedate.y <= issuedate & issuedate <= other_drug_issuedate_180Days_later & drug_name %in% c("quetiapine"))| 
-        (issuedate - issuedate.y) > 180)%>%
+        # (issuedate.y <= issuedate & issuedate <= other_drug_issuedate_180Days_later & drug_name %in% c("quetiapine"))| 
+        (issuedate.y <= issuedate & issuedate <= other_drug_issuedate_90Days_later)| 
+        (issuedate - issuedate.y) > 90)%>%
     rename(other_drug_issuedate = issuedate.y) %>%
     
     group_by(patid) %>%
@@ -265,7 +270,7 @@ for (year in 2004:2021) {
     biomarkers_partition <- biomarkers_data %>% filter(date <= paste0(year, "-12-31"))
     
     common_patids <- semi_join(biomarkers_partition, table, by = "patid") %>% collect()
-    print(common_patids)
+    # print(common_patids)
     
     
     latest_bio <- common_patids %>%
@@ -382,14 +387,22 @@ for (year in 2004:2021) {
   
   print(summary(m.out2, un = FALSE))
   
-  
+  # Save the plot to a PDF file
+  pdf(paste0("plot_", year, ".pdf"))
+  plot(summary(m.out2))
+  dev.off()
   
   plot(summary(m.out2))
   # Save matched data to the list
+  file_name <- paste0("matched_data_iteration_", year, ".txt")
+  
+  # Write matched data to the file
+  write.table(match.data(m.out2), file_name, sep = "\t", row.names = FALSE)
+  
   matched_data_list[[as.character(year)]] <- match.data(m.out2)
   
 }
-
+sink()
 # Combine matched data frames into a single data frame
 all_matched_data <- dplyr::bind_rows(matched_data_list, .id = "Year")
 
