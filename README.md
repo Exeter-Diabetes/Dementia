@@ -1,6 +1,5 @@
 **The table below shows the number of prescriptions per year for each category**
 
-
 ![image](https://github.com/Exeter-Diabetes/Dementia/assets/145013232/6542b11d-c5ee-43a4-8f2a-c5b5838a989f)
 
 **This is the distribution of number of diagnosis per year for patients diagnosed after registration**
@@ -432,3 +431,4 @@ flowchart TD
      51 - 100                                                  13208 ( 32.5) 
      801 - 1000                                                    6 (  0.0)
 ```
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_by_stroke_history.png)
