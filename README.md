@@ -170,6 +170,7 @@ flowchart TD
 ```
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_death.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_ageCat.png)
 
 ```
                                                               Overall        
