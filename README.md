@@ -565,13 +565,25 @@ flowchart TD
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_by_stroke_history.png)
 
 
-**
+
 
 
 
 
 
 ```
+
+A matchit object
+ - method: 5:1 nearest neighbor matching with replacement
+ - distance: Propensity score [caliper]
+             - estimated with logistic regression
+ - caliper: <distance> (0)
+ - number of obs.: 204510 (original), 2941 (matched)
+ - target estimand: ATT
+ - covariates: sex, age_diagnosis, comorbidity_angina, comorbidity_heartfailure, BMI, Prescribed_other_antipsychotic_Prior, period_before_prescription, comorbidity_hypertension, comorbidity_myocardialinfarction, comorbidity_stroke, comorbidity_tia, comorbidity_falls, comorbidity_lowerlimbfracture, comorbidity_ihd, comorbidity_pad, comorbidity_af, comorbidity_revasc, comorbidity_qof_diabetes, comorbidity_anxiety_disorders, comorbidity_fh_diabetes, comorbidity_fh_premature_cvd
+> summary(m.out2, un = FALSE)
+
+Call:
 matchit(formula = risperidone ~ +sex + age_diagnosis + comorbidity_angina + 
     comorbidity_heartfailure + BMI + Prescribed_other_antipsychotic_Prior + 
     period_before_prescription + comorbidity_hypertension + comorbidity_myocardialinfarction + 
@@ -584,71 +596,70 @@ matchit(formula = risperidone ~ +sex + age_diagnosis + comorbidity_angina +
     ratio = 5)
 
 Summary of Balance for Matched Data:
-                                     Means Treated Means Control Std. Mean Diff.
-distance                                    0.3484        0.3484         -0.0001
-sex                                         0.2907        0.2506          0.0893
-age_diagnosis                              81.7053       83.1518         -0.2012
-comorbidity_angina                          0.0813        0.1139         -0.1064
-comorbidity_heartfailure                    0.0752        0.0759         -0.0024
-BMIMissing                                  0.5610        0.6276         -0.1351
-BMINormal                                   0.2195        0.1783          0.1009
-BMIObesity                                  0.0467        0.0371          0.0486
-BMIOverweight                               0.1484        0.1292          0.0544
-BMISeverely Obese                           0.0061        0.0051          0.0159
-BMIUnderweight                              0.0183        0.0226         -0.0329
-Prescribed_other_antipsychotic_Prior        0.3130        0.4120         -0.2145
-period_before_prescription                  0.2938        0.3312         -0.1525
-comorbidity_hypertension                    0.3089        0.3455         -0.0768
-comorbidity_myocardialinfarction            0.0488        0.0474          0.0055
-comorbidity_stroke                          0.1321        0.1598         -0.0749
-comorbidity_tia                             0.0976        0.1031         -0.0177
-comorbidity_falls                           0.2439        0.3525         -0.2310
-comorbidity_lowerlimbfracture               0.1301        0.1962         -0.1851
-comorbidity_ihd                             0.1463        0.1716         -0.0664
-comorbidity_pad                             0.0569        0.0883         -0.1183
-comorbidity_af                              0.0915        0.1149         -0.0714
-comorbidity_revasc                          0.0142        0.0081          0.0465
-comorbidity_qof_diabetes                    0.0915        0.0885          0.0091
-comorbidity_anxiety_disorders               0.1179        0.1202         -0.0068
-comorbidity_fh_diabetes                     0.0955        0.0813          0.0516
-comorbidity_fh_premature_cvd                0.0183        0.0194         -0.0082
-                                     Var. Ratio eCDF Mean eCDF Max Std. Pair Dist.
-distance                                 0.9983    0.0000   0.0142          0.0013
-sex                                           .    0.0401   0.0401          0.8671
-age_diagnosis                            0.8346    0.0367   0.1220          1.1866
-comorbidity_angina                            .    0.0326   0.0326          0.4945
-comorbidity_heartfailure                      .    0.0007   0.0007          0.4104
-BMIMissing                                    .    0.0666   0.0666          0.9767
-BMINormal                                     .    0.0412   0.0412          0.8238
-BMIObesity                                    .    0.0096   0.0096          0.4865
-BMIOverweight                                 .    0.0191   0.0191          0.7366
-BMISeverely Obese                             .    0.0010   0.0010          0.2500
-BMIUnderweight                                .    0.0043   0.0043          0.2698
-Prescribed_other_antipsychotic_Prior          .    0.0989   0.0989          0.9037
-period_before_prescription               1.3306    0.0324   0.2363          0.5822
-comorbidity_hypertension                      .    0.0365   0.0365          0.9413
-comorbidity_myocardialinfarction              .    0.0014   0.0014          0.3709
-comorbidity_stroke                            .    0.0277   0.0277          0.6387
-comorbidity_tia                               .    0.0056   0.0056          0.5267
-comorbidity_falls                             .    0.1086   0.1086          0.7963
-comorbidity_lowerlimbfracture                 .    0.0661   0.0661          0.6772
-comorbidity_ihd                               .    0.0253   0.0253          0.6255
-comorbidity_pad                               .    0.0314   0.0314          0.4044
-comorbidity_af                                .    0.0234   0.0234          0.4957
-comorbidity_revasc                            .    0.0061   0.0061          0.1721
-comorbidity_qof_diabetes                      .    0.0029   0.0029          0.4476
-comorbidity_anxiety_disorders                 .    0.0023   0.0023          0.6077
-comorbidity_fh_diabetes                       .    0.0143   0.0143          0.6823
-comorbidity_fh_premature_cvd                  .    0.0011   0.0011          0.3319
+                                     Means Treated Means Control Std. Mean Diff. Var. Ratio eCDF Mean eCDF Max
+distance                                    0.0094        0.0094          0.0000     1.0018    0.0000   0.0047
+sex                                         0.3424        0.3485         -0.0128          .    0.0061   0.0061
+age_diagnosis                              81.8054       81.7945          0.0015     0.9044    0.0127   0.0393
+comorbidity_angina                          0.1265        0.1220          0.0133          .    0.0044   0.0044
+comorbidity_heartfailure                    0.0914        0.0912          0.0007          .    0.0002   0.0002
+BMIMissing                                  0.5428        0.5397          0.0063          .    0.0031   0.0031
+BMINormal                                   0.2198        0.2261         -0.0151          .    0.0062   0.0062
+BMIObesity                                  0.0700        0.0673          0.0107          .    0.0027   0.0027
+BMIOverweight                               0.1381        0.1358          0.0068          .    0.0023   0.0023
+BMISeverely Obese                           0.0058        0.0082         -0.0307          .    0.0023   0.0023
+BMIUnderweight                              0.0233        0.0230          0.0026          .    0.0004   0.0004
+Prescribed_other_antipsychotic_Prior        0.3191        0.3206         -0.0033          .    0.0016   0.0016
+period_before_prescription                  1.0891        1.0886          0.0011     2.0301    0.0799   0.1479
+comorbidity_hypertension                    0.3774        0.4010         -0.0486          .    0.0235   0.0235
+comorbidity_myocardialinfarction            0.0720        0.0695          0.0096          .    0.0025   0.0025
+comorbidity_stroke                          0.0973        0.0996         -0.0079          .    0.0023   0.0023
+comorbidity_tia                             0.1070        0.1138         -0.0221          .    0.0068   0.0068
+comorbidity_falls                           0.2724        0.2757         -0.0074          .    0.0033   0.0033
+comorbidity_lowerlimbfracture               0.1634        0.1615          0.0052          .    0.0019   0.0019
+comorbidity_ihd                             0.1809        0.1734          0.0196          .    0.0075   0.0075
+comorbidity_pad                             0.0817        0.0735          0.0299          .    0.0082   0.0082
+comorbidity_af                              0.1031        0.1105         -0.0244          .    0.0074   0.0074
+comorbidity_revasc                          0.0272        0.0253          0.0120          .    0.0019   0.0019
+comorbidity_qof_diabetes                    0.1109        0.1140         -0.0099          .    0.0031   0.0031
+comorbidity_anxiety_disorders               0.1323        0.1431         -0.0318          .    0.0108   0.0108
+comorbidity_fh_diabetes                     0.0953        0.1004         -0.0173          .    0.0051   0.0051
+comorbidity_fh_premature_cvd                0.0136        0.0132          0.0034          .    0.0004   0.0004
+                                     Std. Pair Dist.
+distance                                      0.0003
+sex                                           0.9338
+age_diagnosis                                 0.8572
+comorbidity_angina                            0.6685
+comorbidity_heartfailure                      0.5745
+BMIMissing                                    0.6247
+BMINormal                                     0.7824
+BMIObesity                                    0.5127
+BMIOverweight                                 0.6021
+BMISeverely Obese                             0.1846
+BMIUnderweight                                0.2975
+Prescribed_other_antipsychotic_Prior          0.9206
+period_before_prescription                    0.8402
+comorbidity_hypertension                      0.9232
+comorbidity_myocardialinfarction              0.5062
+comorbidity_stroke                            0.5957
+comorbidity_tia                               0.6039
+comorbidity_falls                             0.8740
+comorbidity_lowerlimbfracture                 0.7115
+comorbidity_ihd                               0.7921
+comorbidity_pad                               0.5261
+comorbidity_af                                0.6126
+comorbidity_revasc                            0.3096
+comorbidity_qof_diabetes                      0.6330
+comorbidity_anxiety_disorders                 0.6812
+comorbidity_fh_diabetes                       0.5359
+comorbidity_fh_premature_cvd                  0.1314
 
 Sample Sizes:
-                Control Treated
-All           203994.       733
-Matched (ESS)    299.23     492
-Matched         1165.       492
-Unmatched     202829.       241
-Discarded          0.         0
-
+               Control Treated
+All           203994.      516
+Matched (ESS)   2292.7     514
+Matched         2427.      514
+Unmatched     201567.        2
+Discarded          0.        0
 ```
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Matching.png)
