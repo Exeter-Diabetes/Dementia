@@ -125,7 +125,7 @@ flowchart TD
 
 
 
-
+**Dementia incident cohort**
 
 
 ```
@@ -256,6 +256,7 @@ flowchart TD
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_death.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_ageCat.png)
 
+**Risperidone incident cohort**
 ```
                                                               Overall        
   n                                                            41487         
@@ -568,7 +569,7 @@ flowchart TD
 
 
 
-
+**Matching**
 
 
 ```
