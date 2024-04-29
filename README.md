@@ -82,41 +82,24 @@ flowchart TD
 **This is the distribution of number of diagnosis per year for patients diagnosed after registration**
 
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/YearOfDiagnosis_AfterReg.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AfterRegistrationOverlap.png)
 
 
-**This is the distribution of number of prescriptions per year for patients diagnosed after registration**
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/YearOfPrescription_AfterReg.png)
-
-
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AfterRegistration.png)
 
 **This is the distribution of number of diagnosis per year for patients diagnosed after 2000**
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/YearOfDiagnosis_After2000.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/After2000Overlap.png)
 
-**This is the distribution of number of prescriptions per year for patients diagnosed after 2000**
-
-
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/YearOfPrescription_After2000.png)
-
-
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/After2000.png)
-
-
-**This is the distribution of number of diagnosis per year for patients diagnosed after 2004**
-
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/YearOfDiagnosis_After2004.png)
 
 
 **This is the distribution of number of prescriptions per year for patients diagnosed after 2004**
 
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/YearOfPrescription_After2004.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/After2004Overlap.png)
 
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/After2004.png)
+
 
 
 
