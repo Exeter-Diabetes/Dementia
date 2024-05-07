@@ -656,8 +656,33 @@ flowchart TD
 ```
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_by_stroke_history.png)
 
+**COX model**
+```
+summary(res.cox)
+Call:
+coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
+    age_diagnosis + pre_index_date_stroke + sex, data = FinalData)
 
+  n= 29403, number of events= 1042 
 
+                           coef exp(coef) se(coef)      z Pr(>|z|)    
+age_diagnosis          0.014843  1.014954 0.004555  3.258  0.00112 ** 
+pre_index_date_stroke1 1.875578  6.524590 0.063041 29.752  < 2e-16 ***
+sex1                   0.149645  1.161422 0.065084  2.299  0.02149 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                       exp(coef) exp(-coef) lower .95 upper .95
+age_diagnosis              1.015     0.9853     1.006     1.024
+pre_index_date_stroke1     6.525     0.1533     5.766     7.383
+sex1                       1.161     0.8610     1.022     1.319
+
+Concordance= 0.723  (se = 0.01 )
+Likelihood ratio test= 764.7  on 3 df,   p=<2e-16
+Wald test            = 927.2  on 3 df,   p=<2e-16
+Score (logrank) test = 1234  on 3 df,   p=<2e-16
+
+```
 
 
 **Matching**
