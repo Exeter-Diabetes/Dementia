@@ -109,9 +109,9 @@ flowchart TD
 
 
 ```
-                                            Overall       
+                                              Overall       
   n                                           445402        
-  diagnosedbefore = 1 (%)                     360105 (80.8) 
+  diagnosedbeforeRegistration = 1 (%)          93850 (21.1) 
   died = 1 (%)                                223233 (50.1) 
   age_diagnosis (mean (SD))                    82.35 (7.02) 
   age_category (%)                                          
