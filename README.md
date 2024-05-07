@@ -257,7 +257,22 @@ flowchart TD
 ```
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_death.png)
+
+```
+           strata   median    lower    upper
+1 gender_decode=F 3.775496 3.750856 3.794661
+2 gender_decode=M 3.288159 3.260780 3.318275
+```
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_ageCat.png)
+
+```
+              strata   median    lower    upper
+1 age_category=65-74 5.678303 5.601643 5.752225
+2 age_category=75-84 4.139630 4.117728 4.167009
+3 age_category=85-94 2.694045 2.674880 2.715948
+4   age_category=95+ 1.503080 1.464750 1.544148
+
+```
 
 **Risperidone incident cohort**
 ```
