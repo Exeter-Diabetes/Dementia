@@ -649,15 +649,14 @@ flowchart TD
 
 
 ```
-
 A matchit object
  - method: 5:1 nearest neighbor matching with replacement
  - distance: Propensity score [caliper]
              - estimated with logistic regression
  - caliper: <distance> (0.002)
- - number of obs.: 10437 (original), 1637 (matched)
+ - number of obs.: 10437 (original), 1665 (matched)
  - target estimand: ATT
- - covariates: sex, age_diagnosis, comorbidity_angina, comorbidity_heartfailure, BMI, Prescribed_other_antipsychotic_Prior, period_before_prescription, comorbidity_hypertension, comorbidity_myocardialinfarction, comorbidity_stroke, comorbidity_tia, comorbidity_falls, comorbidity_lowerlimbfracture, comorbidity_ihd, comorbidity_pad, comorbidity_af, comorbidity_revasc, comorbidity_qof_diabetes, comorbidity_anxiety_disorders, comorbidity_fh_diabetes, comorbidity_fh_premature_cvd, comorbidity_pulmonary_embolism, comorbidity_deep_vein_thrombosis, comorbidity_haem_cancer, comorbidity_solid_cancer, comorbidity_hearing_loss
+ - covariates: sex, age_diagnosis, comorbidity_angina, comorbidity_heartfailure, BMI, Prescribed_other_antipsychotic_Prior, period_before_prescription, comorbidity_hypertension, comorbidity_myocardialinfarction, comorbidity_stroke, comorbidity_tia, comorbidity_falls, comorbidity_lowerlimbfracture, comorbidity_ihd, comorbidity_pad, comorbidity_af, comorbidity_revasc, comorbidity_qof_diabetes, comorbidity_anxiety_disorders, comorbidity_fh_diabetes, comorbidity_fh_premature_cvd, comorbidity_pulmonary_embolism, comorbidity_deep_vein_thrombosis, comorbidity_haem_cancer, comorbidity_solid_cancer, comorbidity_hearing_loss, VTE
 > 
 > summary(m.out2, un = FALSE)
 
@@ -671,52 +670,54 @@ matchit(formula = risperidone ~ +sex + age_diagnosis + comorbidity_angina +
     comorbidity_anxiety_disorders + comorbidity_fh_diabetes + 
     comorbidity_fh_premature_cvd + comorbidity_pulmonary_embolism + 
     comorbidity_deep_vein_thrombosis + comorbidity_haem_cancer + 
-    comorbidity_solid_cancer + comorbidity_hearing_loss, data = FullData, 
-    method = "nearest", distance = "glm", link = "logit", replace = TRUE, 
-    caliper = 0.05, ratio = 5)
+    comorbidity_solid_cancer + comorbidity_hearing_loss + VTE, 
+    data = FullData, method = "nearest", distance = "glm", link = "logit", 
+    replace = TRUE, caliper = 0.05, ratio = 5)
 
 Summary of Balance for Matched Data:
                                      Means Treated Means Control Std. Mean Diff. Var. Ratio eCDF Mean eCDF Max Std. Pair Dist.
-distance                                    0.0744        0.0744         -0.0001     1.0009    0.0002   0.0083          0.0020
-sex                                         0.3018        0.3015          0.0006          .    0.0003   0.0003          0.9076
-age_diagnosis                              82.0266       81.5950          0.0601     1.2474    0.0191   0.0555          1.0099
-comorbidity_angina                          0.1006        0.0886          0.0398          .    0.0120   0.0120          0.5564
-comorbidity_heartfailure                    0.0947        0.0935          0.0040          .    0.0012   0.0012          0.5919
-BMIMissing                                  0.5828        0.5555          0.0555          .    0.0274   0.0274          0.8906
-BMINormal                                   0.2515        0.2712         -0.0453          .    0.0197   0.0197          0.8577
-BMIObesity                                  0.0355        0.0355          0.0000          .    0.0000   0.0000          0.0665
-BMIOverweight                               0.1036        0.1130         -0.0311          .    0.0095   0.0095          0.6350
-BMISeverely Obese                           0.0030        0.0018          0.0218          .    0.0012   0.0012          0.0874
-BMIUnderweight                              0.0237        0.0231          0.0039          .    0.0006   0.0006          0.2928
-Prescribed_other_antipsychotic_Prior        0.1450        0.1509         -0.0168          .    0.0059   0.0059          0.6406
-period_before_prescription                  0.1425        0.1752         -0.1803     0.2219    0.0346   0.3314          1.7795
-comorbidity_hypertension                    0.3402        0.3484         -0.0172          .    0.0081   0.0081          0.9683
-comorbidity_myocardialinfarction            0.0473        0.0444          0.0139          .    0.0030   0.0030          0.4052
-comorbidity_stroke                          0.1243        0.1115          0.0386          .    0.0127   0.0127          0.6333
-comorbidity_tia                             0.1124        0.1112          0.0037          .    0.0012   0.0012          0.6313
-comorbidity_falls                           0.2959        0.3052         -0.0204          .    0.0093   0.0093          0.8907
-comorbidity_lowerlimbfracture               0.1509        0.1426          0.0231          .    0.0083   0.0083          0.7179
-comorbidity_ihd                             0.1538        0.1478          0.0168          .    0.0061   0.0061          0.6843
-comorbidity_pad                             0.0828        0.0817          0.0043          .    0.0012   0.0012          0.5555
-comorbidity_af                              0.1036        0.1102         -0.0218          .    0.0067   0.0067          0.6175
-comorbidity_revasc                          0.0148        0.0148          0.0000          .    0.0000   0.0000          0.0297
-comorbidity_qof_diabetes                    0.0947        0.0988         -0.0141          .    0.0041   0.0041          0.5980
-comorbidity_anxiety_disorders               0.0917        0.0929         -0.0041          .    0.0012   0.0012          0.5490
-comorbidity_fh_diabetes                     0.0947        0.0948         -0.0005          .    0.0001   0.0001          0.5716
-comorbidity_fh_premature_cvd                0.0148        0.0118          0.0245          .    0.0030   0.0030          0.1917
-comorbidity_pulmonary_embolism              0.0059        0.0107         -0.0617          .    0.0047   0.0047          0.2012
-comorbidity_deep_vein_thrombosis            0.0325        0.0314          0.0067          .    0.0012   0.0012          0.3412
-comorbidity_haem_cancer                     0.0030        0.0036         -0.0109          .    0.0006   0.0006          0.1202
-comorbidity_solid_cancer                    0.1213        0.1308         -0.0290          .    0.0095   0.0095          0.6690
-comorbidity_hearing_loss                    0.1331        0.1380         -0.0144          .    0.0049   0.0049          0.6953
+distance                                    0.0743        0.0744         -0.0000     1.0017    0.0002   0.0065          0.0021
+sex                                         0.3018        0.3057         -0.0086          .    0.0039   0.0039          0.9461
+age_diagnosis                              82.0266       81.4991          0.0734     1.2540    0.0215   0.0684          1.0037
+comorbidity_angina                          0.1006        0.1083         -0.0256          .    0.0077   0.0077          0.6408
+comorbidity_heartfailure                    0.0947        0.1012         -0.0222          .    0.0065   0.0065          0.5832
+BMIMissing                                  0.5828        0.5327          0.1017          .    0.0501   0.0501          0.9495
+BMINormal                                   0.2515        0.2697         -0.0419          .    0.0182   0.0182          0.9008
+BMIObesity                                  0.0355        0.0462         -0.0576          .    0.0107   0.0107          0.4051
+BMIOverweight                               0.1036        0.1166         -0.0427          .    0.0130   0.0130          0.6404
+BMISeverely Obese                           0.0030        0.0053         -0.0436          .    0.0024   0.0024          0.1533
+BMIUnderweight                              0.0237        0.0296         -0.0389          .    0.0059   0.0059          0.3365
+Prescribed_other_antipsychotic_Prior        0.1450        0.1408          0.0118          .    0.0041   0.0041          0.6302
+period_before_prescription                  0.1425        0.1759         -0.1840     0.2236    0.0340   0.3213          1.7378
+comorbidity_hypertension                    0.3343        0.3485         -0.0301          .    0.0142   0.0142          0.9256
+comorbidity_myocardialinfarction            0.0473        0.0491         -0.0084          .    0.0018   0.0018          0.4398
+comorbidity_stroke                          0.1065        0.0911          0.0500          .    0.0154   0.0154          0.5496
+comorbidity_tia                             0.1065        0.1053          0.0038          .    0.0012   0.0012          0.5978
+comorbidity_falls                           0.2544        0.2714         -0.0391          .    0.0170   0.0170          0.9165
+comorbidity_lowerlimbfracture               0.1420        0.1187          0.0667          .    0.0233   0.0233          0.6595
+comorbidity_ihd                             0.1538        0.1550         -0.0033          .    0.0012   0.0012          0.7007
+comorbidity_pad                             0.0799        0.0838         -0.0146          .    0.0039   0.0039          0.5573
+comorbidity_af                              0.0947        0.0960         -0.0045          .    0.0013   0.0013          0.5893
+comorbidity_revasc                          0.0148        0.0148         -0.0000          .    0.0000   0.0000          0.0297
+comorbidity_qof_diabetes                    0.0947        0.1056         -0.0374          .    0.0109   0.0109          0.6116
+comorbidity_anxiety_disorders               0.0888        0.0902         -0.0050          .    0.0014   0.0014          0.5585
+comorbidity_fh_diabetes                     0.0917        0.1160         -0.0841          .    0.0243   0.0243          0.6492
+comorbidity_fh_premature_cvd                0.0148        0.0130          0.0147          .    0.0018   0.0018          0.2316
+comorbidity_pulmonary_embolism              0.0059        0.0089         -0.0386          .    0.0030   0.0030          0.1939
+comorbidity_deep_vein_thrombosis            0.0325        0.0272          0.0300          .    0.0053   0.0053          0.3252
+comorbidity_haem_cancer                     0.0030        0.0018          0.0218          .    0.0012   0.0012          0.0876
+comorbidity_solid_cancer                    0.1154        0.1295         -0.0443          .    0.0142   0.0142          0.6908
+comorbidity_hearing_loss                    0.1302        0.1302          0.0000          .    0.0000   0.0000          0.2261
+VTE                                         0.0385        0.0361          0.0123          .    0.0024   0.0024          0.3774
 
 Sample Sizes:
                Control Treated
 All           10099.       338
-Matched (ESS)  1044.18     338
-Matched        1299.       338
-Unmatched      8800.         0
+Matched (ESS)  1124.49     338
+Matched        1327.       338
+Unmatched      8772.         0
 Discarded         0.         0
+
 ```
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Matching_1.png)
