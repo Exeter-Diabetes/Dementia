@@ -109,7 +109,8 @@ flowchart TD
 
 
 ```
-                                              Overall       
+                                         
+                                             Overall       
   n                                           445402        
   diagnosedbeforeRegistration = 1 (%)          93850 (21.1) 
   died = 1 (%)                                223233 (50.1) 
@@ -141,42 +142,39 @@ flowchart TD
      2022                                      19019 ( 4.3) 
      2023                                      13714 ( 3.1) 
   gender_decode = M (%)                       162452 (36.5) 
-  pre_diagnoses_af = 1 (%)                     71757 (77.4) 
-  post_diagnoses_af = 1 (%)                    19293 (20.8) 
+  pre_diagnoses_af = 1 (%)                     62311 (14.0) 
+  post_diagnoses_af = 1 (%)                    28577 ( 6.4) 
   af_ever = 1 (%)                              92669 (20.8) 
-  pre_diagnoses_angina = 1 (%)                 52848 (93.6) 
-  post_diagnoses_angina = 1 (%)                 3420 ( 6.1) 
+  pre_diagnoses_angina = 1 (%)                 50121 (11.3) 
+  post_diagnoses_angina = 1 (%)                 6097 ( 1.4) 
   angina_ever = 1 (%)                          56491 (12.7) 
-  pre_diagnoses_anxiety_disorders = 1 (%)      70806 (89.7) 
-  post_diagnoses_anxiety_disorders = 1 (%)      7522 ( 9.5) 
+  pre_diagnoses_anxiety_disorders = 1 (%)      67697 (15.2) 
+  post_diagnoses_anxiety_disorders = 1 (%)     10557 ( 2.4) 
   anxiety_disorders_ever = 1 (%)               78971 (17.7) 
-  pre_diagnoses_falls = 1 (%)                 144780 (60.2) 
-  post_diagnoses_falls = 1 (%)                 93425 (38.8) 
+  pre_diagnoses_falls = 1 (%)                 112952 (25.4) 
+  post_diagnoses_falls = 1 (%)                125068 (28.1) 
   falls_ever = 1 (%)                          240554 (54.0) 
-  pre_diagnoses_fh_diabetes = 1 (%)            92270 (95.1) 
-  post_diagnoses_fh_diabetes = 1 (%)            4569 ( 4.7) 
+  pre_diagnoses_fh_diabetes = 1 (%)            91142 (20.5) 
+  post_diagnoses_fh_diabetes = 1 (%)            5686 ( 1.3) 
   fh_diabetes_ever = 1 (%)                     97034 (21.8) 
   heartfailure_ever = 1 (%)                    53890 (12.1) 
-  pre_diagnoses_hypertension = 1 (%)          246438 (95.5) 
-  post_diagnoses_hypertension = 1 (%)           9528 ( 3.7) 
-  hypertension_ever = 1 (%)                   258088 (57.9) 
-  pre_diagnoses_lowerlimbfracture = 1 (%)      58379 (66.1) 
-  post_diagnoses_lowerlimbfracture = 1 (%)     29242 (33.1) 
+  pre_diagnoses_lowerlimbfracture = 1 (%)      54613 (12.3) 
+  post_diagnoses_lowerlimbfracture = 1 (%)     32901 ( 7.4) 
   lowerlimbfracture_ever = 1 (%)               88302 (19.8) 
-  pre_diagnoses_myocardialinfarction = 1 (%)   36031 (85.4) 
-  post_diagnoses_myocardialinfarction = 1 (%)   5855 (13.9) 
+  pre_diagnoses_myocardialinfarction = 1 (%)   34855 ( 7.8) 
+  post_diagnoses_myocardialinfarction = 1 (%)   6998 ( 1.6) 
   myocardialinfarction_ever = 1 (%)            42174 ( 9.5) 
-  pre_diagnoses_qof_diabetes = 1 (%)           76875 (88.9) 
-  post_diagnoses_qof_diabetes = 1 (%)           8579 ( 9.9) 
+  pre_diagnoses_qof_diabetes = 1 (%)           60800 (13.7) 
+  post_diagnoses_qof_diabetes = 1 (%)          24664 ( 5.5) 
   qof_diabetes_ever = 1 (%)                    86493 (19.4) 
-  pre_diagnoses_revasc = 1 (%)                 24363 (96.4) 
-  post_diagnoses_revasc = 1 (%)                  840 ( 3.3) 
+  pre_diagnoses_revasc = 1 (%)                 24092 ( 5.4) 
+  post_diagnoses_revasc = 1 (%)                 1104 ( 0.2) 
   revasc_ever = 1 (%)                          25262 ( 5.7) 
-  pre_diagnoses_stroke = 1 (%)                 53085 (75.4) 
-  post_diagnoses_stroke = 1 (%)                15657 (22.2) 
+  pre_diagnoses_stroke = 1 (%)                 48361 (10.9) 
+  post_diagnoses_stroke = 1 (%)                20317 ( 4.6) 
   stroke_ever = 1 (%)                          70392 (15.8) 
-  pre_diagnoses_tia = 1 (%)                    40459 (79.1) 
-  post_diagnoses_tia = 1 (%)                   10133 (19.8) 
+  pre_diagnoses_tia = 1 (%)                    38227 ( 8.6) 
+  post_diagnoses_tia = 1 (%)                   12287 ( 2.8) 
   tia_ever = 1 (%)                             51118 (11.5) 
   alcohol_cat (%)                                           
      Excess                                    23242 ( 5.2) 
@@ -239,20 +237,18 @@ flowchart TD
      Pakistani                                  1651 ( 0.4) 
      Unknown                                  112495 (25.3) 
      White                                    313968 (70.5) 
-  missing_ethnicity = 1 (%)                   112393 (25.2) 
-  pre_diagnoses_deep_vein_thrombosis = 1 (%)   20858 (72.4) 
-  post_diagnoses_deep_vein_thrombosis = 1 (%)   7755 (26.9) 
+  pre_diagnoses_deep_vein_thrombosis = 1 (%)   20093 ( 4.5) 
+  post_diagnoses_deep_vein_thrombosis = 1 (%)   8514 ( 1.9) 
   deep_vein_thrombosis_ever = 1 (%)            28828 ( 6.5) 
-  pre_diagnoses_pulmonary_embolism = 1 (%)     10930 (72.3) 
-  post_diagnoses_pulmonary_embolism = 1 (%)     4038 (26.7) 
+  pre_diagnoses_pulmonary_embolism = 1 (%)     10503 ( 2.4) 
+  post_diagnoses_pulmonary_embolism = 1 (%)     4461 ( 1.0) 
   pulmonary_embolism_ever = 1 (%)              15125 ( 3.4) 
-  pre_diagnoses_haem_cancer = 1 (%)             9021 (75.1) 
-  post_diagnoses_haem_cancer = 1 (%)            2864 (23.8) 
+  pre_diagnoses_haem_cancer = 1 (%)             8129 ( 1.8) 
+  post_diagnoses_haem_cancer = 1 (%)            3760 ( 0.8) 
   haem_cancer_ever = 1 (%)                     12014 ( 2.7) 
-  pre_diagnoses_solid_cancer = 1 (%)           69661 (81.1) 
-  post_diagnoses_solid_cancer = 1 (%)          15546 (18.1) 
+  pre_diagnoses_solid_cancer = 1 (%)           64258 (14.4) 
+  post_diagnoses_solid_cancer = 1 (%)          20922 ( 4.7) 
   solid_cancer_ever = 1 (%)                    85902 (19.3) 
-
 
 ```
 
@@ -260,17 +256,17 @@ flowchart TD
 
 ```
            strata   median    lower    upper
-1 gender_decode=F 3.775496 3.750856 3.794661
-2 gender_decode=M 3.288159 3.260780 3.318275
+1 gender_decode=F 4.914442 4.892539 4.941821
+2 gender_decode=M 4.180698 4.153320 4.210815
 ```
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_ageCat.png)
 
 ```
               strata   median    lower    upper
-1 age_category=65-74 5.678303 5.601643 5.752225
-2 age_category=75-84 4.139630 4.117728 4.167009
-3 age_category=85-94 2.694045 2.674880 2.715948
-4   age_category=95+ 1.503080 1.464750 1.544148
+1 age_category=65-74 7.707050 7.619439 7.794661
+2 age_category=75-84 5.333333 5.305955 5.363450
+3 age_category=85-94 3.266256 3.244353 3.288159
+4   age_category=95+ 1.667351 1.620808 1.724846
 
 ```
 
