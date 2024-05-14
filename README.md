@@ -681,6 +681,103 @@ Score (logrank) test = 1234  on 3 df,   p=<2e-16
 ```
 
 
+
+**One year censoring**
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_by_stroke_history_censoring.png)
+```
+Call:
+coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
+    age_diagnosis + pre_index_date_stroke + sex, data = CensoringData_1year)
+
+  n= 29374, number of events= 302 
+   (20 observations deleted due to missingness)
+
+                           coef exp(coef) se(coef)      z Pr(>|z|)    
+age_diagnosis          0.041034  1.041888 0.008492  4.832 1.35e-06 ***
+pre_index_date_stroke1 1.889690  6.617315 0.115851 16.311  < 2e-16 ***
+sex1                   0.305904  1.357852 0.118622  2.579  0.00991 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                       exp(coef) exp(-coef) lower .95 upper .95
+age_diagnosis              1.042     0.9598     1.025     1.059
+pre_index_date_stroke1     6.617     0.1511     5.273     8.304
+sex1                       1.358     0.7365     1.076     1.713
+
+Concordance= 0.741  (se = 0.016 )
+Likelihood ratio test= 266.1  on 3 df,   p=<2e-16
+Wald test            = 307.7  on 3 df,   p=<2e-16
+Score (logrank) test = 409.1  on 3 df,   p=<2e-16
+```
+
+**Excluding stroke 3 months prior**
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_by_stroke_history_Adjusted_ST_3months.png)
+
+```
+Call:
+coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
+    age_diagnosis + pre_index_date_stroke + sex, data = Excluding_3_monthsPriorStroke)
+
+  n= 29246, number of events= 975 
+
+                           coef exp(coef) se(coef)      z Pr(>|z|)    
+age_diagnosis          0.016788  1.016930 0.004703  3.569 0.000358 ***
+pre_index_date_stroke1 1.747929  5.742694 0.066094 26.446  < 2e-16 ***
+sex1                   0.149249  1.160962 0.067442  2.213 0.026897 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                       exp(coef) exp(-coef) lower .95 upper .95
+age_diagnosis              1.017     0.9834     1.008     1.026
+pre_index_date_stroke1     5.743     0.1741     5.045     6.537
+sex1                       1.161     0.8614     1.017     1.325
+
+Concordance= 0.704  (se = 0.01 )
+Likelihood ratio test= 600.2  on 3 df,   p=<2e-16
+Wald test            = 739.3  on 3 df,   p=<2e-16
+Score (logrank) test = 948.3  on 3 df,   p=<2e-16
+
+
+```
+
+
+
+
+
+
+**Excluding stroke 12 months prior**
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_by_stroke_history_Adjusted_ST_12months.png)
+
+```
+Call:
+coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
+    age_diagnosis + pre_index_date_stroke + sex, data = Excluding_12_monthsPriorStroke)
+
+  n= 29037, number of events= 918 
+
+                           coef exp(coef) se(coef)      z Pr(>|z|)    
+age_diagnosis          0.019197  1.019382 0.004857  3.952 7.75e-05 ***
+pre_index_date_stroke1 1.635448  5.131757 0.069466 23.543  < 2e-16 ***
+sex1                   0.173900  1.189936 0.069490  2.503   0.0123 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                       exp(coef) exp(-coef) lower .95 upper .95
+age_diagnosis              1.019     0.9810     1.010     1.029
+pre_index_date_stroke1     5.132     0.1949     4.479     5.880
+sex1                       1.190     0.8404     1.038     1.364
+
+Concordance= 0.684  (se = 0.011 )
+Likelihood ratio test= 477.9  on 3 df,   p=<2e-16
+Wald test            = 595.5  on 3 df,   p=<2e-16
+Score (logrank) test = 740.7  on 3 df,   p=<2e-16
+
+
+```
+
+
+
+
 **Matching**
 
 
