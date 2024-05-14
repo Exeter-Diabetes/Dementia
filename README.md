@@ -969,3 +969,53 @@ Discarded         0.         0
   Survival_time (mean (SD))                      1.65 (1.96)   1.66 (1.91)    0.154       0.009
 ```
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/TreatmentVsControl.png)
+
+
+```
+Call:
+coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
+    age_diagnosis + pre_index_date_stroke + sex, data = table)
+
+  n= 193300, number of events= 2563 
+
+                           coef exp(coef)  se(coef)      z Pr(>|z|)    
+age_diagnosis          0.006827  1.006851  0.002911  2.345    0.019 *  
+pre_index_date_stroke  2.345283 10.436222  0.039969 58.678   <2e-16 ***
+sex                    0.044144  1.045133  0.040557  1.088    0.276    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                      exp(coef) exp(-coef) lower .95 upper .95
+age_diagnosis             1.007    0.99320    1.0011     1.013
+pre_index_date_stroke    10.436    0.09582    9.6499    11.287
+sex                       1.045    0.95682    0.9653     1.132
+
+Concordance= 0.751  (se = 0.005 )
+Likelihood ratio test= 3136  on 3 df,   p=<2e-16
+Wald test            = 3484  on 3 df,   p=<2e-16
+Score (logrank) test = 5407  on 3 df,   p=<2e-16
+
+> res.cox <- coxph(Surv(Survival_time, post_index_date_stroke) ~ age_diagnosis +  + sex, data = table)
+> summary(res.cox)
+Call:
+coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
+    age_diagnosis + +sex, data = table)
+
+  n= 193300, number of events= 2563 
+
+                  coef exp(coef) se(coef)     z Pr(>|z|)    
+age_diagnosis 0.008858  1.008897 0.002890 3.065  0.00218 ** 
+sex           0.199664  1.220993 0.040275 4.958 7.14e-07 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+              exp(coef) exp(-coef) lower .95 upper .95
+age_diagnosis     1.009     0.9912     1.003     1.015
+sex               1.221     0.8190     1.128     1.321
+
+Concordance= 0.534  (se = 0.006 )
+Likelihood ratio test= 29.74  on 2 df,   p=3e-07
+Wald test            = 29.85  on 2 df,   p=3e-07
+Score (logrank) test = 29.91  on 2 df,   p=3e-07
+
+```
