@@ -967,7 +967,5 @@ Discarded         0.         0
      Stage 3 (severe)                              46 ( 0.0)      7 (  0.0)                    
      Unknown                                    25341 (15.7)   4611 ( 14.2)                    
   Survival_time (mean (SD))                      1.65 (1.96)   1.66 (1.91)    0.154       0.009
-
-
-
 ```
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/TreatmentVsControl.png)
