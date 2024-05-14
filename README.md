@@ -282,8 +282,7 @@ Common codes	86
 **Risperidone incident cohort**
 ```
 
-                                                         
-                                                          Overall        
+                                                           Overall        
   n                                                        29394         
   diagnosedbeforeRegistration = 1 (%)                      12616 (42.9)  
   died = 1 (%)                                             16893 (57.5)  
@@ -352,6 +351,13 @@ Common codes	86
      Severely Obese                                           87 ( 0.3)  
      Underweight                                            1312 ( 4.5)  
      Unknown                                               14747 (50.2)  
+  totalcholesterol (%)                                                   
+     < 160 mg/dl                                            7117 (24.2)  
+     > 280 mg/dl                                             259 ( 0.9)  
+     199 mg/dl                                              4912 (16.7)  
+     200 - 239 mg/dl                                        2977 (10.1)  
+     240 - 279 mg/dl                                         890 ( 3.0)  
+     Unknown                                               13239 (45.0)  
   testvalue_dbp (mean (SD))                                66.30 (10.02) 
   testvalue_sbp (mean (SD))                               120.03 (16.15) 
   testvalue_totalcholesterol (mean (SD))                    4.45 (1.14)  
@@ -656,8 +662,7 @@ Common codes	86
      Stage 2                                                2065 ( 7.0)  
      Stage 3 (severe)                                          7 ( 0.0)  
      Unknown                                                3600 (12.2)  
-  pre_index_date_hypertension = 1 (%)                      22921 (88.9)  
-  post_index_date_hypertension = 1 (%)                      1419 ( 5.5)                                
+  pre_index_date_hypertension = 1 (%)                      22945 (88.9)                                
 ```
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_by_stroke_history.png)
 
