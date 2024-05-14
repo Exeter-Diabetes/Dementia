@@ -99,9 +99,14 @@ flowchart TD
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/After2004Overlap.png)
 
 
+**BMJ codes vs ours**
 
 
-
+```
+BMJ codes	279
+Our codes	631
+Common codes	86
+```
 
 
 
