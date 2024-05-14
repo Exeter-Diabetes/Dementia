@@ -116,8 +116,8 @@ Common codes	86
 
 
 ```
-                                         
-                                             Overall       
+                                             
+                                              Overall       
   n                                           445402        
   diagnosedbeforeRegistration = 1 (%)          93850 (21.1) 
   died = 1 (%)                                223233 (50.1) 
@@ -256,6 +256,7 @@ Common codes	86
   pre_diagnoses_solid_cancer = 1 (%)           64258 (14.4) 
   post_diagnoses_solid_cancer = 1 (%)          20922 ( 4.7) 
   solid_cancer_ever = 1 (%)                    85902 (19.3) 
+  VTE = 1 (%)                                  15125 ( 3.4) 
 
 ```
 
