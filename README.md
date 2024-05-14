@@ -107,7 +107,9 @@ BMJ codes	279
 Our codes	631
 Common codes	86
 ```
+**Flow chart of the final cohorts**
 
+![image](https://github.com/Exeter-Diabetes/Dementia/assets/145013232/be7ec930-facd-4a2c-91aa-457464d84030)
 
 
 **Dementia incident cohort**
