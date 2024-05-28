@@ -119,146 +119,141 @@ Common codes	86
 
 ```
                                              
+                                             
                                               Overall       
-  n                                           445402        
-  diagnosedbeforeRegistration = 1 (%)          93850 (21.1) 
-  died = 1 (%)                                223233 (50.1) 
-  age_diagnosis (mean (SD))                    82.35 (7.02) 
+  n                                           353255        
+  diagnosedbeforeRegistration = 1 (%)          77403 (21.9) 
+  died = 1 (%)                                174204 (49.3) 
+  age_diagnosis (mean (SD))                    82.25 (7.10) 
   age_category (%)                                          
-     65-74                                     64286 (14.4) 
-     75-84                                    202031 (45.4) 
-     85-94                                    164413 (36.9) 
-     95+                                       14672 ( 3.3) 
+     65-74                                     53220 (15.1) 
+     75-84                                    159585 (45.2) 
+     85-94                                    128631 (36.4) 
+     95+                                       11819 ( 3.3) 
   year_of_diagnosis (%)                                     
-     2004                                      20457 ( 4.6) 
-     2005                                      17426 ( 3.9) 
-     2006                                      19708 ( 4.4) 
-     2007                                      17420 ( 3.9) 
-     2008                                      18002 ( 4.0) 
-     2009                                      19947 ( 4.5) 
-     2010                                      21460 ( 4.8) 
-     2011                                      22688 ( 5.1) 
-     2012                                      25240 ( 5.7) 
-     2013                                      27311 ( 6.1) 
-     2014                                      29973 ( 6.7) 
-     2015                                      29772 ( 6.7) 
-     2016                                      26706 ( 6.0) 
-     2017                                      26491 ( 5.9) 
-     2018                                      25314 ( 5.7) 
-     2019                                      24739 ( 5.6) 
-     2020                                      19551 ( 4.4) 
-     2021                                      20464 ( 4.6) 
-     2022                                      19019 ( 4.3) 
-     2023                                      13714 ( 3.1) 
-  gender_decode = M (%)                       162452 (36.5) 
-  pre_diagnoses_af = 1 (%)                     62311 (14.0) 
-  post_diagnoses_af = 1 (%)                    28577 ( 6.4) 
-  af_ever = 1 (%)                              92669 (20.8) 
-  pre_diagnoses_angina = 1 (%)                 50121 (11.3) 
-  post_diagnoses_angina = 1 (%)                 6097 ( 1.4) 
-  angina_ever = 1 (%)                          56491 (12.7) 
-  pre_diagnoses_anxiety_disorders = 1 (%)      67697 (15.2) 
-  post_diagnoses_anxiety_disorders = 1 (%)     10557 ( 2.4) 
-  anxiety_disorders_ever = 1 (%)               78971 (17.7) 
-  pre_diagnoses_falls = 1 (%)                 112952 (25.4) 
-  post_diagnoses_falls = 1 (%)                125068 (28.1) 
-  falls_ever = 1 (%)                          240554 (54.0) 
-  pre_diagnoses_fh_diabetes = 1 (%)            91142 (20.5) 
-  post_diagnoses_fh_diabetes = 1 (%)            5686 ( 1.3) 
-  fh_diabetes_ever = 1 (%)                     97034 (21.8) 
-  heartfailure_ever = 1 (%)                    53890 (12.1) 
-  pre_diagnoses_lowerlimbfracture = 1 (%)      54613 (12.3) 
-  post_diagnoses_lowerlimbfracture = 1 (%)     32901 ( 7.4) 
-  lowerlimbfracture_ever = 1 (%)               88302 (19.8) 
-  pre_diagnoses_myocardialinfarction = 1 (%)   34855 ( 7.8) 
-  post_diagnoses_myocardialinfarction = 1 (%)   6998 ( 1.6) 
-  myocardialinfarction_ever = 1 (%)            42174 ( 9.5) 
-  pre_diagnoses_qof_diabetes = 1 (%)           60800 (13.7) 
-  post_diagnoses_qof_diabetes = 1 (%)          24664 ( 5.5) 
-  qof_diabetes_ever = 1 (%)                    86493 (19.4) 
-  pre_diagnoses_revasc = 1 (%)                 24092 ( 5.4) 
-  post_diagnoses_revasc = 1 (%)                 1104 ( 0.2) 
-  revasc_ever = 1 (%)                          25262 ( 5.7) 
-  pre_diagnoses_stroke = 1 (%)                 48361 (10.9) 
-  post_diagnoses_stroke = 1 (%)                20317 ( 4.6) 
-  stroke_ever = 1 (%)                          70392 (15.8) 
-  pre_diagnoses_tia = 1 (%)                    38227 ( 8.6) 
-  post_diagnoses_tia = 1 (%)                   12287 ( 2.8) 
-  tia_ever = 1 (%)                             51118 (11.5) 
+     2004                                      17502 ( 5.0) 
+     2005                                      14865 ( 4.2) 
+     2006                                      16620 ( 4.7) 
+     2007                                      14520 ( 4.1) 
+     2008                                      14931 ( 4.2) 
+     2009                                      16317 ( 4.6) 
+     2010                                      17437 ( 4.9) 
+     2011                                      18395 ( 5.2) 
+     2012                                      20029 ( 5.7) 
+     2013                                      21675 ( 6.1) 
+     2014                                      23469 ( 6.6) 
+     2015                                      23301 ( 6.6) 
+     2016                                      20765 ( 5.9) 
+     2017                                      20374 ( 5.8) 
+     2018                                      19268 ( 5.5) 
+     2019                                      18785 ( 5.3) 
+     2020                                      14879 ( 4.2) 
+     2021                                      15410 ( 4.4) 
+     2022                                      14326 ( 4.1) 
+     2023                                      10387 ( 2.9) 
+  gender_decode = M (%)                       122481 (34.7) 
+  pre_diagnoses_af = 1 (%)                     46688 (13.2) 
+  post_diagnoses_af = 1 (%)                    22901 ( 6.5) 
+  af_ever = 1 (%)                              71047 (20.1) 
+  pre_diagnoses_angina = 1 (%)                 38974 (11.0) 
+  post_diagnoses_angina = 1 (%)                 4583 ( 1.3) 
+  angina_ever = 1 (%)                          43776 (12.4) 
+  pre_diagnoses_anxiety_disorders = 1 (%)      52839 (15.0) 
+  post_diagnoses_anxiety_disorders = 1 (%)      8377 ( 2.4) 
+  anxiety_disorders_ever = 1 (%)               61794 (17.5) 
+  pre_diagnoses_falls = 1 (%)                  88512 (25.1) 
+  post_diagnoses_falls = 1 (%)                 97633 (27.6) 
+  falls_ever = 1 (%)                          188256 (53.3) 
+  pre_diagnoses_fh_diabetes = 1 (%)            70720 (20.0) 
+  post_diagnoses_fh_diabetes = 1 (%)            4579 ( 1.3) 
+  fh_diabetes_ever = 1 (%)                     75477 (21.4) 
+  heartfailure_ever = 1 (%)                    41583 (11.8) 
+  pre_diagnoses_lowerlimbfracture = 1 (%)      43571 (12.3) 
+  post_diagnoses_lowerlimbfracture = 1 (%)     26109 ( 7.4) 
+  lowerlimbfracture_ever = 1 (%)               70334 (19.9) 
+  pre_diagnoses_myocardialinfarction = 1 (%)   26861 ( 7.6) 
+  post_diagnoses_myocardialinfarction = 1 (%)   5709 ( 1.6) 
+  myocardialinfarction_ever = 1 (%)            32860 ( 9.3) 
+  pre_diagnoses_qof_diabetes = 1 (%)           47756 (13.5) 
+  post_diagnoses_qof_diabetes = 1 (%)          18426 ( 5.2) 
+  qof_diabetes_ever = 1 (%)                    67059 (19.0) 
+  pre_diagnoses_revasc = 1 (%)                 18445 ( 5.2) 
+  post_diagnoses_revasc = 1 (%)                  832 ( 0.2) 
+  revasc_ever = 1 (%)                          19332 ( 5.5) 
+  pre_diagnoses_stroke = 1 (%)                 38087 (10.8) 
+  post_diagnoses_stroke = 1 (%)                16028 ( 4.5) 
+  stroke_ever = 1 (%)                          55527 (15.7) 
+  pre_diagnoses_tia = 1 (%)                    29408 ( 8.3) 
+  post_diagnoses_tia = 1 (%)                    9919 ( 2.8) 
+  tia_ever = 1 (%)                             39813 (11.3) 
   alcohol_cat (%)                                           
-     Excess                                    23242 ( 5.2) 
-     Harmful                                   11662 ( 2.6) 
-     None                                      41685 ( 9.4) 
-     Unknown                                  118203 (26.5) 
-     Within limits                            250610 (56.3) 
+     Excess                                    17897 ( 5.1) 
+     Harmful                                    9010 ( 2.6) 
+     None                                      33247 ( 9.4) 
+     Unknown                                   98566 (27.9) 
+     Within limits                            194535 (55.1) 
   smoking_cat (%)                                           
-     Active smoker                             35957 ( 8.1) 
-     Ex-smoker                                185229 (41.6) 
-     Non-smoker                               142210 (31.9) 
-     Unknown                                   82006 (18.4) 
+     Active smoker                             28397 ( 8.0) 
+     Ex-smoker                                141985 (40.2) 
+     Non-smoker                               114276 (32.3) 
+     Unknown                                   68597 (19.4) 
   qrisk2_smoking_cat (%)                                    
-     0                                        191587 (43.0) 
-     1                                        116595 (26.2) 
-     2                                         34444 ( 7.7) 
-     3                                          1163 ( 0.3) 
-     4                                           877 ( 0.2) 
-     Unknown                                  100736 (22.6) 
+     0                                        152478 (43.2) 
+     1                                         88230 (25.0) 
+     2                                         27182 ( 7.7) 
+     3                                           942 ( 0.3) 
+     4                                           693 ( 0.2) 
+     Unknown                                   83730 (23.7) 
   qrisk2_smoking_cat_uncoded (%)                            
-     Ex-smoker                                116595 (26.2) 
-     Heavy smoker                                877 ( 0.2) 
-     Light smoker                              34444 ( 7.7) 
-     Moderate smoker                            1163 ( 0.3) 
-     Non-smoker                               191587 (43.0) 
-     Unknown                                  100736 (22.6) 
+     Ex-smoker                                 88230 (25.0) 
+     Heavy smoker                                693 ( 0.2) 
+     Light smoker                              27182 ( 7.7) 
+     Moderate smoker                             942 ( 0.3) 
+     Non-smoker                               152478 (43.2) 
+     Unknown                                   83730 (23.7) 
   gp_5cat_ethnicity (%)                                     
-     Black                                      7623 ( 1.7) 
-     Mixed                                      1302 ( 0.3) 
-     Other                                      2023 ( 0.5) 
-     South Asian                                8065 ( 1.8) 
-     Unknown                                  112405 (25.2) 
-     White                                    313984 (70.5) 
+     Black                                      6004 ( 1.7) 
+     Mixed                                      1063 ( 0.3) 
+     Other                                      1687 ( 0.5) 
+     South Asian                                6953 ( 2.0) 
+     Unknown                                   91545 (25.9) 
+     White                                    246003 (69.6) 
   gp_16cat_ethnicity (%)                                    
-     African                                    1371 ( 0.3) 
-     Bangladeshi                                 716 ( 0.2) 
-     Caribbean                                  5582 ( 1.3) 
-     Chinese                                     451 ( 0.1) 
-     Indian                                     4053 ( 0.9) 
-     Other                                      1590 ( 0.4) 
-     Other Asian                                1585 ( 0.4) 
-     Other Black                                 598 ( 0.1) 
-     Other Mixed                                 341 ( 0.1) 
-     Other White                                9380 ( 2.1) 
-     Pakistani                                  1652 ( 0.4) 
-     Unknown                                  112760 (25.3) 
-     White and Asian                             165 ( 0.0) 
-     White and Black African                     200 ( 0.0) 
-     White and Black Caribbean                   612 ( 0.1) 
-     White British                            299270 (67.2) 
-     White Irish                                5076 ( 1.1) 
+     African                                    1101 ( 0.3) 
+     Bangladeshi                                 628 ( 0.2) 
+     Caribbean                                  4368 ( 1.2) 
+     Chinese                                     378 ( 0.1) 
+     Indian                                     3507 ( 1.0) 
+     Other                                      1324 ( 0.4) 
+     Other Asian                                1372 ( 0.4) 
+     Other Black                                 483 ( 0.1) 
+     Other Mixed                                 287 ( 0.1) 
+     Other White                                7423 ( 2.1) 
+     Pakistani                                  1399 ( 0.4) 
+     Unknown                                   91821 (26.0) 
+     White and Asian                             133 ( 0.0) 
+     White and Black African                     165 ( 0.0) 
+     White and Black Caribbean                   487 ( 0.1) 
+     White British                            234396 (66.4) 
+     White Irish                                3983 ( 1.1) 
   gp_qrisk2_ethnicity (%)                                   
-     Bangladeshi                                 716 ( 0.2) 
-     Black African                              1358 ( 0.3) 
-     Black Caribbean                            5554 ( 1.2) 
-     Chinese                                     449 ( 0.1) 
-     Indian                                     4049 ( 0.9) 
-     Other                                      3587 ( 0.8) 
-     Other Asian                                1575 ( 0.4) 
-     Pakistani                                  1651 ( 0.4) 
-     Unknown                                  112495 (25.3) 
-     White                                    313968 (70.5) 
-  pre_diagnoses_deep_vein_thrombosis = 1 (%)   20093 ( 4.5) 
-  post_diagnoses_deep_vein_thrombosis = 1 (%)   8514 ( 1.9) 
-  deep_vein_thrombosis_ever = 1 (%)            28828 ( 6.5) 
-  pre_diagnoses_pulmonary_embolism = 1 (%)     10503 ( 2.4) 
-  post_diagnoses_pulmonary_embolism = 1 (%)     4461 ( 1.0) 
-  pulmonary_embolism_ever = 1 (%)              15125 ( 3.4) 
-  pre_diagnoses_haem_cancer = 1 (%)             8129 ( 1.8) 
-  post_diagnoses_haem_cancer = 1 (%)            3760 ( 0.8) 
-  haem_cancer_ever = 1 (%)                     12014 ( 2.7) 
-  pre_diagnoses_solid_cancer = 1 (%)           64258 (14.4) 
-  post_diagnoses_solid_cancer = 1 (%)          20922 ( 4.7) 
-  solid_cancer_ever = 1 (%)                    85902 (19.3) 
-  VTE = 1 (%)                                  15125 ( 3.4) 
+     Bangladeshi                                 628 ( 0.2) 
+     Black African                              1091 ( 0.3) 
+     Black Caribbean                            4345 ( 1.2) 
+     Chinese                                     376 ( 0.1) 
+     Indian                                     3504 ( 1.0) 
+     Other                                      2945 ( 0.8) 
+     Other Asian                                1364 ( 0.4) 
+     Pakistani                                  1398 ( 0.4) 
+     Unknown                                   91614 (25.9) 
+     White                                    245990 (69.6) 
+  pre_diagnoses_deep_vein_thrombosis = 1 (%)   14894 ( 4.2) 
+  post_diagnoses_deep_vein_thrombosis = 1 (%)   6581 ( 1.9) 
+  deep_vein_thrombosis_ever = 1 (%)            21662 ( 6.1) 
+  pre_diagnoses_pulmonary_embolism = 1 (%)      7555 ( 2.1) 
+  post_diagnoses_pulmonary_embolism = 1 (%)     3213 ( 0.9) 
+  pulmonary_embolism_ever = 1 (%)              10883 ( 3.1) 
+  VTE = 1 (%)                                  10883 ( 3.1)  
 
 ```
 
@@ -266,17 +261,17 @@ Common codes	86
 
 ```
            strata   median    lower    upper
-1 gender_decode=F 4.914442 4.892539 4.941821
-2 gender_decode=M 4.180698 4.153320 4.210815
+1 gender_decode=F 5.037645 5.010267 5.067762
+2 gender_decode=M 4.350445 4.314853 4.386037
 ```
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_ageCat.png)
 
 ```
-              strata   median    lower    upper
-1 age_category=65-74 7.707050 7.619439 7.794661
-2 age_category=75-84 5.333333 5.305955 5.363450
-3 age_category=85-94 3.266256 3.244353 3.288159
-4   age_category=95+ 1.667351 1.620808 1.724846
+               strata   median    lower    upper
+1 age_category=65-74 7.882272 7.800137 7.972621
+2 age_category=75-84 5.505818 5.470226 5.538672
+3 age_category=85-94 3.340178 3.318275 3.364819
+4   age_category=95+ 1.711157 1.642710 1.757700
 
 ```
 
@@ -664,33 +659,56 @@ Common codes	86
   same_indexdate_BMJ_antipysch_prescr = 1 (%)              17600 ( 85.7) 
                                
 ```
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_death_risperidone.png)
+
+```
+           strata   median    lower    upper
+1 gender_decode=F 2.483231 2.417522 2.562628
+2 gender_decode=M 1.957563 1.905544 2.031485
+```
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_ageCat_risperidone.png)
+
+```
+                strata   median    lower    upper
+1 age_category=65 - 74 3.586585 3.416838 3.712526
+2 age_category=75 - 84 2.447639 2.373717 2.513347
+3     age_category=85+ 1.464750 1.401780 1.527721
+
+```
+
+
+
+
+
+
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_by_stroke_history.png)
 
 **COX model**
 ```
-summary(res.cox)
 Call:
 coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
-    age_diagnosis + pre_index_date_stroke + sex, data = FinalData)
+    age_diagnosis + pre_index_date_stroke + sex, data = CompleteData)
 
-  n= 29403, number of events= 1042 
+  n= 23959, number of events= 846 
 
                            coef exp(coef) se(coef)      z Pr(>|z|)    
-age_diagnosis          0.014843  1.014954 0.004555  3.258  0.00112 ** 
-pre_index_date_stroke1 1.875578  6.524590 0.063041 29.752  < 2e-16 ***
-sex1                   0.149645  1.161422 0.065084  2.299  0.02149 *  
+age_diagnosis          0.013706  1.013801 0.005042  2.719  0.00656 ** 
+pre_index_date_stroke1 1.903718  6.710798 0.069880 27.243  < 2e-16 ***
+sex1                   0.174512  1.190665 0.072553  2.405  0.01616 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
                        exp(coef) exp(-coef) lower .95 upper .95
-age_diagnosis              1.015     0.9853     1.006     1.024
-pre_index_date_stroke1     6.525     0.1533     5.766     7.383
-sex1                       1.161     0.8610     1.022     1.319
+age_diagnosis              1.014     0.9864     1.004     1.024
+pre_index_date_stroke1     6.711     0.1490     5.852     7.696
+sex1                       1.191     0.8399     1.033     1.373
 
-Concordance= 0.723  (se = 0.01 )
-Likelihood ratio test= 764.7  on 3 df,   p=<2e-16
-Wald test            = 927.2  on 3 df,   p=<2e-16
-Score (logrank) test = 1234  on 3 df,   p=<2e-16
+Concordance= 0.726  (se = 0.011 )
+Likelihood ratio test= 640.9  on 3 df,   p=<2e-16
+Wald test            = 776.8  on 3 df,   p=<2e-16
+Score (logrank) test = 1043  on 3 df,   p=<2e-16
 
 ```
 
@@ -703,25 +721,25 @@ Call:
 coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
     age_diagnosis + pre_index_date_stroke + sex, data = CensoringData_1year)
 
-  n= 29374, number of events= 302 
-   (20 observations deleted due to missingness)
+  n= 23940, number of events= 501 
+   (19 observations deleted due to missingness)
 
                            coef exp(coef) se(coef)      z Pr(>|z|)    
-age_diagnosis          0.041034  1.041888 0.008492  4.832 1.35e-06 ***
-pre_index_date_stroke1 1.889690  6.617315 0.115851 16.311  < 2e-16 ***
-sex1                   0.305904  1.357852 0.118622  2.579  0.00991 ** 
+age_diagnosis          0.010646  1.010703 0.006488  1.641   0.1008    
+pre_index_date_stroke1 2.196622  8.994583 0.090048 24.394   <2e-16 ***
+sex1                   0.199762  1.221113 0.092650  2.156   0.0311 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
                        exp(coef) exp(-coef) lower .95 upper .95
-age_diagnosis              1.042     0.9598     1.025     1.059
-pre_index_date_stroke1     6.617     0.1511     5.273     8.304
-sex1                       1.358     0.7365     1.076     1.713
+age_diagnosis              1.011     0.9894    0.9979     1.024
+pre_index_date_stroke1     8.995     0.1112    7.5393    10.731
+sex1                       1.221     0.8189    1.0183     1.464
 
-Concordance= 0.741  (se = 0.016 )
-Likelihood ratio test= 266.1  on 3 df,   p=<2e-16
-Wald test            = 307.7  on 3 df,   p=<2e-16
-Score (logrank) test = 409.1  on 3 df,   p=<2e-16
+Concordance= 0.742  (se = 0.013 )
+Likelihood ratio test= 546.2  on 3 df,   p=<2e-16
+Wald test            = 619.1  on 3 df,   p=<2e-16
+Score (logrank) test = 915.7  on 3 df,   p=<2e-16
 ```
 
 **Excluding stroke 3 months prior**
@@ -732,24 +750,24 @@ Call:
 coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
     age_diagnosis + pre_index_date_stroke + sex, data = Excluding_3_monthsPriorStroke)
 
-  n= 29246, number of events= 975 
+  n= 23836, number of events= 789 
 
                            coef exp(coef) se(coef)      z Pr(>|z|)    
-age_diagnosis          0.016788  1.016930 0.004703  3.569 0.000358 ***
-pre_index_date_stroke1 1.747929  5.742694 0.066094 26.446  < 2e-16 ***
-sex1                   0.149249  1.160962 0.067442  2.213 0.026897 *  
+age_diagnosis          0.017014  1.017160 0.005212  3.264   0.0011 ** 
+pre_index_date_stroke1 1.769601  5.868512 0.073380 24.116   <2e-16 ***
+sex1                   0.176362  1.192870 0.075323  2.341   0.0192 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
                        exp(coef) exp(-coef) lower .95 upper .95
-age_diagnosis              1.017     0.9834     1.008     1.026
-pre_index_date_stroke1     5.743     0.1741     5.045     6.537
-sex1                       1.161     0.8614     1.017     1.325
+age_diagnosis              1.017     0.9831     1.007     1.028
+pre_index_date_stroke1     5.869     0.1704     5.082     6.776
+sex1                       1.193     0.8383     1.029     1.383
 
-Concordance= 0.704  (se = 0.01 )
-Likelihood ratio test= 600.2  on 3 df,   p=<2e-16
-Wald test            = 739.3  on 3 df,   p=<2e-16
-Score (logrank) test = 948.3  on 3 df,   p=<2e-16
+Concordance= 0.706  (se = 0.011 )
+Likelihood ratio test= 499.9  on 3 df,   p=<2e-16
+Wald test            = 615.9  on 3 df,   p=<2e-16
+Score (logrank) test = 794.9  on 3 df,   p=<2e-16
 
 
 ```
@@ -767,25 +785,24 @@ Call:
 coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
     age_diagnosis + pre_index_date_stroke + sex, data = Excluding_12_monthsPriorStroke)
 
-  n= 29037, number of events= 918 
+  n= 23670, number of events= 744 
 
                            coef exp(coef) se(coef)      z Pr(>|z|)    
-age_diagnosis          0.019197  1.019382 0.004857  3.952 7.75e-05 ***
-pre_index_date_stroke1 1.635448  5.131757 0.069466 23.543  < 2e-16 ***
-sex1                   0.173900  1.189936 0.069490  2.503   0.0123 *  
+age_diagnosis          0.019554  1.019747 0.005376  3.637 0.000276 ***
+pre_index_date_stroke1 1.663083  5.275553 0.076970 21.607  < 2e-16 ***
+sex1                   0.184390  1.202484 0.077672  2.374 0.017598 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
                        exp(coef) exp(-coef) lower .95 upper .95
-age_diagnosis              1.019     0.9810     1.010     1.029
-pre_index_date_stroke1     5.132     0.1949     4.479     5.880
-sex1                       1.190     0.8404     1.038     1.364
+age_diagnosis              1.020     0.9806     1.009     1.031
+pre_index_date_stroke1     5.276     0.1896     4.537     6.135
+sex1                       1.202     0.8316     1.033     1.400
 
-Concordance= 0.684  (se = 0.011 )
-Likelihood ratio test= 477.9  on 3 df,   p=<2e-16
-Wald test            = 595.5  on 3 df,   p=<2e-16
-Score (logrank) test = 740.7  on 3 df,   p=<2e-16
-
+Concordance= 0.689  (se = 0.012 )
+Likelihood ratio test= 401.8  on 3 df,   p=<2e-16
+Wald test            = 501  on 3 df,   p=<2e-16
+Score (logrank) test = 627.7  on 3 df,   p=<2e-16
 
 ```
 
