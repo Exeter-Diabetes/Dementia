@@ -812,7 +812,11 @@ Score (logrank) test = 627.7  on 3 df,   p=<2e-16
 
 
 **Matching**
-
+1. No history of other antipsychotic drugs
+2. No history of other antipsychotic drugs in the last 12 months
+3. No history of other antipsychotic drugs in the last 3 months
+4. Exclude anyone who was prescribed risperidone at any point from the controls
+5. Match with just age and sex
 
 
 ****No history of antipsychotic****
