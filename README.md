@@ -811,7 +811,10 @@ Score (logrank) test = 627.7  on 3 df,   p=<2e-16
 
 
 **Matching**
-***No history of antipsychotic***
+
+
+
+****No history of antipsychotic****
 
 ```
                                                         Stratified by risperidone
