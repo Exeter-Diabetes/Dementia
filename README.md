@@ -1199,7 +1199,7 @@ Score (logrank) test = 627.7  on 3 df,   p=<2e-16
          strata   median    lower    upper
 1 risperidone=0 7.498973 7.285421 7.685147
 2 risperidone=1 7.074606 6.789870 7.394935
-
+```
 
 
 
