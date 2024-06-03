@@ -262,17 +262,17 @@ Common codes	86
 
 ```
            strata   median    lower    upper
-1 gender_decode=F 5.037645 5.010267 5.067762
-2 gender_decode=M 4.350445 4.314853 4.386037
+1 gender_decode=F 4.914442 4.892539 4.941821
+2 gender_decode=M 4.180698 4.153320 4.210815
 ```
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_ageCat.png)
 
 ```
-               strata   median    lower    upper
-1 age_category=65-74 7.882272 7.800137 7.972621
-2 age_category=75-84 5.505818 5.470226 5.538672
-3 age_category=85-94 3.340178 3.318275 3.364819
-4   age_category=95+ 1.711157 1.642710 1.757700
+              strata   median    lower    upper
+1 age_category=65-74 7.707050 7.619439 7.794661
+2 age_category=75-84 5.333333 5.305955 5.363450
+3 age_category=85-94 3.266256 3.244353 3.288159
+4   age_category=95+ 1.667351 1.620808 1.724846
 
 ```
 
