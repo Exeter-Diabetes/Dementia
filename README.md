@@ -838,16 +838,16 @@ Common codes	86
 
 ```
            strata   median    lower    upper
-1 gender_decode=F 2.431211 2.349076 2.513347
-2 gender_decode=M 1.878166 1.782341 1.938398
+1 gender_decode=F 2.436687 2.376454 2.505133
+2 gender_decode=M 1.889117 1.817933 1.943874
 ```
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_ageCat_risperidone.png)
 
 ```
                 strata   median    lower    upper
-1 age_category=65 - 74 3.624914 3.471595 3.800137
-2 age_category=75 - 84 2.431211 2.349076 2.496920
-3     age_category=85+ 1.388090 1.336071 1.442847
+1 age_category=65 - 74 3.529090 3.405886 3.668720
+2 age_category=75 - 84 2.390144 2.318960 2.453114
+3     age_category=85+ 1.420945 1.374401 1.478439
 
 ```
 
