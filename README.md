@@ -86,7 +86,8 @@ Common codes	86
 ```
 **Flow chart of the final cohorts**
 
-![image](https://github.com/Exeter-Diabetes/Dementia/assets/145013232/9dc86317-b4bc-4c2a-a9c7-db0ef2a6a874)
+![image](https://github.com/Exeter-Diabetes/Dementia/assets/145013232/737f579f-2aaa-4080-b6ce-1c3c6f53e0dc)
+
 
 
 
