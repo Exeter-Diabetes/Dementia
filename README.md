@@ -1,82 +1,59 @@
 ```mermaid
 
 flowchart TD
-    A[New Dementia CPRD Download ] -->|All Observations: dementia codelist| B(n = 3,499,192 records)
-    B[n = 3,499,192 records] -->|Exlcluding: Schizophrenia and bipolar disorder| BB(n = 3,359,895 records)
-    BB[n = 3,359,895 records ] -->| date of birth < obsdate < lcd/ deregistration /date of death  | C(n = 3,336,262 records)
-    C[n = 3,336,262 records ] -->| Earliest diagnosis after 1980-01-01 and have a dementia code after registration   | DA(n = 2,865,530 records)
-    C[n = 3,336,262 records ] -->| Earliest diagnosis after 1980-01-01 and have a dementia code after 2000  | DC(n = 3,254,760 records)
-    C[n = 3,336,262 records ] -->| Earliest diagnosis after 1980-01-01 and have a dementia code after 2004  | DB(n = 3,115,141 records)
-
-    DA[n = 2,865,530 records ] -->| Unique patid: Earliest observation   | E(n = 651,862 patients)
-    DC[n = 3,254,760 records ] -->| Unique patid: Earliest observation   | F(n = 635,403 patients)
-    DB[n = 3,115,141 records ] -->| Unique patid: Earliest observation   | G(n = 598,807 patients)
-
-    E[n = 651,862 patients] -->| regend > 2004-01-01 & alive or died > 2004-01-01  | EE(n = 609,032 patients)
-    F[n = 635,403 patients] -->| regend > 2004-01-01 & alive or died > 2004-01-01  | FF(n = 613,958 patients)
-    G[n = 598,807 patients] -->| regend > 2004-01-01 & alive or died > 2004-01-01  | GG(n = 598,807 patients)
-
-    EE[n = 609,032 patients] -->| Age: 65 or above  | EJ(n = 587,471 records)
-    FF[n = 613,958 patients] -->| Age: 65 or above  | FJ(n = 592,421 records)
-    GG[n = 598,807 patients] -->| Age: 65 or above  | GJ(n = 577,960 records)
-
-
-    EJ[n = 587,471 patients] -->| Died  | J(Yes = 290,625 
-    No = 296,846)
-    EJ[n = 401,588 patients] -->| Gender  | K(Male = 213,223  
-    Female = 374,246
-    Unknown = 2 *to be dropped*)
-    EJ[n = 587,471 patients] -->| On Risperidone after 2004-01-01  | JJ(n = 51,653 patients)
-    JJ[n = 51,653 patients] -->| After diagnosis | ZA(n = 29,814 patients)
-    JJ[n = 51,653 patients] -->| < year prior to diagnosis | ZB(n = 14,611 patients)
-    JJ[n = 51,653 patients] -->| > year prior to diagnosis | ZC(n = 7,228 patients)
-
-    ZA[n = 29,814 patients] -->| Died  | XA(Yes = 15,960 
-    No = 13,854 )
-    ZA[n = 29,814 patients] -->| Gender  | XB(Male = 11,405 
-    Female = 18,409  
-    )
-
-    
-
-
-    FJ[n = 592,421 patients] -->| Died  | R(Yes = 294,394 
-    No = 298,027  )
-    FJ[n = 592,421 patients] -->| Gender  | Q(Male = 215,383 
-    Female = 377,036
-    Unknown = 2 *to be dropped* )
-
-
-    FJ[n = 592,421 patients] -->| On Risperidone after 2004-01-01  | KK(n = 52,291 patients)
-    KK[n = 52,291 patients] -->| After diagnosis | VA(n = 42,438)
-    KK[n = 52,291 patients] -->| < year prior to diagnosis | VB(n = 7,062 patients)
-    KK[n = 52,291 patients] -->| > year prior to diagnosis | VC(n = 2,791 patients)
-
-    VA[n = 35,242 patients] -->| Died  | YA(Yes = 23,738 
-    No = 18,700 )
-    VA[n = 35,242 patients] -->| Gender  | YB(Male = 16,613   
-    Female = 25,825   
-    )
+    A["New Dementia CPRD Download"] -- All Observations: dementia codelist --> B["n = 3,499,192 records"]
+    B -- Exlcluding: Schizophrenia and bipolar disorder --> BB["n = 3,359,895 records"]
+    BB -- date of birth &lt; obsdate &lt; lcd/ deregistration /date of death --> C["n = 3,336,261 records"]
+    C -- Earliest diagnosis after 1980-01-01 and have a dementia code after registration --> DA["n = 2,865,537 records"]
+    C -- Earliest diagnosis after 1980-01-01 and have a dementia code after 2000 --> DC["n = 3,254,768 records"]
+    C -- Earliest diagnosis after 1980-01-01 and have a dementia code after 2004 --> DB["n = 3,115,141 records"]
+    DA -- Unique patid: Earliest observation --> E["n = 651,863 patients"]
+    DC -- Unique patid: Earliest observation --> F["n = 635,404 patients"]
+    DB -- Unique patid: Earliest observation --> G["n = 598,807 patients"]
+    E -- regend > 2004-01-01 & alive or died > 2004-01-01 --> EE["n = 609,033 patients"]
+    F -- regend > 2004-01-01 & alive or died > 2004-01-01 --> FF["n = 613,959 patients"]
+    G -- regend > 2004-01-01 & alive or died > 2004-01-01 --> GG["n = 598,808 patients"]
+    EE -- Age: 65 or above --> EJ["n = 587,450 patients"]
+    FF -- Age: 65 or above --> FJ["n = 592,401 patients"]
+    GG -- Age: 65 or above --> GJ["n = 577,941 patients"]
+    EJ -- Died --> J("Yes = 290,619   
+    No = 296,831")
+    EJ -- Gender --> K("Male = 213,215     
+    Female = 374235")
+    EJ -- On Risperidone after 2004-01-01 --> JJ["n = 51,648 patients"]
+    JJ -- After diagnosis --> ZA["n = 29,810 patients"]
+    JJ -- &lt; year prior to diagnosis --> ZB("n = 8,218 patients")
+    JJ -- > year prior to diagnosis --> ZC("n = 13,620 patients")
+    ZA -- Died --> XA("Yes = 15,960  
+    No = 13,850 ")
+    ZA -- Gender --> XB("Male = 11,403  
+    Female = 15,960 ")
+    FJ -- Died --> R("Yes = 294,389   
+    No = 298,012")
+    FJ -- Gender --> Q("Male = 215,375  
+    Female = 377,026")
+    FJ -- On Risperidone after 2004-01-01 --> KK["n = 52,286 patients"]
+    KK -- After diagnosis --> VA["n = 42,433 patients"]
+    KK -- &lt; year prior to diagnosis --> VB("n = 4,439 patients")
+    KK -- > year prior to diagnosis --> VC("n = 5,414 patients")
+    VA -- Died --> YA("Yes = 23,738 
+    No = 18,695")
+    VA -- Gender --> YB("Male = 16,610    
+    Female = 25,823")
+    GJ -- Died --> S("Yes = 285,321  
+    No = 292,620")
+    GJ -- Gender --> T("Male = 211,048 
+    Female = 366,893")
+    GJ -- On Risperidone after 2004-01-01 --> LL["n = 51,887 patients"]
+    LL -- After diagnosis --> AA["n = 42,144 patients"]
+    LL -- &lt; year prior to diagnosis --> AB("n = 6,988 patients")
+    LL -- > year prior to diagnosis --> AC("n = 2,755 patients")
+    AA -- Died --> HA("Yes = 23,568     
+    No = 18,576")
+    AA -- Gender --> HB("Male = 16,516    
+    Female = 25,628")
 
 
-    GJ[n = 577,960 patients] -->| Died  | S(Yes = 285,325 
-    No = 292,635  )
-    GJ[n = 577,960 patients] -->| Gender  | T(Male = 211,056
-    Female = 366,902
-    Unknown = 2 *to be dropped*)
-
-
-
-    GJ[n = 577,960 patients] -->| On Risperidone after 2004-01-01  | LL(n = 51,892 patients)
-    LL[n = 51,892 patients] -->| After diagnosis | AA(n = 41,310)
-    LL[n = 51,892 patients] -->| < year prior to diagnosis | AB(n = 7,598 patients)
-    LL[n = 51,892 patients] -->| > year prior to diagnosis | AC(n = 2,984 patients)
-
-    AA[n = 41,310 patients] -->| Died  | HA(Yes = 22,937    
-    No = 18,373  )
-    AA[n = 41,310 patients] -->| Gender  | HB(Male = 16,296   
-    Female = 25,014     
-    )
 ```
 
 **This is the distribution of number of diagnosis per year for patients diagnosed after registration**
