@@ -388,11 +388,11 @@ Common codes	86
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_ageCat.png)
 
 ```
-              strata   median    lower    upper
-1 age_category=65-74 7.707050 7.619439 7.794661
-2 age_category=75-84 5.333333 5.305955 5.363450
-3 age_category=85-94 3.266256 3.244353 3.288159
-4   age_category=95+ 1.667351 1.620808 1.724846
+                strata   median    lower    upper
+1 age_category=65 - 74 7.701574 7.616701 7.789185
+2 age_category=75 - 84 5.333333 5.305955 5.363450
+3 age_category=85 - 94 3.263518 3.241615 3.288159
+4     age_category=95+ 1.670089 1.620808 1.724846
 
 ```
 
