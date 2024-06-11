@@ -263,7 +263,7 @@ Common codes	86
 **Risperidone incident cohort**
 ```
                                                         
-                                                          Overall       
+                                                         Overall       
   n                                                        30060        
   diagnosedbeforeRegistration = 1 (%)                      17005 (56.6) 
   died = 1 (%)                                             17390 (57.9) 
@@ -278,6 +278,9 @@ Common codes	86
   primary_death_stroke = 1 (%)                               785 ( 2.6) 
   Composite_pre_stroke = 1 (%)                              4237 (14.1) 
   Composite_post_stroke = 1 (%)                             1695 ( 5.6) 
+  comorbidity_stroke = 1 (%)                                4214 (14.0) 
+  pre_index_date_stroke = 1 (%)                             3609 (12.0) 
+  post_index_date_stroke = 1 (%)                            1061 ( 3.5) 
   ethnicity (%)                                                         
      Black                                                   504 ( 1.7) 
      Mixed                                                   107 ( 0.4) 
@@ -380,9 +383,6 @@ Common codes	86
   comorbidity_revasc = 1 (%)                                1608 ( 5.3) 
   pre_index_date_revasc = 1 (%)                             1599 ( 5.3) 
   post_index_date_revasc = 1 (%)                              24 ( 0.1) 
-  comorbidity_stroke = 1 (%)                                4214 (14.0) 
-  pre_index_date_stroke = 1 (%)                             3609 (12.0) 
-  post_index_date_stroke = 1 (%)                            1061 ( 3.5) 
   stroke_cat = ischaemic (%)                                3612 (85.7) 
   comorbidity_tia = 1 (%)                                   3250 (10.8) 
   pre_index_date_tia = 1 (%)                                2791 ( 9.3) 
@@ -739,7 +739,6 @@ Common codes	86
      Pakistani                                               102 ( 0.3) 
      Unknown                                                2169 ( 7.2) 
      White                                                 26718 (88.9) 
-> 
 ```
 
 
