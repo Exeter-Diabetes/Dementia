@@ -863,6 +863,7 @@ Score (logrank) test = 1022  on 3 df,   p=<2e-16
 
 **One year censoring**
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_by_stroke_history_censoring.png)
+<!--
 ```
 Call:
 coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
@@ -952,6 +953,7 @@ Wald test            = 501  on 3 df,   p=<2e-16
 Score (logrank) test = 627.7  on 3 df,   p=<2e-16
 
 ```
+-->
 
 
 
