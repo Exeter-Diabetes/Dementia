@@ -241,6 +241,7 @@ Common codes	86
      White British                    393034 (88.2)
 
 ```
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/MatchingDeathDates.png)
 
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ConfusionMatrix_Died.png)
