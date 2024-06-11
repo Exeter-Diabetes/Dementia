@@ -818,28 +818,28 @@ Common codes	86
 
 **COX model**
 ```
-Call:
-coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
-    age_diagnosis + pre_index_date_stroke + sex, data = CompleteData)
+coxph(formula = Surv(Survival_time, Composite_post_stroke) ~ 
+    age_diagnosis + Composite_pre_stroke + sex, data = CompleteData)
 
-  n= 23959, number of events= 846 
+  n= 14464, number of events= 1207 
+   (15596 observations deleted due to missingness)
 
-                           coef exp(coef) se(coef)      z Pr(>|z|)    
-age_diagnosis          0.013706  1.013801 0.005042  2.719  0.00656 ** 
-pre_index_date_stroke1 1.903718  6.710798 0.069880 27.243  < 2e-16 ***
-sex1                   0.174512  1.190665 0.072553  2.405  0.01616 *  
+                         coef exp(coef) se(coef)      z Pr(>|z|)    
+age_diagnosis         0.01036   1.01042  0.00435  2.382  0.01723 *  
+Composite_pre_stroke1 1.63788   5.14424  0.05853 27.982  < 2e-16 ***
+sex1                  0.19645   1.21708  0.06117  3.211  0.00132 ** 
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-                       exp(coef) exp(-coef) lower .95 upper .95
-age_diagnosis              1.014     0.9864     1.004     1.024
-pre_index_date_stroke1     6.711     0.1490     5.852     7.696
-sex1                       1.191     0.8399     1.033     1.373
+                      exp(coef) exp(-coef) lower .95 upper .95
+age_diagnosis             1.010     0.9897     1.002     1.019
+Composite_pre_stroke1     5.144     0.1944     4.587     5.770
+sex1                      1.217     0.8216     1.080     1.372
 
-Concordance= 0.726  (se = 0.011 )
-Likelihood ratio test= 640.9  on 3 df,   p=<2e-16
-Wald test            = 776.8  on 3 df,   p=<2e-16
-Score (logrank) test = 1043  on 3 df,   p=<2e-16
+Concordance= 0.686  (se = 0.01 )
+Likelihood ratio test= 703  on 3 df,   p=<2e-16
+Wald test            = 821.1  on 3 df,   p=<2e-16
+Score (logrank) test = 1022  on 3 df,   p=<2e-16
 
 ```
 
