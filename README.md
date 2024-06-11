@@ -242,6 +242,38 @@ Common codes	86
 
 ```
 
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ConfusionMatrix_Died.png)
+
+```
+         0      1
+  0 120214 101942
+  1  33604 189626
+```
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ConfusionMatrix_Stroke.png)
+
+```
+         0      1
+  0 359106  15892
+  1  29857  40531
+
+```
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ConfusionMatrix_Ethnicity.png)
+
+```
+               Black  Mixed  Other South Asian Unknown  White
+  Black         6026    248    256         108     562    423
+  Mixed          537     93    123         102     113    334
+  Other           48     34    528         155     210   1048
+  South Asian    113     99    491        6331     661    369
+  Unknown        766    189    584         604    9356 100901
+  White          340    368   1451         216   21640 289959
+```
+
+
+
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_death.png)
 
 ```
