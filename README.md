@@ -287,8 +287,8 @@ Common codes	86
 
 ```
            strata   median    lower    upper
-1 gender_decode=F 2.855578 2.833676 2.877481
-2 gender_decode=M 2.313484 2.291581 2.335387
+1 gender_decode=F 4.914442 4.892539 4.941821
+2 gender_decode=M 4.180698 4.153320 4.210815
 ```
 
 
@@ -305,10 +305,10 @@ Common codes	86
 
 ```
                 strata   median    lower    upper
-1 age_category=65 - 74 4.440794 4.377823 4.506502
-2 age_category=75 - 84 3.211499 3.186858 3.238877
-3 age_category=85 - 94 2.004107 1.987680 2.026010
-4     age_category=95+ 1.100616 1.062286 1.138946
+1 age_category=65 - 74 5.451061 5.390828 5.508556
+2 age_category=75 - 84 3.783710 3.764545 3.805613
+3 age_category=85 - 94 2.302533 2.286105 2.318960
+4     age_category=95+ 1.240246 1.204654 1.278576
 ```
 **Risperidone incident cohort**
 ```
