@@ -960,7 +960,7 @@ Score (logrank) test = 627.7  on 3 df,   p=<2e-16
 
 **Matching**
 
-****2004 - 2010***
+***2004 - 2010***
 ```
                                                         Stratified by risperidone
                                                           0             1              p      test SMD   
@@ -1020,7 +1020,7 @@ Score (logrank) test = 627.7  on 3 df,   p=<2e-16
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_2004_2010.png)
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KKM_2004_2010_under75.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_2004_2010_under75.png)
 ```
 Call:
 coxph(formula = Surv(Survival_time, stroke_composite_post_index_date) ~ 
@@ -1128,7 +1128,7 @@ Score (logrank) test = 2543  on 3 df,   p=<2e-16
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_2004_2014.png)
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KKM_2004_2014_under75.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_2004_2014_under75.png)
 ```
 Call:
 coxph(formula = Surv(Survival_time, stroke_composite_post_index_date) ~ 
