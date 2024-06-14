@@ -1234,7 +1234,7 @@ Score (logrank) test = 6118  on 3 df,   p=<2e-16
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_2004_2023.png)
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KKM_2004_2023_under75.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_2004_2023_under75.png)
 
 ```
 Call:
