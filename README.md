@@ -1018,8 +1018,9 @@ Score (logrank) test = 627.7  on 3 df,   p=<2e-16
 
 
 
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_2004_2010.png)
 
-
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KKM_2004_2010_under75.png)
 ```
 Call:
 coxph(formula = Surv(Survival_time, stroke_composite_post_index_date) ~ 
@@ -1047,12 +1048,14 @@ Score (logrank) test = 2543  on 3 df,   p=<2e-16
 ```
 
 
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_2004_2010.png)
 ```
          strata   median    lower    upper
 1 risperidone=0 3.939767 3.893224 3.989049
 2 risperidone=1 3.797399 3.704312 3.942505
 ```
 
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_2004_2010_under75.png)
 
 ```
          strata   median    lower    upper
@@ -1123,6 +1126,9 @@ Score (logrank) test = 2543  on 3 df,   p=<2e-16
 ```
 
 
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_2004_2014.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KKM_2004_2014_under75.png)
 ```
 Call:
 coxph(formula = Surv(Survival_time, stroke_composite_post_index_date) ~ 
@@ -1148,6 +1154,7 @@ Wald test            = 4706  on 3 df,   p=<2e-16
 Score (logrank) test = 6118  on 3 df,   p=<2e-16
 ```
 
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_2004_2014.png)
 
 ```
          strata   median    lower    upper
@@ -1156,8 +1163,29 @@ Score (logrank) test = 6118  on 3 df,   p=<2e-16
 ```
 
 
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_2004_2014_under75.png)
 ```
          strata   median    lower    upper
 1 risperidone=0 4.344969 4.257358 4.429843
 2 risperidone=1 4.536619 4.344969 4.763860
 ```
+
+
+
+
+***2004 - 2023***
+
+
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_2004_2023.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KKM_2004_2023_under75.png)
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_2004_2023.png)
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_2004_2023_under75.png)
