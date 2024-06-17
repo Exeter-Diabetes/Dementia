@@ -298,7 +298,6 @@ Common codes	86
 **Risperidone incident cohort**
 ```
                                                         
-                                                         Overall       
   n                                                        30060        
   diagnosedbeforeRegistration = 1 (%)                      17005 (56.6) 
   died = 1 (%)                                             17390 (57.9) 
@@ -316,6 +315,10 @@ Common codes	86
   comorbidity_stroke = 1 (%)                                4214 (14.0) 
   pre_index_date_stroke = 1 (%)                             3609 (12.0) 
   post_index_date_stroke = 1 (%)                            1061 ( 3.5) 
+  Stroke_prior_to_risperidone = 1 (%)                       4237 (14.1) 
+  Stroke__within_year_after_1st_risperidone_presc = 1 (%)   1038 ( 3.5) 
+  death_in_a_year_after_risperidone = 1 (%)                 8585 (28.6) 
+  sex = 1 (%)                                              11635 (38.7) 
   ethnicity (%)                                                         
      Black                                                   504 ( 1.7) 
      Mixed                                                   107 ( 0.4) 
@@ -379,12 +382,8 @@ Common codes	86
      1 - 2                                                   146 ( 4.0) 
      2 - 3                                                    49 ( 1.4) 
      3 - 4                                                     4 ( 0.1) 
-  Stroke_prior_to_risperidone = 1 (%)                       3404 (11.3) 
-  Stroke__within_year_after_1st_risperidone_presc = 1 (%)    407 ( 1.4) 
-  death_in_a_year_after_risperidone = 1 (%)                 7183 (23.9) 
-  sex = 1 (%)                                              11635 (38.7) 
   dementia_duration_prior_risperidone (mean (SD))           2.11 (2.35) 
-  Survival_time (mean (SD))                                 1.91 (1.94) 
+  Survival_time (mean (SD))                                 1.74 (1.90) 
   comorbidity_af = 1 (%)                                    5331 (17.7) 
   pre_index_date_af = 1 (%)                                 4765 (15.9) 
   post_index_date_af = 1 (%)                                1791 ( 6.0) 
@@ -781,8 +780,8 @@ Common codes	86
 
 ```
            strata   median    lower    upper
-1 gender_decode=F 2.436687 2.376454 2.505133
-2 gender_decode=M 1.889117 1.817933 1.943874
+1 gender_decode=F 4.654346 4.591376 4.717317
+2 gender_decode=M 4.101300 4.035592 4.175222
 ```
 
 
@@ -798,19 +797,9 @@ Common codes	86
 
 ```
                 strata   median    lower    upper
-1 age_category=65 - 74 3.529090 3.405886 3.668720
-2 age_category=75 - 84 2.390144 2.318960 2.453114
-3     age_category=85+ 1.420945 1.374401 1.478439
-
-```
-
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_ageCat_risperidone_Composite.png)
-
-```
-                strata   median    lower    upper
-1 age_category=65 - 74 5.483915 5.273101 5.612594
-2 age_category=75 - 84 4.334018 4.251882 4.427105
-3     age_category=85+ 2.863792 2.798084 2.956879
+1 age_category=65 - 74 6.308008 6.179329 6.461328
+2 age_category=75 - 84 4.692676 4.624230 4.761123
+3     age_category=85+ 3.063655 2.997947 3.126626
 
 ```
 
@@ -819,28 +808,29 @@ Common codes	86
 
 **COX model**
 ```
+Call:
 coxph(formula = Surv(Survival_time, Composite_post_stroke) ~ 
     age_diagnosis + Composite_pre_stroke + sex, data = CompleteData)
 
-  n= 14464, number of events= 1207 
-   (15596 observations deleted due to missingness)
+  n= 30060, number of events= 1695 
 
-                         coef exp(coef) se(coef)      z Pr(>|z|)    
-age_diagnosis         0.01036   1.01042  0.00435  2.382  0.01723 *  
-Composite_pre_stroke1 1.63788   5.14424  0.05853 27.982  < 2e-16 ***
-sex1                  0.19645   1.21708  0.06117  3.211  0.00132 ** 
+                          coef exp(coef) se(coef)      z Pr(>|z|)    
+age_diagnosis         0.006682  1.006704 0.003562  1.876   0.0607 .  
+Composite_pre_stroke1 1.825286  6.204567 0.049282 37.038   <2e-16 ***
+sex1                  0.119763  1.127229 0.051070  2.345   0.0190 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
                       exp(coef) exp(-coef) lower .95 upper .95
-age_diagnosis             1.010     0.9897     1.002     1.019
-Composite_pre_stroke1     5.144     0.1944     4.587     5.770
-sex1                      1.217     0.8216     1.080     1.372
+age_diagnosis             1.007     0.9933    0.9997     1.014
+Composite_pre_stroke1     6.205     0.1612    5.6333     6.834
+sex1                      1.127     0.8871    1.0199     1.246
 
-Concordance= 0.686  (se = 0.01 )
-Likelihood ratio test= 703  on 3 df,   p=<2e-16
-Wald test            = 821.1  on 3 df,   p=<2e-16
-Score (logrank) test = 1022  on 3 df,   p=<2e-16
+Concordance= 0.713  (se = 0.008 )
+Likelihood ratio test= 1204  on 3 df,   p=<2e-16
+Wald test            = 1419  on 3 df,   p=<2e-16
+Score (logrank) test = 1860  on 3 df,   p=<2e-16
+
 
 ```
 
