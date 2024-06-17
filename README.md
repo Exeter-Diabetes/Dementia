@@ -833,31 +833,31 @@ Score (logrank) test = 1860  on 3 df,   p=<2e-16
 
 **One year censoring**
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_by_stroke_history_censoring.png)
-<!--
+
 ```
 Call:
-coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
-    age_diagnosis + pre_index_date_stroke + sex, data = CensoringData_1year)
+coxph(formula = Surv(Survival_time, Composite_post_stroke) ~ 
+    age_diagnosis + Composite_pre_stroke + sex, data = CensoringData_1year)
 
-  n= 23940, number of events= 501 
-   (19 observations deleted due to missingness)
+  n= 30040, number of events= 1037 
+   (20 observations deleted due to missingness)
 
-                           coef exp(coef) se(coef)      z Pr(>|z|)    
-age_diagnosis          0.010646  1.010703 0.006488  1.641   0.1008    
-pre_index_date_stroke1 2.196622  8.994583 0.090048 24.394   <2e-16 ***
-sex1                   0.199762  1.221113 0.092650  2.156   0.0311 *  
+                          coef exp(coef) se(coef)      z Pr(>|z|)    
+age_diagnosis         0.003332  1.003337 0.004501  0.740   0.4592    
+Composite_pre_stroke1 2.076755  7.978539 0.062823 33.057   <2e-16 ***
+sex1                  0.124871  1.133003 0.064246  1.944   0.0519 .  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-                       exp(coef) exp(-coef) lower .95 upper .95
-age_diagnosis              1.011     0.9894    0.9979     1.024
-pre_index_date_stroke1     8.995     0.1112    7.5393    10.731
-sex1                       1.221     0.8189    1.0183     1.464
+                      exp(coef) exp(-coef) lower .95 upper .95
+age_diagnosis             1.003     0.9967    0.9945     1.012
+Composite_pre_stroke1     7.979     0.1253    7.0542     9.024
+sex1                      1.133     0.8826    0.9990     1.285
 
-Concordance= 0.742  (se = 0.013 )
-Likelihood ratio test= 546.2  on 3 df,   p=<2e-16
-Wald test            = 619.1  on 3 df,   p=<2e-16
-Score (logrank) test = 915.7  on 3 df,   p=<2e-16
+Concordance= 0.726  (se = 0.009 )
+Likelihood ratio test= 1019  on 3 df,   p=<2e-16
+Wald test            = 1126  on 3 df,   p=<2e-16
+Score (logrank) test = 1597  on 3 df,   p=<2e-16
 ```
 
 **Excluding stroke 3 months prior**
@@ -865,28 +865,27 @@ Score (logrank) test = 915.7  on 3 df,   p=<2e-16
 
 ```
 Call:
-coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
-    age_diagnosis + pre_index_date_stroke + sex, data = Excluding_3_monthsPriorStroke)
+coxph(formula = Surv(Survival_time, Composite_post_stroke) ~ 
+    age_diagnosis + Composite_pre_stroke + sex, data = Excluding_3_monthsPriorStroke)
 
-  n= 23836, number of events= 789 
+  n= 29905, number of events= 1615 
 
-                           coef exp(coef) se(coef)      z Pr(>|z|)    
-age_diagnosis          0.017014  1.017160 0.005212  3.264   0.0011 ** 
-pre_index_date_stroke1 1.769601  5.868512 0.073380 24.116   <2e-16 ***
-sex1                   0.176362  1.192870 0.075323  2.341   0.0192 *  
+                          coef exp(coef) se(coef)      z Pr(>|z|)    
+age_diagnosis         0.007775  1.007806 0.003646  2.133   0.0330 *  
+Composite_pre_stroke1 1.743310  5.716231 0.050815 34.307   <2e-16 ***
+sex1                  0.121428  1.129108 0.052390  2.318   0.0205 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-                       exp(coef) exp(-coef) lower .95 upper .95
-age_diagnosis              1.017     0.9831     1.007     1.028
-pre_index_date_stroke1     5.869     0.1704     5.082     6.776
-sex1                       1.193     0.8383     1.029     1.383
+                      exp(coef) exp(-coef) lower .95 upper .95
+age_diagnosis             1.008     0.9923     1.001     1.015
+Composite_pre_stroke1     5.716     0.1749     5.174     6.315
+sex1                      1.129     0.8857     1.019     1.251
 
-Concordance= 0.706  (se = 0.011 )
-Likelihood ratio test= 499.9  on 3 df,   p=<2e-16
-Wald test            = 615.9  on 3 df,   p=<2e-16
-Score (logrank) test = 794.9  on 3 df,   p=<2e-16
-
+Concordance= 0.701  (se = 0.008 )
+Likelihood ratio test= 1023  on 3 df,   p=<2e-16
+Wald test            = 1223  on 3 df,   p=<2e-16
+Score (logrank) test = 1566  on 3 df,   p=<2e-16
 
 ```
 
@@ -900,30 +899,30 @@ Score (logrank) test = 794.9  on 3 df,   p=<2e-16
 
 ```
 Call:
-coxph(formula = Surv(Survival_time, post_index_date_stroke) ~ 
-    age_diagnosis + pre_index_date_stroke + sex, data = Excluding_12_monthsPriorStroke)
+coxph(formula = Surv(Survival_time, Composite_post_stroke) ~ 
+    age_diagnosis + Composite_pre_stroke + sex, data = Excluding_12_monthsPriorStroke)
 
-  n= 23670, number of events= 744 
+  n= 29692, number of events= 1546 
 
-                           coef exp(coef) se(coef)      z Pr(>|z|)    
-age_diagnosis          0.019554  1.019747 0.005376  3.637 0.000276 ***
-pre_index_date_stroke1 1.663083  5.275553 0.076970 21.607  < 2e-16 ***
-sex1                   0.184390  1.202484 0.077672  2.374 0.017598 *  
+                          coef exp(coef) se(coef)      z Pr(>|z|)    
+age_diagnosis         0.008703  1.008741 0.003734  2.331   0.0198 *  
+Composite_pre_stroke1 1.679211  5.361324 0.052382 32.057   <2e-16 ***
+sex1                  0.136316  1.146044 0.053538  2.546   0.0109 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-                       exp(coef) exp(-coef) lower .95 upper .95
-age_diagnosis              1.020     0.9806     1.009     1.031
-pre_index_date_stroke1     5.276     0.1896     4.537     6.135
-sex1                       1.202     0.8316     1.033     1.400
+                      exp(coef) exp(-coef) lower .95 upper .95
+age_diagnosis             1.009     0.9913     1.001     1.016
+Composite_pre_stroke1     5.361     0.1865     4.838     5.941
+sex1                      1.146     0.8726     1.032     1.273
 
-Concordance= 0.689  (se = 0.012 )
-Likelihood ratio test= 401.8  on 3 df,   p=<2e-16
-Wald test            = 501  on 3 df,   p=<2e-16
-Score (logrank) test = 627.7  on 3 df,   p=<2e-16
+Concordance= 0.689  (se = 0.008 )
+Likelihood ratio test= 886  on 3 df,   p=<2e-16
+Wald test            = 1073  on 3 df,   p=<2e-16
+Score (logrank) test = 1352  on 3 df,   p=<2e-16
 
 ```
--->
+
 
 
 
