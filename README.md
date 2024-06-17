@@ -1032,7 +1032,7 @@ Score (logrank) test = 6685  on 3 df,   p=<2e-16
 
 ```
 
-
+<!--
 ***2004 - 2010***
 ```
                                                         Stratified by risperidone
@@ -1348,3 +1348,4 @@ Score (logrank) test = 11868  on 3 df,   p=<2e-16
 1 risperidone=0 3.887748 3.841205 3.934292
 2 risperidone=1 5.117043 4.919918 5.311431
 ```
+-->
