@@ -929,6 +929,112 @@ Score (logrank) test = 1352  on 3 df,   p=<2e-16
 
 **Matching**
 
+
+***Updated Algorithm***
+```
+                                                        Stratified by risperidone
+                                                          0              1              p      test SMD   
+  n                                                       146548         29731                            
+  sex = 1 (%)                                              56288 (38.4)  11465 ( 38.6)   0.625       0.003
+  risperidone = 1 (%)                                          0 ( 0.0)  29731 (100.0)  <0.001         NaN
+  age_diagnosis (mean (SD))                                80.42 (6.98)  80.45 (7.12)    0.525       0.004
+  Stroke__within_year_after_1st_risperidone_presc = 1 (%)   6774 ( 4.6)   1186 (  4.0)  <0.001       0.031
+  stroke_composite_pre_index_date = 1 (%)                  20747 (14.2)   4200 ( 14.1)   0.898       0.001
+  pre_index_date_angina = 1 (%)                            16990 (11.6)   3508 ( 11.8)   0.318       0.006
+  pre_index_date_heartfailure = 1 (%)                      11120 ( 7.6)   2267 (  7.6)   0.835       0.001
+  BMI (%)                                                                                0.909       0.008
+     Missing                                               31207 (21.3)   6394 ( 21.5)                    
+     Normal                                                55224 (37.7)  11235 ( 37.8)                    
+     Obesity                                               14936 (10.2)   3008 ( 10.1)                    
+     Overweight                                            36036 (24.6)   7270 ( 24.5)                    
+     Severely Obese                                          999 ( 0.7)    193 (  0.6)                    
+     Underweight                                            8146 ( 5.6)   1631 (  5.5)                    
+  Prescribed_other_antipsychotic_Prior = 1 (%)             37255 (25.4)   7447 ( 25.0)   0.179       0.009
+  period_before_prescription (mean (SD))                    2.65 (2.11)   2.57 (2.39)   <0.001       0.034
+  comorbidity_myocardialinfarction = 1 (%)                 13121 ( 9.0)   2581 (  8.7)   0.136       0.010
+  pre_index_date_stroke = 1 (%)                            17987 (12.3)   3585 ( 12.1)   0.305       0.007
+  pre_index_date_tia = 1 (%)                               13602 ( 9.3)   2771 (  9.3)   0.843       0.001
+  pre_index_date_falls = 1 (%)                             59942 (40.9)  12027 ( 40.5)   0.152       0.009
+  pre_index_date_lowerlimbfracture = 1 (%)                 23423 (16.0)   4716 ( 15.9)   0.610       0.003
+  pre_index_date_ihd = 1 (%)                               24113 (16.5)   4945 ( 16.6)   0.455       0.005
+  pre_index_date_pad = 1 (%)                               11301 ( 7.7)   2292 (  7.7)   0.999      <0.001
+  pre_index_date_af = 1 (%)                                23115 (15.8)   4726 ( 15.9)   0.602       0.003
+  pre_index_date_revasc = 1 (%)                             7524 ( 5.1)   1589 (  5.3)   0.139       0.009
+  pre_index_date_qof_diabetes = 1 (%)                      24997 (17.1)   5131 ( 17.3)   0.406       0.005
+  pre_index_date_anxiety_disorders = 1 (%)                 29133 (19.9)   5889 ( 19.8)   0.783       0.002
+  pre_index_date_fh_diabetes = 1 (%)                       29123 (19.9)   5907 ( 19.9)   0.992      <0.001
+  pre_index_date_fh_premature_cvd = 1 (%)                  11231 ( 7.7)   2272 (  7.6)   0.907       0.001
+  pre_index_date_pulmonary_embolism = 1 (%)                 3804 ( 2.6)    746 (  2.5)   0.402       0.005
+  pre_index_date_deep_vein_thrombosis = 1 (%)               7443 ( 5.1)   1520 (  5.1)   0.821       0.002
+  pre_index_date_hearing_loss = 1 (%)                      38853 (26.5)   7861 ( 26.4)   0.804       0.002
+  VTE = 1 (%)                                              13431 ( 9.2)   2718 (  9.1)   0.909       0.001
+  gp_5cat_ethnicity (%)                                                                  0.594       0.012
+     Black                                                  2271 ( 1.5)    442 (  1.5)                    
+     Mixed                                                   507 ( 0.3)     90 (  0.3)                    
+     Other                                                   668 ( 0.5)    147 (  0.5)                    
+     South Asian                                            2207 ( 1.5)    447 (  1.5)                    
+     Unknown                                               35813 (24.4)   7195 ( 24.2)                    
+     White                                                105082 (71.7)  21410 ( 72.0)                    
+  comorbidity_hypertension (%)                                                          <0.001       0.047
+     Elevated                                              25150 (17.2)   5078 ( 17.1)                    
+     Normal                                                37563 (25.6)   7505 ( 25.2)                    
+     Stage 1                                               56228 (38.4)  11369 ( 38.2)                    
+     Stage 2                                               23356 (15.9)   4680 ( 15.7)                    
+     Stage 3 (severe)                                        217 ( 0.1)     40 (  0.1)                    
+     Unknown                                                4034 ( 2.8)   1059 (  3.6)                    
+  Survival_time (mean (SD))                                 1.77 (1.78)   1.76 (1.90)    0.458       0.005
+```
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_NewAlgorithm.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_NewAlgorithm_under75.png)
+
+```
+Call:
+coxph(formula = Surv(Survival_time, stroke_composite_post_index_date) ~ 
+    risperidone, data = table)
+
+  n= 176279, number of events= 12646 
+
+                coef exp(coef) se(coef)      z Pr(>|z|)    
+risperidone -0.26654   0.76603  0.02624 -10.16   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+            exp(coef) exp(-coef) lower .95 upper .95
+risperidone     0.766      1.305    0.7276    0.8065
+
+Concordance= 0.512  (se = 0.002 )
+Likelihood ratio test= 110.1  on 1 df,   p=<2e-16
+Wald test            = 103.2  on 1 df,   p=<2e-16
+Score (logrank) test = 103.8  on 1 df,   p=<2e-16
+
+```
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_NewAlgorithm.png)
+
+```
+         strata   median    lower    upper
+1 risperidone=0 4.777550 4.752909 4.799452
+2 risperidone=1 3.946612 3.893224 4.013689
+```
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_NewAlgorithm_under75.png)
+
+```
+         strata   median    lower    upper
+1 risperidone=0 5.382615 5.311431 5.472964
+2 risperidone=1 4.353183 4.147844 4.544832
+```
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_NewAlgorithm_ControlGroup.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_NewAlgorithm_TreatmentGroup.png)
+
 ***Matched on Age and Sex***
 
 ```
