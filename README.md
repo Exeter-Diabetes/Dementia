@@ -986,9 +986,9 @@ Score (logrank) test = 1352  on 3 df,   p=<2e-16
 
 ```
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_NewAlgorithm_censored_censored.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_NewAlgorithm_censored.png)
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_NewAlgorithm_under75_censored_censored.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_NewAlgorithm_under75_censored.png)
 ```
 Call:
 coxph(formula = Surv(Survival_time, stroke_composite_post_index_date) ~ 
