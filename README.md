@@ -1123,7 +1123,14 @@ Score (logrank) test = 1352  on 3 df,   p=<2e-16
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_NewAlgorithm_censored.png)
 
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_censored.png)
+
+
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_NewAlgorithm_censored_under75.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_censored_under75.png)
+
 ```
 Call:
 coxph(formula = Surv(Survival_time, stroke_composite_post_index_date) ~ 
@@ -1225,21 +1232,20 @@ Call:
 coxph(formula = Surv(Survival_time, stroke_composite_post_index_date) ~ 
     risperidone, data = table)
 
-  n= 162929, number of events= 11448 
-   (13089 observations deleted due to missingness)
+  n= 176018, number of events= 11551 
 
-               coef exp(coef) se(coef)    z Pr(>|z|)    
-risperidone 0.32273   1.38089  0.02667 12.1   <2e-16 ***
+               coef exp(coef) se(coef)     z Pr(>|z|)   
+risperidone 0.08420   1.08785  0.02641 3.188  0.00143 **
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
             exp(coef) exp(-coef) lower .95 upper .95
-risperidone     1.381     0.7242     1.311     1.455
+risperidone     1.088     0.9192     1.033     1.146
 
-Concordance= 0.522  (se = 0.002 )
-Likelihood ratio test= 135.7  on 1 df,   p=<2e-16
-Wald test            = 146.5  on 1 df,   p=<2e-16
-Score (logrank) test = 147.7  on 1 df,   p=<2e-16
+Concordance= 0.51  (se = 0.002 )
+Likelihood ratio test= 9.96  on 1 df,   p=0.002
+Wald test            = 10.16  on 1 df,   p=0.001
+Score (logrank) test = 10.17  on 1 df,   p=0.001
 
 ```
 
