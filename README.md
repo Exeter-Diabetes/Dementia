@@ -1129,21 +1129,20 @@ Call:
 coxph(formula = Surv(Survival_time, stroke_composite_post_index_date) ~ 
     risperidone, data = table)
 
-  n= 155814, number of events= 10602 
-   (12803 observations deleted due to missingness)
+  n= 168617, number of events= 10684 
 
-               coef exp(coef) se(coef)    z Pr(>|z|)    
-risperidone 0.34567   1.41294  0.02743 12.6   <2e-16 ***
+               coef exp(coef) se(coef)     z Pr(>|z|)    
+risperidone 0.11408   1.12084  0.02716 4.201 2.66e-05 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
             exp(coef) exp(-coef) lower .95 upper .95
-risperidone     1.413     0.7077     1.339     1.491
+risperidone     1.121     0.8922     1.063     1.182
 
-Concordance= 0.524  (se = 0.002 )
-Likelihood ratio test= 146.5  on 1 df,   p=<2e-16
-Wald test            = 158.9  on 1 df,   p=<2e-16
-Score (logrank) test = 160.4  on 1 df,   p=<2e-16
+Concordance= 0.512  (se = 0.002 )
+Likelihood ratio test= 17.18  on 1 df,   p=3e-05
+Wald test            = 17.65  on 1 df,   p=3e-05
+Score (logrank) test = 17.66  on 1 df,   p=3e-05
 
 ```
 
