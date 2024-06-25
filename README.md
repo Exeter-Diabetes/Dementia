@@ -1262,6 +1262,92 @@ Score (logrank) test = 147.7  on 1 df,   p=<2e-16
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_NewAlgorithm_TreatmentGroup_censored_noExact.png)
 
 
+
+***Death***
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DeathCOX.png)
+
+```
+Call: survfit(formula = Surv(stime, fail) ~ risperidone, data = data)
+
+                  model       hr     ci.l     ci.u
+risperidone1 unadjusted 1.487239 1.444572 1.531166
+```
+***Primary care stroke***
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/PC_stroke.png)
+
+```
+
+                  model       hr     ci.l     ci.u
+risperidone1 unadjusted 1.218886 1.113119 1.334704
+```
+
+***HES stroke***
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HES_stroke.png)
+
+```
+                  model       hr     ci.l     ci.u
+risperidone1 unadjusted 1.196758 1.090976 1.312797
+```
+
+
+***Composite stroke***
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Composite_stroke.png)
+
+```
+                  model       hr     ci.l     ci.u
+risperidone1 unadjusted 1.239755 1.158657 1.326529
+```
+
+***Stroke composite - include only those without a history of stroke***
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Composite_stroke_noHistory.png)
+
+
+```
+                  model       hr     ci.l     ci.u
+risperidone1 unadjusted 1.337269 1.212788 1.474527
+```
+
+***Stroke composite - include only WITH a history of stroke***
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Composite_stroke_OnlyHistory.png)
+
+
+```
+                  model       hr     ci.l     ci.u
+risperidone1 unadjusted 1.19713 1.087565 1.317734
+```
+
+***Stroke composite - include only over 75s***
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Composite_stroke_onlyOver75.png)
+
+```
+                  model       hr     ci.l     ci.u
+risperidone1 unadjusted 1.215812 1.131883 1.305965
+```
+
+
+***Stroke composite - include only under 75s***
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Composite_stroke_onlyUnder75.png)
+
+```
+                  model       hr     ci.l     ci.u
+risperidone1 unadjusted 1.504179 1.217258 1.85873
+```
+
+***No other drugs***
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Composite_stroke_noOtherDrugs.png)
+
+```
+                  model       hr     ci.l     ci.u
+risperidone1 unadjusted 1.327142 1.194215 1.474865
+```
+
+***CVD composite:***
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CvdCOX.png)
+
+```
+                  model       hr     ci.l     ci.u
+risperidone1 unadjusted 1.063408 1.016238 1.112767
+```
 <!--
 ***Matched on Age and Sex***
 
