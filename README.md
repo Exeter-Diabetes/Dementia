@@ -1066,7 +1066,7 @@ Score (logrank) test = 1352  on 3 df,   p=<2e-16
 
 **Matching**
 
-***Updated Algorithm - exact match on: Sex, stroke history and risperidone age category (65-74, 75-84, 85+)***
+***Updated Algorithm - exact match on: Sex, stroke history, cvd and risperidone age category (65-74, 75-84, 85+)***
 
 ```
                                                          Stratified by risperidone
@@ -1124,12 +1124,10 @@ Score (logrank) test = 1352  on 3 df,   p=<2e-16
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_NewAlgorithm_censored.png)
 
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_censored.png)
 
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_NewAlgorithm_censored_under75.png)
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_censored_under75.png)
 
 ```
 Call:
