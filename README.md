@@ -289,10 +289,10 @@ Common codes	86
 
 ```
                 strata   median    lower    upper
-1 age_category=65 - 74 7.701574 7.613963 7.789185
-2 age_category=75 - 84 5.333333 5.305955 5.363450
-3 age_category=85 - 94 3.260780 3.238877 3.285421
-4     age_category=95+ 1.670089 1.618070 1.722108
+1 age_category=65 - 74 5.448323 5.388090 5.505818
+2 age_category=75 - 84 3.780972 3.759069 3.802875
+3 age_category=85 - 94 2.299795 2.283368 2.316222
+4     age_category=95+ 1.237509 1.199179 1.275838
 ```
 
 **Risperidone incident cohort**
