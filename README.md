@@ -1219,6 +1219,19 @@ risperidone1 unadjusted 1.063408 1.016238 1.112767
 
 ***Analysis***
 
+**Unadjusted formula**
+```
+m.fail.marg <- coxph(Surv(stime, fail) ~ risperidone,
+                       data = data,x=T,y=T, robust =T, weights = weights, cluster = subclass)
+```
+
+**Adjusted formula**
+
+```
+m.fail.cond <- coxph(Surv(stime, fail) ~ risperidone + sex + age_risperidone + ethnicity + pre_index_date_stroke + pre_index_date_qof_diabetes + pre_index_date_haem_cancer + pre_index_date_ihd + pre_index_date_af + pre_index_date_myocardialinfarction + pre_index_date_heartfailure + pre_index_date_hypertension,
+                        data = data,x=T,y=T, robust =T, weights = weights, cluster = subclass)
+```
+
 ```
                                                      scenario              outcome      model        hr      ci.l      ci.u
 stroke.pc_unadjusted_all                                  all            stroke.pc unadjusted 1.1724632 1.0715371 1.2828953
