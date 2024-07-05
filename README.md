@@ -1275,6 +1275,94 @@ risperidone1 unadjusted 1.063408 1.016238 1.112767
 
 ***Analysis***
 
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_all_unadjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_all_adjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_nostroke_unadjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_nostroke_adjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_withstroke_unadjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_withstroke_adjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_over75_unadjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_over75_adjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_under75_unadjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_under75_adjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_nodrugs_unadjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_nodrugs_adjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_cvd_unadjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_cvd_adjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_nocvd_unadjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_nocvd_adjusted.png)
+
+
+
+***All***
+```
+                                    outcome       scenario      model       hr     ci.l     ci.u event_count person_time incidence_rate_per_1000_PY
+stroke.c_unadjusted_all            stroke.c            all unadjusted 1.205586 1.125213 1.291700        5157   132540.21                   38.90895
+stroke.c_adjusted_all              stroke.c            all   adjusted 1.225406 1.141156 1.315876        5157   132540.21                   38.90895
+stroke.c_unadjusted_no_stroke      stroke.c      no_stroke unadjusted 1.259704 1.135917 1.396981        2389   116617.75                   20.48573
+stroke.c_adjusted_no_stroke        stroke.c      no_stroke   adjusted 1.268280 1.142567 1.407824        2389   116617.75                   20.48573
+stroke.c_unadjusted_with_stroke    stroke.c    with_stroke unadjusted 1.175299 1.066566 1.295118        2768    15922.46                  173.84247
+stroke.c_adjusted_with_stroke      stroke.c    with_stroke   adjusted 1.184634 1.074603 1.305932        2768    15922.46                  173.84247
+stroke.c_unadjusted_over_75        stroke.c        over_75 unadjusted 1.176743 1.093200 1.266670        4662   116749.80                   39.93154
+stroke.c_adjusted_over_75          stroke.c        over_75   adjusted 1.192559 1.105431 1.286555        4662   116749.80                   39.93154
+stroke.c_unadjusted_under_75       stroke.c       under_75 unadjusted 1.469818 1.204730 1.793236         495    15790.41                   31.34814
+stroke.c_adjusted_under_75         stroke.c       under_75   adjusted 1.529360 1.240043 1.886178         495    15790.41                   31.34814
+stroke.c_unadjusted_no_other_drugs stroke.c no_other_drugs unadjusted 1.289255 1.161259 1.431360        1945    51307.43                   37.90874
+stroke.c_adjusted_no_other_drugs   stroke.c no_other_drugs   adjusted 1.299386 1.165517 1.448630        1945    51307.43                   37.90874
+stroke.c_unadjusted_CVD            stroke.c           CVD unadjusted  1.156533 1.064481 1.256545        3657    51170.85                   71.46647
+stroke.c_adjusted_CVD              stroke.c           CVD   adjusted  1.165438 1.069801 1.269625        3657    51170.85                   71.46647
+stroke.c_unadjusted_No_CVD         stroke.c        No_CVD unadjusted  1.366732 1.203925 1.551556        1500    81369.36                   18.43446
+stroke.c_adjusted_No_CVD           stroke.c        No_CVD   adjusted  1.377897 1.212284 1.566135        1500    81369.36                   18.43446
+
+```
+
+
+
+****Treatment group****
+```
+                                    outcome       scenario      model       hr     ci.l     ci.u event_count person_time incidence_rate_per_1000_PY
+stroke.c_unadjusted_all            stroke.c            all unadjusted 1.205586 1.125213 1.291700         955       28439                   33.58065
+stroke.c_adjusted_all              stroke.c            all   adjusted 1.225406 1.141156 1.315876         955       28439                   33.58065
+stroke.c_unadjusted_no_stroke      stroke.c      no_stroke unadjusted 1.259704 1.135917 1.396981         444       24567                   18.07302
+stroke.c_adjusted_no_stroke        stroke.c      no_stroke   adjusted 1.268280 1.142567 1.407824         444       24567                   18.07302
+stroke.c_unadjusted_with_stroke    stroke.c    with_stroke unadjusted 1.175299 1.066566 1.295118         511        3872                  131.97314
+stroke.c_adjusted_with_stroke      stroke.c    with_stroke   adjusted 1.184634 1.074603 1.305932         511        3872                  131.97314
+stroke.c_unadjusted_over_75        stroke.c        over_75 unadjusted 1.176743 1.093200 1.266670         839       25165                   33.33996
+stroke.c_adjusted_over_75          stroke.c        over_75   adjusted 1.192559 1.105431 1.286555         839       25165                   33.33996
+stroke.c_unadjusted_under_75       stroke.c       under_75 unadjusted 1.469818 1.204730 1.793236         116        3274                   35.43067
+stroke.c_adjusted_under_75         stroke.c       under_75   adjusted 1.529360 1.240043 1.886178         116        3274                   35.43067
+stroke.c_unadjusted_no_other_drugs stroke.c no_other_drugs unadjusted 1.289255 1.161259 1.431360         446       13545                   32.92728
+stroke.c_adjusted_no_other_drugs   stroke.c no_other_drugs   adjusted 1.299386 1.165517 1.448630         446       13545                   32.92728
+stroke.c_unadjusted_CVD            stroke.c            CVD unadjusted 1.156533 1.064481 1.256545         650       11465                   56.69429
+stroke.c_adjusted_CVD              stroke.c            CVD   adjusted 1.165438 1.069801 1.269625         650       11465                   56.69429
+stroke.c_unadjusted_No_CVD         stroke.c         No_CVD unadjusted 1.366732 1.203925 1.551556         305       16974                   17.96866
+stroke.c_adjusted_No_CVD           stroke.c         No_CVD   adjusted 1.377897 1.212284 1.566135         305       16974                   17.96866
+```
+
+
+****Control group****
+
+```
+                                    outcome       scenario      model       hr     ci.l     ci.u event_count person_time incidence_rate_per_1000_PY
+stroke.c_unadjusted_all            stroke.c            all unadjusted 1.205586 1.125213 1.291700        4202      137000                   30.67153
+stroke.c_adjusted_all              stroke.c            all   adjusted 1.225406 1.141156 1.315876        4202      137000                   30.67153
+stroke.c_unadjusted_no_stroke      stroke.c      no_stroke unadjusted 1.259704 1.135917 1.396981        1945      119062                   16.33603
+stroke.c_adjusted_no_stroke        stroke.c      no_stroke   adjusted 1.268280 1.142567 1.407824        1945      119062                   16.33603
+stroke.c_unadjusted_with_stroke    stroke.c    with_stroke unadjusted 1.175299 1.066566 1.295118        2257       17938                  125.82228
+stroke.c_adjusted_with_stroke      stroke.c    with_stroke   adjusted 1.184634 1.074603 1.305932        2257       17938                  125.82228
+stroke.c_unadjusted_over_75        stroke.c        over_75 unadjusted 1.176743 1.093200 1.266670        3823      121743                   31.40222
+stroke.c_adjusted_over_75          stroke.c        over_75   adjusted 1.192559 1.105431 1.286555        3823      121743                   31.40222
+stroke.c_unadjusted_under_75       stroke.c       under_75 unadjusted 1.469818 1.204730 1.793236         379       15257                   24.84106
+stroke.c_adjusted_under_75         stroke.c       under_75   adjusted 1.529360 1.240043 1.886178         379       15257                   24.84106
+stroke.c_unadjusted_no_other_drugs stroke.c no_other_drugs unadjusted 1.289255 1.161259 1.431360        1499       51296                   29.22255
+stroke.c_adjusted_no_other_drugs   stroke.c no_other_drugs   adjusted 1.299386 1.165517 1.448630        1499       51296                   29.22255
+stroke.c_unadjusted_CVD            stroke.c            CVD unadjusted 1.156533 1.064481 1.256545        3007       54929                   54.74340
+stroke.c_adjusted_CVD              stroke.c            CVD   adjusted 1.165438 1.069801 1.269625        3007       54929                   54.74340
+stroke.c_unadjusted_No_CVD         stroke.c         No_CVD unadjusted 1.366732 1.203925 1.551556        1195       82071                   14.56056
+stroke.c_adjusted_No_CVD           stroke.c         No_CVD   adjusted 1.377897 1.212284 1.566135        1195       82071                   14.56056
+```
+
+
 **Unadjusted formula**
 ```
 m.fail.marg <- coxph(Surv(stime, fail) ~ risperidone,
