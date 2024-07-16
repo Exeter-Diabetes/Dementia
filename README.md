@@ -1524,23 +1524,59 @@ stroke.c_adjusted_12weeksFollowUp                   stroke.c                 12w
 ****Control group****
 
 ```
-                                    outcome       scenario      model       hr     ci.l     ci.u event_count person_time incidence_rate_per_1000_PY
-stroke.c_unadjusted_all            stroke.c            all unadjusted 1.205586 1.125213 1.291700        4202      137000                   30.67153
-stroke.c_adjusted_all              stroke.c            all   adjusted 1.225406 1.141156 1.315876        4202      137000                   30.67153
-stroke.c_unadjusted_no_stroke      stroke.c      no_stroke unadjusted 1.259704 1.135917 1.396981        1945      119062                   16.33603
-stroke.c_adjusted_no_stroke        stroke.c      no_stroke   adjusted 1.268280 1.142567 1.407824        1945      119062                   16.33603
-stroke.c_unadjusted_with_stroke    stroke.c    with_stroke unadjusted 1.175299 1.066566 1.295118        2257       17938                  125.82228
-stroke.c_adjusted_with_stroke      stroke.c    with_stroke   adjusted 1.184634 1.074603 1.305932        2257       17938                  125.82228
-stroke.c_unadjusted_over_75        stroke.c        over_75 unadjusted 1.176743 1.093200 1.266670        3823      121743                   31.40222
-stroke.c_adjusted_over_75          stroke.c        over_75   adjusted 1.192559 1.105431 1.286555        3823      121743                   31.40222
-stroke.c_unadjusted_under_75       stroke.c       under_75 unadjusted 1.469818 1.204730 1.793236         379       15257                   24.84106
-stroke.c_adjusted_under_75         stroke.c       under_75   adjusted 1.529360 1.240043 1.886178         379       15257                   24.84106
-stroke.c_unadjusted_no_other_drugs stroke.c no_other_drugs unadjusted 1.289255 1.161259 1.431360        1499       51296                   29.22255
-stroke.c_adjusted_no_other_drugs   stroke.c no_other_drugs   adjusted 1.299386 1.165517 1.448630        1499       51296                   29.22255
-stroke.c_unadjusted_CVD            stroke.c            CVD unadjusted 1.156533 1.064481 1.256545        3007       54929                   54.74340
-stroke.c_adjusted_CVD              stroke.c            CVD   adjusted 1.165438 1.069801 1.269625        3007       54929                   54.74340
-stroke.c_unadjusted_No_CVD         stroke.c         No_CVD unadjusted 1.366732 1.203925 1.551556        1195       82071                   14.56056
-stroke.c_adjusted_No_CVD           stroke.c         No_CVD   adjusted 1.377897 1.212284 1.566135        1195       82071                   14.56056
+                                                     outcome                        subgroup      model   hr ci.l  ci.u event_count person_time incidence_rate_per_1000_PY number_of_patients
+stroke.c_unadjusted_all                             stroke.c                             all unadjusted 1.24 1.15  1.32        3917   100878.19                      38.83             122911
+stroke.c_adjusted_all                               stroke.c                             all   adjusted 1.25 1.16  1.34        3917   100878.19                      38.83             122911
+stroke.c_unadjusted_no_stroke                       stroke.c                       no_stroke unadjusted 1.34 1.21  1.48        1896    89959.38                      21.08             108267
+stroke.c_adjusted_no_stroke                         stroke.c                       no_stroke   adjusted 1.35 1.22  1.50        1896    89959.38                      21.08             108267
+stroke.c_unadjusted_with_stroke                     stroke.c                     with_stroke unadjusted 1.16 1.05  1.28        2021    10918.81                     185.09              14644
+stroke.c_adjusted_with_stroke                       stroke.c                     with_stroke   adjusted 1.16 1.05  1.28        2021    10918.81                     185.09              14644
+stroke.c_unadjusted_over_75                         stroke.c                         over_75 unadjusted 1.24 1.15  1.33        3640    90527.82                      40.21             111155
+stroke.c_adjusted_over_75                           stroke.c                         over_75   adjusted 1.25 1.16  1.35        3640    90527.82                      40.21             111155
+stroke.c_unadjusted_under_75                        stroke.c                        under_75 unadjusted 1.21 0.95  1.54         277    10350.37                      26.76              11756
+stroke.c_adjusted_under_75                          stroke.c                        under_75   adjusted 1.22 0.95  1.58         277    10350.37                      26.76              11756
+stroke.c_unadjusted_no_other_drugs                  stroke.c                  no_other_drugs unadjusted 1.28 1.15  1.43        1336    36358.87                      36.74              44210
+stroke.c_adjusted_no_other_drugs                    stroke.c                  no_other_drugs   adjusted 1.30 1.16  1.45        1336    36358.87                      36.74              44210
+stroke.c_unadjusted_CVD                             stroke.c                             CVD unadjusted 1.17 1.08  1.28        2743    37869.69                      72.43              47926
+stroke.c_adjusted_CVD                               stroke.c                             CVD   adjusted 1.17 1.07  1.28        2743    37869.69                      72.43              47926
+stroke.c_unadjusted_No_CVD                          stroke.c                          No_CVD unadjusted 1.42 1.25  1.61        1174    63008.50                      18.63              74985
+stroke.c_adjusted_No_CVD                            stroke.c                          No_CVD   adjusted 1.43 1.26  1.62        1174    63008.50                      18.63              74985
+stroke.c_unadjusted_diabetes                        stroke.c                        diabetes unadjusted 1.24 0.99  1.54         189     3775.14                      50.06               4648
+stroke.c_adjusted_diabetes                          stroke.c                        diabetes   adjusted 1.37 1.08  1.72         189     3775.14                      50.06               4648
+stroke.c_unadjusted_Obese_overweight                stroke.c                Obese_overweight unadjusted 1.19 1.03  1.36         634    16786.42                      37.77              20045
+stroke.c_adjusted_Obese_overweight                  stroke.c                Obese_overweight   adjusted 1.21 1.05  1.40         634    16786.42                      37.77              20045
+stroke.c_unadjusted_atrialFibrillation              stroke.c              atrialFibrillation unadjusted 1.04 0.85  1.27         260     3150.46                      82.53               4140
+stroke.c_adjusted_atrialFibrillation                stroke.c              atrialFibrillation   adjusted 1.12 0.90  1.39         260     3150.46                      82.53               4140
+stroke.c_unadjusted_risperidone_Age_65_74           stroke.c           risperidone_Age_65_74 unadjusted 1.21 0.95  1.54         277    10350.37                      26.76              11756
+stroke.c_adjusted_risperidone_Age_65_74             stroke.c           risperidone_Age_65_74   adjusted 1.22 0.95  1.58         277    10350.37                      26.76              11756
+stroke.c_unadjusted_risperidone_Age_75_84           stroke.c           risperidone_Age_75_84 unadjusted 1.25 1.13  1.39        1753    47422.76                      36.97              56235
+stroke.c_adjusted_risperidone_Age_75_84             stroke.c           risperidone_Age_75_84   adjusted 1.26 1.13  1.40        1753    47422.76                      36.97              56235
+stroke.c_unadjusted_risperidone_Age_85+             stroke.c             risperidone_Age_85+ unadjusted 1.23 1.11  1.36        1887    43105.06                      43.78              54920
+stroke.c_adjusted_risperidone_Age_85+               stroke.c             risperidone_Age_85+   adjusted 1.24 1.12  1.38        1887    43105.06                      43.78              54920
+stroke.c_unadjusted_totalcholesterol_LESSTHAN160    stroke.c    totalcholesterol_LESSTHAN160 unadjusted 1.11 0.93  1.33         338     5482.12                      61.65               7264
+stroke.c_adjusted_totalcholesterol_LESSTHAN160      stroke.c    totalcholesterol_LESSTHAN160   adjusted 1.24 1.02  1.50         338     5482.12                      61.65               7264
+stroke.c_unadjusted_totalcholesterol_GREATERTHAN280 stroke.c totalcholesterol_GREATERTHAN280 unadjusted 1.54 0.40  5.86           2       86.85                      23.03                 99
+stroke.c_adjusted_totalcholesterol_GREATERTHAN280   stroke.c totalcholesterol_GREATERTHAN280   adjusted 4.57 1.40 14.94           2       86.85                      23.03                 99
+stroke.c_unadjusted_totalcholesterol_EQUAL199       stroke.c       totalcholesterol_EQUAL199 unadjusted 1.25 0.99  1.57         185     4872.24                      37.97               6080
+stroke.c_adjusted_totalcholesterol_EQUAL199         stroke.c       totalcholesterol_EQUAL199   adjusted 1.22 0.97  1.55         185     4872.24                      37.97               6080
+stroke.c_unadjusted_totalcholesterol_200_239        stroke.c        totalcholesterol_200_239 unadjusted 1.32 0.94  1.85          75     3273.22                      22.91               4023
+stroke.c_adjusted_totalcholesterol_200_239          stroke.c        totalcholesterol_200_239   adjusted 1.29 0.91  1.84          75     3273.22                      22.91               4023
+stroke.c_unadjusted_totalcholesterol_240_279        stroke.c        totalcholesterol_240_279 unadjusted 1.63 0.66  4.02           9      590.24                      15.25                718
+stroke.c_adjusted_totalcholesterol_240_279          stroke.c        totalcholesterol_240_279   adjusted 1.71 0.61  4.77           9      590.24                      15.25                718
+stroke.c_unadjusted_hypertension_stage1AndHigher    stroke.c    hypertension_stage1AndHigher unadjusted 1.25 1.13  1.39        1312    34683.26                      37.83              41500
+stroke.c_adjusted_hypertension_stage1AndHigher      stroke.c    hypertension_stage1AndHigher   adjusted 1.25 1.12  1.38        1312    34683.26                      37.83              41500
+stroke.c_unadjusted_hypertension_stage2AndHigher    stroke.c    hypertension_stage2AndHigher unadjusted 1.32 1.01  1.73         121     3102.68                      39.00               3740
+stroke.c_adjusted_hypertension_stage2AndHigher      stroke.c    hypertension_stage2AndHigher   adjusted 1.35 1.02  1.78         121     3102.68                      39.00               3740
+stroke.c_unadjusted_carehome_preIndexDate           stroke.c           carehome_preIndexDate unadjusted 1.22 0.90  1.66         104     2097.61                      49.58               3026
+stroke.c_adjusted_carehome_preIndexDate             stroke.c           carehome_preIndexDate   adjusted 1.34 0.98  1.85         104     2097.61                      49.58               3026
+stroke.c_unadjusted_HES&ONS_stroke                  stroke.c                  HES&ONS_stroke unadjusted 1.24 1.15  1.32        3917   100878.19                      38.83             122911
+stroke.c_adjusted_HES&ONS_stroke                    stroke.c                  HES&ONS_stroke   adjusted 1.25 1.16  1.34        3917   100878.19                      38.83             122911
+stroke.c_unadjusted_ischaemicstroke                 stroke.c                 ischaemicstroke unadjusted 1.27 1.15  1.40        1580     7428.72                     212.69               9990
+stroke.c_adjusted_ischaemicstroke                   stroke.c                 ischaemicstroke   adjusted 1.17 1.06  1.30        1580     7428.72                     212.69               9990
+stroke.c_unadjusted_haemorrhagicstroke              stroke.c              haemorrhagicstroke unadjusted 1.62 0.92  2.86          25      169.20                     147.76                231
+stroke.c_adjusted_haemorrhagicstroke                stroke.c              haemorrhagicstroke   adjusted 1.71 0.92  3.19          25      169.20                     147.76                231
+stroke.c_unadjusted_12weeksFollowUp                 stroke.c                 12weeksFollowUp unadjusted 1.65 1.47  1.85        1307          NA                         NA             122911
+stroke.c_adjusted_12weeksFollowUp                   stroke.c                 12weeksFollowUp   adjusted 1.70 1.52  1.91        1307          NA                         NA             122911
 ```
 
 
