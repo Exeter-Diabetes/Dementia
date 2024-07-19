@@ -437,7 +437,7 @@ Common codes	86
 
 **Risperidone incident cohort**
 ```
-                                                        
+                                                             Overall       
   n                                                        30060        
   diagnosedbeforeRegistration = 1 (%)                      17005 (56.6) 
   died = 1 (%)                                             17390 (57.9) 
@@ -445,6 +445,12 @@ Common codes	86
   ONS_died = 1 (%)                                         20695 (68.8) 
   age_diagnosis (mean (SD))                                80.44 (7.13) 
   age_risperidone (mean (SD))                              82.99 (6.87) 
+  deprivation (%)                                                       
+     1                                                      6726 (22.4) 
+     2                                                      7388 (24.6) 
+     3                                                      6070 (20.2) 
+     4                                                      5181 (17.3) 
+     5                                                      4657 (15.5) 
   gender_decode = M (%)                                    11635 (38.7) 
   GP_stroke = 1 (%)                                         4214 (14.0) 
   HES_stroke = 1 (%)                                        3204 (10.7) 
@@ -456,7 +462,7 @@ Common codes	86
   pre_index_date_stroke = 1 (%)                             3609 (12.0) 
   post_index_date_stroke = 1 (%)                            1061 ( 3.5) 
   Stroke_prior_to_risperidone = 1 (%)                       4237 (14.1) 
-  Stroke__within_year_after_1st_risperidone_presc = 1 (%)   1038 ( 3.5) 
+  Stroke__within_year_after_1st_risperidone_presc = 1 (%)   1094 ( 3.6) 
   death_in_a_year_after_risperidone = 1 (%)                 8585 (28.6) 
   sex = 1 (%)                                              11635 (38.7) 
   ethnicity (%)                                                         
@@ -557,7 +563,6 @@ Common codes	86
   comorbidity_revasc = 1 (%)                                1608 ( 5.3) 
   pre_index_date_revasc = 1 (%)                             1599 ( 5.3) 
   post_index_date_revasc = 1 (%)                              24 ( 0.1) 
-  stroke_cat = ischaemic (%)                                3612 (85.7) 
   comorbidity_tia = 1 (%)                                   3250 (10.8) 
   pre_index_date_tia = 1 (%)                                2791 ( 9.3) 
   post_index_date_tia = 1 (%)                                701 ( 2.3) 
@@ -912,7 +917,8 @@ Common codes	86
      Other Asian                                             106 ( 0.4) 
      Pakistani                                               102 ( 0.3) 
      Unknown                                                2169 ( 7.2) 
-     White                                                 26718 (88.9) 
+     White                                                 26718 (88.9)                                                     
+
 ```
 
 
