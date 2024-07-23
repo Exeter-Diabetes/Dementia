@@ -1391,80 +1391,163 @@ risperidone1 unadjusted 1.063408 1.016238 1.112767
 
 ***Analysis***
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_all_unadjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_all_adjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_nostroke_unadjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_nostroke_adjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_withstroke_unadjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_withstroke_adjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_over75_unadjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_over75_adjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_under75_unadjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_under75_adjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_nodrugs_unadjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_nodrugs_adjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_cvd_unadjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_cvd_adjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_nocvd_unadjusted.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Stroke_nocvd_adjusted.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_haemorrhagicstroke.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_haemorrhagicstroke.png)
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_ischaemicstroke.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_ischaemicstroke.png)
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_carehome_preIndexDate.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_carehome_preIndexDate.png)
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_hypertension_stage2AndHigher.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_hypertension_stage2AndHigher.png)
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_hypertension_stage1AndHigher.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_hypertension_stage1AndHigher.png)
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_risperidone_Age_85+.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_risperidone_Age_85+.png)
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_risperidone_Age_75_84.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_risperidone_Age_75_84.png)
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_risperidone_Age_65_74.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_risperidone_Age_65_74.png)
+
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_No_atrialFibrillation.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_No_atrialFibrillation.png)
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_atrialFibrillation.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_atrialFibrillation.png)
+
+
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_BMI_Normal_underweight.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_BMI_Normal_underweight.png)
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_BMI_Obese_overweight.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_BMI_Obese_overweight.png)
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_No_diabetes.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_No_diabetes.png)
+
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_diabetes.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_diabetes.png)
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_No_CVD.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_No_CVD.png)
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_no_other_drugs.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_no_other_drugs.png)
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_CVD.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_CVD.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_under_75.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_under_75.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_over_75.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_over_75.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_with_stroke.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_with_stroke.png)
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_no_stroke.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_no_stroke.png)
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_adjusted_all.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/Stroke_unadjusted_all.png)
 
 
 
 ***All***
 ```
-                                                     outcome                        sugbroup      model   hr ci.l  ci.u event_count person_time incidence_rate_per_1000_PY number_of_patients
-stroke.c_unadjusted_all                             stroke.c                             all unadjusted 1.24 1.15  1.32        4890   119903.62                      40.78             149704
-stroke.c_adjusted_all                               stroke.c                             all   adjusted 1.25 1.16  1.34        4890   119903.62                      40.78             149704
-stroke.c_unadjusted_no_stroke                       stroke.c                       no_stroke unadjusted 1.34 1.21  1.48        2387   106782.25                      22.35             131614
-stroke.c_adjusted_no_stroke                         stroke.c                       no_stroke   adjusted 1.35 1.22  1.50        2387   106782.25                      22.35             131614
-stroke.c_unadjusted_with_stroke                     stroke.c                     with_stroke unadjusted 1.16 1.05  1.28        2503    13121.37                     190.76              18090
-stroke.c_adjusted_with_stroke                       stroke.c                     with_stroke   adjusted 1.16 1.05  1.28        2503    13121.37                     190.76              18090
-stroke.c_unadjusted_over_75                         stroke.c                         over_75 unadjusted 1.24 1.15  1.33        4523   107341.25                      42.14             135063
-stroke.c_adjusted_over_75                           stroke.c                         over_75   adjusted 1.25 1.16  1.35        4523   107341.25                      42.14             135063
-stroke.c_unadjusted_under_75                        stroke.c                        under_75 unadjusted 1.21 0.95  1.54         367    12562.38                      29.21              14641
-stroke.c_adjusted_under_75                          stroke.c                        under_75   adjusted 1.22 0.95  1.58         367    12562.38                      29.21              14641
-stroke.c_unadjusted_no_other_drugs                  stroke.c                  no_other_drugs unadjusted 1.28 1.15  1.43        1770    44876.78                      39.44              56731
-stroke.c_adjusted_no_other_drugs                    stroke.c                  no_other_drugs   adjusted 1.30 1.16  1.45        1770    44876.78                      39.44              56731
-stroke.c_unadjusted_CVD                             stroke.c                             CVD unadjusted 1.17 1.08  1.28        3387    45030.13                      75.22              58594
-stroke.c_adjusted_CVD                               stroke.c                             CVD   adjusted 1.17 1.07  1.28        3387    45030.13                      75.22              58594
-stroke.c_unadjusted_No_CVD                          stroke.c                          No_CVD unadjusted 1.42 1.25  1.61        1503    74873.49                      20.07              91110
-stroke.c_adjusted_No_CVD                            stroke.c                          No_CVD   adjusted 1.43 1.26  1.62        1503    74873.49                      20.07              91110
-stroke.c_unadjusted_diabetes                        stroke.c                        diabetes unadjusted 1.24 0.99  1.54         320     5776.59                      55.40               7583
-stroke.c_adjusted_diabetes                          stroke.c                        diabetes   adjusted 1.37 1.08  1.72         320     5776.59                      55.40               7583
-stroke.c_unadjusted_Obese_overweight                stroke.c                Obese_overweight unadjusted 1.19 1.03  1.36         927    22907.78                      40.47              28684
-stroke.c_adjusted_Obese_overweight                  stroke.c                Obese_overweight   adjusted 1.21 1.05  1.40         927    22907.78                      40.47              28684
-stroke.c_unadjusted_atrialFibrillation              stroke.c              atrialFibrillation unadjusted 1.04 0.85  1.27         413     4794.25                      86.14               6740
-stroke.c_adjusted_atrialFibrillation                stroke.c              atrialFibrillation   adjusted 1.12 0.90  1.39         413     4794.25                      86.14               6740
-stroke.c_unadjusted_risperidone_Age_65_74           stroke.c           risperidone_Age_65_74 unadjusted 1.21 0.95  1.54         367    12562.38                      29.21              14641
-stroke.c_adjusted_risperidone_Age_65_74             stroke.c           risperidone_Age_65_74   adjusted 1.22 0.95  1.58         367    12562.38                      29.21              14641
-stroke.c_unadjusted_risperidone_Age_75_84           stroke.c           risperidone_Age_75_84 unadjusted 1.25 1.13  1.39        2188    56312.26                      38.85              68371
-stroke.c_adjusted_risperidone_Age_75_84             stroke.c           risperidone_Age_75_84   adjusted 1.26 1.13  1.40        2188    56312.26                      38.85              68371
-stroke.c_unadjusted_risperidone_Age_85+             stroke.c             risperidone_Age_85+ unadjusted 1.23 1.11  1.36        2335    51028.99                      45.76              66692
-stroke.c_adjusted_risperidone_Age_85+               stroke.c             risperidone_Age_85+   adjusted 1.24 1.12  1.38        2335    51028.99                      45.76              66692
-stroke.c_unadjusted_totalcholesterol_LESSTHAN160    stroke.c    totalcholesterol_LESSTHAN160 unadjusted 1.11 0.93  1.33         521     7941.36                      65.61              11272
-stroke.c_adjusted_totalcholesterol_LESSTHAN160      stroke.c    totalcholesterol_LESSTHAN160   adjusted 1.24 1.02  1.50         521     7941.36                      65.61              11272
-stroke.c_unadjusted_totalcholesterol_GREATERTHAN280 stroke.c totalcholesterol_GREATERTHAN280 unadjusted 1.54 0.40  5.86           5      156.66                      31.92                191
-stroke.c_adjusted_totalcholesterol_GREATERTHAN280   stroke.c totalcholesterol_GREATERTHAN280   adjusted 4.57 1.40 14.94           5      156.66                      31.92                191
-stroke.c_unadjusted_totalcholesterol_EQUAL199       stroke.c       totalcholesterol_EQUAL199 unadjusted 1.25 0.99  1.57         315     7391.12                      42.62               9891
-stroke.c_adjusted_totalcholesterol_EQUAL199         stroke.c       totalcholesterol_EQUAL199   adjusted 1.22 0.97  1.55         315     7391.12                      42.62               9891
-stroke.c_unadjusted_totalcholesterol_200_239        stroke.c        totalcholesterol_200_239 unadjusted 1.32 0.94  1.85         133     5156.15                      25.79               6675
-stroke.c_adjusted_totalcholesterol_200_239          stroke.c        totalcholesterol_200_239   adjusted 1.29 0.91  1.84         133     5156.15                      25.79               6675
-stroke.c_unadjusted_totalcholesterol_240_279        stroke.c        totalcholesterol_240_279 unadjusted 1.63 0.66  4.02          19     1002.84                      18.95               1285
-stroke.c_adjusted_totalcholesterol_240_279          stroke.c        totalcholesterol_240_279   adjusted 1.71 0.61  4.77          19     1002.84                      18.95               1285
-stroke.c_unadjusted_hypertension_stage1AndHigher    stroke.c    hypertension_stage1AndHigher unadjusted 1.25 1.13  1.39        1829    44968.91                      40.67              55863
-stroke.c_adjusted_hypertension_stage1AndHigher      stroke.c    hypertension_stage1AndHigher   adjusted 1.25 1.12  1.38        1829    44968.91                      40.67              55863
-stroke.c_unadjusted_hypertension_stage2AndHigher    stroke.c    hypertension_stage2AndHigher unadjusted 1.32 1.01  1.73         216     4942.10                      43.71               6312
-stroke.c_adjusted_hypertension_stage2AndHigher      stroke.c    hypertension_stage2AndHigher   adjusted 1.35 1.02  1.78         216     4942.10                      43.71               6312
-stroke.c_unadjusted_carehome_preIndexDate           stroke.c           carehome_preIndexDate unadjusted 1.22 0.90  1.66         176     3267.70                      53.86               4938
-stroke.c_adjusted_carehome_preIndexDate             stroke.c           carehome_preIndexDate   adjusted 1.34 0.98  1.85         176     3267.70                      53.86               4938
-stroke.c_unadjusted_HES&ONS_stroke                  stroke.c                  HES&ONS_stroke unadjusted 1.24 1.15  1.32        4890   119903.62                      40.78             149704
-stroke.c_adjusted_HES&ONS_stroke                    stroke.c                  HES&ONS_stroke   adjusted 1.25 1.16  1.34        4890   119903.62                      40.78             149704
-stroke.c_unadjusted_ischaemicstroke                 stroke.c                 ischaemicstroke unadjusted 1.27 1.15  1.40        2088     9252.35                     225.67              12840
-stroke.c_adjusted_ischaemicstroke                   stroke.c                 ischaemicstroke   adjusted 1.17 1.06  1.30        2088     9252.35                     225.67              12840
-stroke.c_unadjusted_haemorrhagicstroke              stroke.c              haemorrhagicstroke unadjusted 1.62 0.92  2.86          53      301.21                     175.96                421
-stroke.c_adjusted_haemorrhagicstroke                stroke.c              haemorrhagicstroke   adjusted 1.71 0.92  3.19          53      301.21                     175.96                421
-stroke.c_unadjusted_12weeksFollowUp                 stroke.c                 12weeksFollowUp unadjusted 1.65 1.47  1.85        1721          NA                         NA             149704
-stroke.c_adjusted_12weeksFollowUp                   stroke.c                 12weeksFollowUp   adjusted 1.70 1.52  1.91        1721          NA                         NA             149704
+                                              outcome                     sugbroup      model   hr ci.l ci.u event_count person_time incidence_rate_per_1000_PY number_of_patients
+Stroke_unadjusted_all                           Stroke                          all unadjusted 1.26 1.18 1.35        5640   132385.30                      42.60             165495
+Stroke_adjusted_all                             Stroke                          all   adjusted 1.27 1.19 1.36        5640   132385.30                      42.60             165495
+Stroke_unadjusted_no_stroke                     Stroke                    no_stroke unadjusted 1.38 1.25 1.51        2632   116491.13                      22.59             143629
+Stroke_adjusted_no_stroke                       Stroke                    no_stroke   adjusted 1.38 1.25 1.52        2632   116491.13                      22.59             143629
+Stroke_unadjusted_with_stroke                   Stroke                  with_stroke unadjusted 1.18 1.08 1.29        3008    15894.18                     189.25              21866
+Stroke_adjusted_with_stroke                     Stroke                  with_stroke   adjusted 1.18 1.08 1.30        3008    15894.18                     189.25              21866
+Stroke_unadjusted_over_75                       Stroke                      over_75 unadjusted 1.25 1.16 1.33        5107   116516.09                      43.83             146892
+Stroke_adjusted_over_75                         Stroke                      over_75   adjusted 1.25 1.17 1.34        5107   116516.09                      43.83             146892
+Stroke_unadjusted_under_75                      Stroke                     under_75 unadjusted 1.41 1.16 1.71         533    15869.21                      33.59              18603
+Stroke_adjusted_under_75                        Stroke                     under_75   adjusted 1.45 1.17 1.78         533    15869.21                      33.59              18603
+Stroke_unadjusted_no_other_drugs                Stroke               no_other_drugs unadjusted 1.35 1.22 1.48        2132    51292.10                      41.57              64895
+Stroke_adjusted_no_other_drugs                  Stroke               no_other_drugs   adjusted 1.36 1.22 1.50        2132    51292.10                      41.57              64895
+Stroke_unadjusted_CVD                           Stroke                          CVD unadjusted 1.20 1.11 1.30        3970    51137.26                      77.63              66419
+Stroke_adjusted_CVD                             Stroke                          CVD   adjusted 1.20 1.11 1.30        3970    51137.26                      77.63              66419
+Stroke_unadjusted_No_CVD                        Stroke                       No_CVD unadjusted 1.45 1.28 1.63        1670    81248.04                      20.55              99076
+Stroke_adjusted_No_CVD                          Stroke                       No_CVD   adjusted 1.45 1.28 1.63        1670    81248.04                      20.55              99076
+Stroke_unadjusted_diabetes                      Stroke                     diabetes unadjusted 1.13 0.92 1.39         347     6188.54                      56.07               8155
+Stroke_adjusted_diabetes                        Stroke                     diabetes   adjusted 1.22 0.98 1.51         347     6188.54                      56.07               8155
+Stroke_unadjusted_No_diabetes                   Stroke                  No_diabetes unadjusted 1.29 1.20 1.40        3708    93660.60                      39.59             117130
+Stroke_adjusted_No_diabetes                     Stroke                  No_diabetes   adjusted 1.26 1.16 1.36        3708    93660.60                      39.59             117130
+Stroke_unadjusted_BMI_Obese_overweight          Stroke         BMI_Obese_overweight unadjusted 1.21 1.07 1.37        1108    24920.51                      44.46              31205
+Stroke_adjusted_BMI_Obese_overweight            Stroke         BMI_Obese_overweight   adjusted 1.24 1.09 1.41        1108    24920.51                      44.46              31205
+Stroke_unadjusted_BMI_Normal_underweight        Stroke       BMI_Normal_underweight unadjusted 1.24 1.11 1.39        1300    31700.69                      41.01              41164
+Stroke_adjusted_BMI_Normal_underweight          Stroke       BMI_Normal_underweight   adjusted 1.23 1.10 1.39        1300    31700.69                      41.01              41164
+Stroke_unadjusted_atrialFibrillation            Stroke           atrialFibrillation unadjusted 0.94 0.77 1.14         460     5361.73                      85.79               7537
+Stroke_adjusted_atrialFibrillation              Stroke           atrialFibrillation   adjusted 1.06 0.86 1.29         460     5361.73                      85.79               7537
+Stroke_unadjusted_No_atrialFibrillation         Stroke        No_atrialFibrillation unadjusted 1.39 1.29 1.51        3518    98310.02                      35.78             121560
+Stroke_adjusted_No_atrialFibrillation           Stroke        No_atrialFibrillation   adjusted 1.32 1.22 1.43        3518    98310.02                      35.78             121560
+Stroke_unadjusted_risperidone_Age_65_74         Stroke        risperidone_Age_65_74 unadjusted 1.41 1.16 1.71         533    15869.21                      33.59              18603
+Stroke_adjusted_risperidone_Age_65_74           Stroke        risperidone_Age_65_74   adjusted 1.45 1.17 1.78         533    15869.21                      33.59              18603
+Stroke_unadjusted_risperidone_Age_75_84         Stroke        risperidone_Age_75_84 unadjusted 1.28 1.16 1.41        2490    61425.38                      40.54              74660
+Stroke_adjusted_risperidone_Age_75_84           Stroke        risperidone_Age_75_84   adjusted 1.28 1.15 1.41        2490    61425.38                      40.54              74660
+Stroke_unadjusted_risperidone_Age_85+           Stroke          risperidone_Age_85+ unadjusted 1.22 1.11 1.34        2617    55090.71                      47.50              72232
+Stroke_adjusted_risperidone_Age_85+             Stroke          risperidone_Age_85+   adjusted 1.23 1.11 1.36        2617    55090.71                      47.50              72232
+Stroke_unadjusted_hypertension_stage1AndHigher  Stroke hypertension_stage1AndHigher unadjusted 1.30 1.18 1.43        2045    47960.31                      42.64              59584
+Stroke_adjusted_hypertension_stage1AndHigher    Stroke hypertension_stage1AndHigher   adjusted 1.29 1.17 1.42        2045    47960.31                      42.64              59584
+Stroke_unadjusted_hypertension_stage2AndHigher  Stroke hypertension_stage2AndHigher unadjusted 1.19 0.92 1.53         234     5114.51                      45.75               6547
+Stroke_adjusted_hypertension_stage2AndHigher    Stroke hypertension_stage2AndHigher   adjusted 1.16 0.89 1.50         234     5114.51                      45.75               6547
+Stroke_unadjusted_carehome_preIndexDate         Stroke        carehome_preIndexDate unadjusted 1.35 1.03 1.77         212     3920.77                      54.07               5991
+Stroke_adjusted_carehome_preIndexDate           Stroke        carehome_preIndexDate   adjusted 1.47 1.11 1.96         212     3920.77                      54.07               5991
+Stroke_unadjusted_HES&ONS_stroke                Stroke               HES&ONS_stroke unadjusted 1.26 1.18 1.35        5640   132385.30                      42.60             165495
+Stroke_adjusted_HES&ONS_stroke                  Stroke               HES&ONS_stroke   adjusted 1.27 1.19 1.36        5640   132385.30                      42.60             165495
+Stroke_unadjusted_stroke_recency_1_year         Stroke        stroke_recency_1_year unadjusted 0.97 0.75 1.26         269      535.27                     502.55                901
+Stroke_adjusted_stroke_recency_1_year           Stroke        stroke_recency_1_year   adjusted 0.96 0.74 1.25         269      535.27                     502.55                901
+Stroke_unadjusted_stroke_recency_1_5_years      Stroke     stroke_recency_1_5_years unadjusted 1.26 1.06 1.50         569     2979.15                     190.99               4112
+Stroke_adjusted_stroke_recency_1_5_years        Stroke     stroke_recency_1_5_years   adjusted 1.25 1.05 1.49         569     2979.15                     190.99               4112
+Stroke_unadjusted_stroke_recency_over_5_years   Stroke  stroke_recency_over_5_years unadjusted 1.10 0.89 1.36         441     3698.88                     119.23               5003
+Stroke_adjusted_stroke_recency_over_5_years     Stroke  stroke_recency_over_5_years   adjusted 1.10 0.89 1.36         441     3698.88                     119.23               5003
+Stroke_unadjusted_ischaemicstroke               Stroke              ischaemicstroke unadjusted 1.32 1.21 1.45        2519    11025.37                     228.47              15265
+Stroke_adjusted_ischaemicstroke                 Stroke              ischaemicstroke   adjusted 1.20 1.10 1.32        2519    11025.37                     228.47              15265
+Stroke_unadjusted_haemorrhagicstroke            Stroke           haemorrhagicstroke unadjusted 1.32 0.83 2.09          76      368.09                     206.47                528
+Stroke_adjusted_haemorrhagicstroke              Stroke           haemorrhagicstroke   adjusted 1.61 0.97 2.66          76      368.09                     206.47                528
 ```
 
 
