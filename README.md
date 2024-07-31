@@ -1495,7 +1495,6 @@ risperidone1 unadjusted 1.063408 1.016238 1.112767
 
 ***All***
 ```
- Outer pipes Cell padding
 
 | outcome    | subgroup                     | event_count | person_time | incidence_rate | number_of_patients | numbers_needed_to_harm | Adjusted_HR        | Unadjusted_HR      |
 | ---------- | ---------------------------- | ----------- | ----------- | -------------- | ------------------ | ---------------------- | ------------------ | ------------------ |
