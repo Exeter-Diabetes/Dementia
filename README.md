@@ -1413,6 +1413,35 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/CompetingRisk_VTE.png)
 
 
+***Summary***
+```
+| outcome    | subgroup                   | NNH    | ci.l_NNH | ci.u_NNH | Adjusted_HR       |
+| ---------- | -------------------------- | ------ | -------- | -------- | ----------------- |
+| Stroke     | CVD                        | 66     | 45.55    | 119.78   | 1.23 (1.13, 1.33) |
+| Stroke     | No_CVD                     | 97.17  | 73.48    | 143.42   | 1.51 (1.34, 1.71) |
+| Stroke     | PreCovidPeriod_all         | 87.08  | 66.75    | 125.21   | 1.28 (1.19, 1.37) |
+| Stroke     | PreCovidPeriod_no_cvd      | 98.21  | 73.34    | 148.58   | 1.48 (1.31, 1.68) |
+| Stroke     | PreCovidPeriod_no_stroke   | 116.71 | 86.95    | 177.44   | 1.42 (1.28, 1.57) |
+| Stroke     | PreCovidPeriod_with_cvd    | 72.61  | 47.94    | 149.58   | 1.20 (1.10, 1.31) |
+| Stroke     | PreCovidPeriod_with_stroke | 42.58  | 24.69    | 154.61   | 1.17 (1.06, 1.29) |
+| Stroke     | all                        | 82.65  | 64.67    | 114.48   | 1.31 (1.22, 1.40) |
+| Stroke     | no_stroke                  | 113.2  | 85.76    | 166.46   | 1.45 (1.31, 1.60) |
+| Stroke     | with_stroke                | 38.47  | 23.67    | 102.58   | 1.19 (1.08, 1.31) |
+| stroke.hes | CVD                        | 167.08 | 91.39    | 972.83   | 1.18 (1.05, 1.33) |
+| stroke.hes | No_CVD                     | 257.44 | 157.22   | 710.1    | 1.33 (1.13, 1.57) |
+| stroke.hes | PreCovidPeriod_all         | 231.49 | 144.55   | 580.81   | 1.21 (1.09, 1.33) |
+| stroke.hes | PreCovidPeriod_no_cvd      | 274.55 | 160.08   | 963.37   | 1.29 (1.09, 1.52) |
+| stroke.hes | PreCovidPeriod_no_stroke   | 371.4  | 203.14   | 2163.21  | 1.24 (1.08, 1.41) |
+| stroke.hes | PreCovidPeriod_with_cvd    | 179.43 | 92.28    | 3223.44  | 1.16 (1.03, 1.31) |
+| stroke.hes | PreCovidPeriod_with_stroke | 84.44  | 40.6     | Inf      | 1.17 (1.01, 1.34) |
+| stroke.hes | all                        | 215.55 | 140.87   | 458.7    | 1.23 (1.12, 1.36) |
+| stroke.hes | no_stroke                  | 336.75 | 196.67   | 1170.29  | 1.27 (1.12, 1.45) |
+| stroke.hes | with_stroke                | 81.05  | 41.07    | 3033.75  | 1.18 (1.02, 1.36) |
+
+```
+
+
+
 ***All***
 ```
     outcome    subgroup                     event_count person_time incidence_rate number_of_patients   NNH ci.l_NNH ci.u_NNH Adjusted_HR        Unadjusted_HR     
