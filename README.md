@@ -1412,6 +1412,46 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/CompetingRisk_Stroke.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/CompetingRisk_VTE.png)
 
+***COX model - trained on controls***
+```
+Call:
+concordance.formula(object = Surv(treatment_group$Stroke_censtime_yrs, 
+    treatment_group$Stroke_censvar) ~ treatment_group$predicted_risk)
+
+n= 28464 
+Concordance= 0.2858 se= 0.009253
+concordant discordant     tied.x     tied.y    tied.xy 
+   6052286   15139802      25484       1100         21 
+```
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ROC_cox_controls_1years.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CM_cox_controls_1years.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ROC_cox_controls_6months.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CM_cox_controls_6months.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ROC_cox_controls_3months.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CM_cox_controls_3months.png)
+
+
+***Causal Forest***
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ROC_causalForest.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CM_causalForest.png)
+
+***Random Forest - python***
+```
+Accuracy: 0.578
+Precision: 0.585
+Recall: 0.515
+F1 Score: 0.548
+ROC AUC Score: 0.578
+```
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/RF_CM_train.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/RF_CM_test.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/RF_FeatureImportance.png)
+
 
 ***Summary***
 ```
