@@ -1420,15 +1420,13 @@ concordance.formula(object = Surv(treatment_group$Stroke_censtime_yrs,
 
 n= 28464 
 Concordance= 0.2858 se= 0.009253
-concordant discordant     tied.x     tied.y    tied.xy 
+concordant discordant     tied.x     tied.y    tied .xy 
    6052286   15139802      25484       1100         21 
 ```
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ROC_cox_controls_1years.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CM_cox_controls_1years.png)
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ROC_cox_controls_6months.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CM_cox_controls_6months.png)
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ROC_cox_controls_3months.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CM_cox_controls_3months.png)
