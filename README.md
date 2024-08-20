@@ -1412,31 +1412,56 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/CompetingRisk_Stroke.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/CompetingRisk_VTE.png)
 
+
+
+
+
+
+
 ***COX model - trained on controls***
-```
-Call:
-concordance.formula(object = Surv(treatment_group$Stroke_censtime_yrs, 
-    treatment_group$Stroke_censvar) ~ treatment_group$predicted_risk)
-
-n= 28464 
-Concordance= 0.2858 se= 0.009253
-concordant discordant     tied.x     tied.y    tied .xy 
-   6052286   15139802      25484       1100         21 
-```
-
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ROC_cox_controls_1years.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CM_cox_controls_1years.png)
 
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ROC_cox_controls_3months.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CM_cox_controls_3months.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ROC_cox_controls.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CM_cox_controls.png)
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/RandomForest_cox_controls.png)
 
 
 ***Causal Forest***
 
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/ROC_causalForest.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CM_causalForest.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalViolin_overall.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalViolin_withnoCVD.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalViolin_withCVD.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalViolin_noStroke.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalViolin_withStroke.png)
+
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_overall.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_withnoCVD.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_withCVD.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_noStroke.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_withStroke.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ***Random Forest - python***
 ```
