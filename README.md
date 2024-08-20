@@ -1443,7 +1443,7 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_overall.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_withnoCVD.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_noCVD.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_withCVD.png)
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_noStroke.png)
