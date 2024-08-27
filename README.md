@@ -1429,6 +1429,8 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/RandomForest_cox_controls.png)
 
 ***Causal Survival Forest***
+
+
 ****No CVD****
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_noCVD.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_noCVD.png)
@@ -1436,6 +1438,7 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMedian_noCVD.png)
 
 ****With CVD****
+
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_withCVD.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_withCVD.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMean_withCVD.png)
@@ -1443,12 +1446,14 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 
 
 ****No Stroke****
+
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_noStroke.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_noStroke.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMean_noStroke.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMedian_noStroke.png)
 
 ****With Stroke****
+
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_withStroke.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_withStroke.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMean_withStroke.png)
@@ -1457,23 +1462,25 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 ***Causal Forest***
 
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalViolin_overall.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalViolin_withnoCVD.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalViolin_withCVD.png)
+****No CVD****
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_noCVD_CF.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_noCVD_CF.png)
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalViolin_noStroke.png)
+****With CVD****
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalViolin_withStroke.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_withCVD_CF.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_withCVD_CF.png)
 
 
+****No Stroke****
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_overall.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_noCVD.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_withCVD.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_noStroke_CF.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_noStroke_CF.png)
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_noStroke.png)
+****With Stroke****
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CausalFeatureImportance_withStroke.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_withStroke_CF.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_withStroke_CF.png)
 
 
 
