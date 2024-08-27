@@ -1474,36 +1474,39 @@ ROC AUC Score: 0.578
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/RF_CM_train.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/RF_CM_test.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/RF_FeatureImportance.png)
-
+   outcome    subgroup                     event_count person_time incidence_rate number_of_patients   NNH ci.l_NNH ci.u_NNH Adjusted_HR        Unadjusted_HR     
+ 102 stroke.hes with_stroke                         1379      16443.          83.9               21866  81.0    45.3     386.  1.18 (1.02, 1.36)  1.18 (1.03, 1.36) 
 
 ***Summary***
 ```
 | outcome    | subgroup                   | NNH    | ci.l_NNH | ci.u_NNH | Adjusted_HR       |
 | ---------- | -------------------------- | ------ | -------- | -------- | ----------------- |
-| Stroke     | CVD                        | 66     | 45.55    | 119.78   | 1.23 (1.13, 1.33) |
-| Stroke     | No_CVD                     | 97.17  | 73.48    | 143.42   | 1.51 (1.34, 1.71) |
-| Stroke     | PreCovidPeriod_all         | 87.08  | 66.75    | 125.21   | 1.28 (1.19, 1.37) |
-| Stroke     | PreCovidPeriod_no_cvd      | 98.21  | 73.34    | 148.58   | 1.48 (1.31, 1.68) |
-| Stroke     | PreCovidPeriod_no_stroke   | 116.71 | 86.95    | 177.44   | 1.42 (1.28, 1.57) |
-| Stroke     | PreCovidPeriod_with_cvd    | 72.61  | 47.94    | 149.58   | 1.20 (1.10, 1.31) |
-| Stroke     | PreCovidPeriod_with_stroke | 42.58  | 24.69    | 154.61   | 1.17 (1.06, 1.29) |
-| Stroke     | all                        | 82.65  | 64.67    | 114.48   | 1.31 (1.22, 1.40) |
-| Stroke     | no_stroke                  | 113.2  | 85.76    | 166.46   | 1.45 (1.31, 1.60) |
-| Stroke     | with_stroke                | 38.47  | 23.67    | 102.58   | 1.19 (1.08, 1.31) |
-| stroke.hes | CVD                        | 167.08 | 91.39    | 972.83   | 1.18 (1.05, 1.33) |
-| stroke.hes | No_CVD                     | 257.44 | 157.22   | 710.1    | 1.33 (1.13, 1.57) |
-| stroke.hes | PreCovidPeriod_all         | 231.49 | 144.55   | 580.81   | 1.21 (1.09, 1.33) |
-| stroke.hes | PreCovidPeriod_no_cvd      | 274.55 | 160.08   | 963.37   | 1.29 (1.09, 1.52) |
-| stroke.hes | PreCovidPeriod_no_stroke   | 371.4  | 203.14   | 2163.21  | 1.24 (1.08, 1.41) |
-| stroke.hes | PreCovidPeriod_with_cvd    | 179.43 | 92.28    | 3223.44  | 1.16 (1.03, 1.31) |
-| stroke.hes | PreCovidPeriod_with_stroke | 84.44  | 40.6     | Inf      | 1.17 (1.01, 1.34) |
-| stroke.hes | all                        | 215.55 | 140.87   | 458.7    | 1.23 (1.12, 1.36) |
-| stroke.hes | no_stroke                  | 336.75 | 196.67   | 1170.29  | 1.27 (1.12, 1.45) |
-| stroke.hes | with_stroke                | 81.05  | 41.07    | 3033.75  | 1.18 (1.02, 1.36) |
+| Stroke     | CVD                        | 66     | 48.3     | 104      | 1.23 (1.13, 1.33) |
+| Stroke     | No_CVD                     | 97.2   | 77.0     | 132.     | 1.51 (1.34, 1.71) |
+| Stroke     | PreCovidPeriod_all         | 87.1   | 69.5     | 116.     | 1.28 (1.19, 1.37) |
+| Stroke     | PreCovidPeriod_no_cvd      | 98.2   | 76.9     | 136.     | 1.48 (1.31, 1.68) |
+| Stroke     | PreCovidPeriod_no_stroke   | 117.   | 91.2     | 162.     | 1.42 (1.28, 1.57) |
+| Stroke     | PreCovidPeriod_with_cvd    | 72.6   | 51.0     | 126.     | 1.20 (1.10, 1.31) |
+| Stroke     | PreCovidPeriod_with_stroke | 42.6   | 26.5     | 108.     | 1.17 (1.06, 1.29) |
+| Stroke     | all                        | 82.6   | 67.3     | 107.     | 1.31 (1.22, 1.40) |
+| Stroke     | no_stroke                  | 113.2  | 90.0     | 153.     | 1.45 (1.31, 1.60) |
+| Stroke     | with_stroke                | 38.5   | 25.4     | 79.2     | 1.19 (1.08, 1.31) |
+| stroke.hes | CVD                        | 167.08 | 100.     |  499.    | 1.18 (1.05, 1.33) |
+| stroke.hes | No_CVD                     | 257.   | 169.     | 536.     | 1.33 (1.13, 1.57) |
+| stroke.hes | PreCovidPeriod_all         | 231.   | 155.     | 458.     | 1.21 (1.09, 1.33) |
+| stroke.hes | PreCovidPeriod_no_cvd      | 275.   | 173.     | 667.     | 1.29 (1.09, 1.52) |
+| stroke.hes | PreCovidPeriod_no_stroke   | 371.   | 222.     | 1145.    | 1.24 (1.08, 1.41) |
+| stroke.hes | PreCovidPeriod_with_cvd    | 179.   | 102.     | 769.     | 1.16 (1.03, 1.31) |
+| stroke.hes | PreCovidPeriod_with_stroke | 84.4   | 44.7     | 756      | 1.17 (1.01, 1.34) |
+| stroke.hes | all                        | 216.   | 151.     | 379.     | 1.23 (1.12, 1.36) |
+| stroke.hes | no_stroke                  | 337.   | 214.     | 793.     | 1.27 (1.12, 1.45) |
+| stroke.hes | with_stroke                | 81.0   | 45.3     | 386.     | 1.18 (1.02, 1.36) |
 
 ```
 
-***All updated CIsc***
+
+
+***All***
 ```
    outcome    subgroup                     event_count person_time incidence_rate number_of_patients   NNH ci.l_NNH ci.u_NNH Adjusted_HR        Unadjusted_HR     
   1 Stroke     BMI_Normal_underweight              1279      30822.          41.5               41164  94.9    66.9     163.  1.28 (1.13, 1.44)  1.30 (1.16, 1.46) 
@@ -1608,115 +1611,10 @@ ROC AUC Score: 0.578
 100 stroke.hes stroke_recency_over_5_years          229       3692.          62.0                5003 248.     54.1     Inf   1.07 (0.80, 1.44)  1.07 (0.80, 1.44) 
 101 stroke.hes under_75                             319      15676.          20.4               18603 113.     67.4     352.  1.38 (1.04, 1.83)  1.38 (1.04, 1.82) 
 102 stroke.hes with_stroke                         1379      16443.          83.9               21866  81.0    45.3     386.  1.18 (1.02, 1.36)  1.18 (1.03, 1.36) 
-> 
 
-```
-
-***All***
-```
-    outcome    subgroup                     event_count person_time incidence_rate number_of_patients   NNH ci.l_NNH ci.u_NNH Adjusted_HR        Unadjusted_HR     
-  1 Stroke     BMI_Normal_underweight              1279      30822.          41.5               41164  94.9    62.7  194.53   1.28 (1.13, 1.44)  1.30 (1.16, 1.46) 
-  2 Stroke     BMI_Obese_overweight                1086      24252.          44.8               31205 115.     67.4  385.63   1.26 (1.11, 1.44)  1.24 (1.09, 1.41) 
-  3 Stroke     CVD                                 3931      50403.          78.0               66419  66      45.6  119.78   1.23 (1.13, 1.33)  1.23 (1.14, 1.34) 
-  4 Stroke     HES&ONS_stroke                      5581     130309.          42.8              165495  82.6    64.7  114.48   1.31 (1.22, 1.40)  1.31 (1.22, 1.40) 
-  5 Stroke     HES_stroke                          5581     130309.          42.8              165495  82.6    64.7  114.48   1.31 (1.22, 1.40)  1.31 (1.22, 1.40) 
-  6 Stroke     No_CVD                              1650      79906.          20.6               99076  97.2    73.5  143.42   1.51 (1.34, 1.71)  1.52 (1.35, 1.72) 
-  7 Stroke     No_VTE                              4807     114223.          42.1              144821  76.0    60.0  103.65   1.33 (1.24, 1.43)  1.34 (1.25, 1.44) 
-  8 Stroke     No_atrialFibrillation               3479      96511.          36.0              121560  68.8    55.4  90.74    1.38 (1.27, 1.49)  1.46 (1.35, 1.58) 
-  9 Stroke     No_diabetes                         3659      91901.          39.8              117130  80.8    62.5  114.38   1.29 (1.19, 1.40)  1.34 (1.24, 1.45) 
- 10 Stroke     PreCovidPeriod_all                  5341     120449.          44.3              150824  87.1    66.8  125.21   1.28 (1.19, 1.37)  1.28 (1.20, 1.37) 
- 11 Stroke     PreCovidPeriod_no_cvd               1586      74122.          21.4               90646  98.2    73.3  148.58   1.48 (1.31, 1.68)  1.49 (1.32, 1.68) 
- 12 Stroke     PreCovidPeriod_no_stroke            2494     106136.          23.5              131154 117.     87.0  177.44   1.42 (1.28, 1.57)  1.42 (1.29, 1.57) 
- 13 Stroke     PreCovidPeriod_with_cvd             3755      46327.          81.0               60178  72.6    47.9  149.58   1.20 (1.10, 1.31)  1.21 (1.11, 1.31) 
- 14 Stroke     PreCovidPeriod_with_stroke          2847      14313.         199.                19670  42.6    24.7  154.61   1.17 (1.06, 1.29)  1.17 (1.06, 1.29) 
- 15 Stroke     With_VTE                              63       1038.          60.7                1483  52.4    20.8  Inf      1.51 (0.90, 2.54)  1.40 (0.87, 2.26) 
- 16 Stroke     all                                 5581     130309.          42.8              165495  82.6    64.7  114.48   1.31 (1.22, 1.40)  1.31 (1.22, 1.40) 
- 17 Stroke     atrialFibrillation                   445       5201.          85.6                7537 263.     85.4  Inf      1.02 (0.83, 1.26)  0.92 (0.75, 1.12) 
- 18 Stroke     carehome_preIndexDate                209       3816.          54.8                5991  98.5    40.0  Inf      1.51 (1.13, 2.01)  1.39 (1.06, 1.83) 
- 19 Stroke     diabetes                             340       5993.          56.7                8155 170.     55.7  Inf      1.26 (1.01, 1.57)  1.15 (0.93, 1.43) 
- 20 Stroke     haemorrhagicstroke                    76        355.         214.                  528  21.2     7.64 Inf      1.71 (1.04, 2.82)  1.45 (0.91, 2.31) 
- 21 Stroke     hypertension_stage1AndHigher         580      13774.          42.1               19259  75.1    47.8  175.63   1.39 (1.17, 1.65)  1.39 (1.18, 1.65) 
- 22 Stroke     hypertension_stage2AndHigher          64       1343.          47.6                1938  78.8    27.0  Inf      1.39 (0.80, 2.43)  1.25 (0.76, 2.04) 
- 23 Stroke     ischaemicstroke                     2480      10842.         229.                15265  19.2    14.0  30.74    1.21 (1.10, 1.34)  1.33 (1.21, 1.46) 
- 24 Stroke     no_other_drugs                      2107      50407.          41.8               64895  66.6    49.8  100.45   1.39 (1.26, 1.55)  1.39 (1.26, 1.54) 
- 25 Stroke     no_stroke                           2606     114632.          22.7              143629 113.     85.8  166.46   1.45 (1.31, 1.60)  1.45 (1.32, 1.60) 
- 26 Stroke     over_75                             5055     114736.          44.1              146892  88.4    67.0  129.74   1.29 (1.19, 1.38)  1.29 (1.20, 1.38) 
- 27 Stroke     risperidone_Age_65_74                526      15572.          33.8               18603  56      36.8  116.91   1.51 (1.22, 1.87)  1.48 (1.21, 1.81) 
- 28 Stroke     risperidone_Age_75_84               2463      60457.          40.7               74660  90.8    63.3  160.41   1.31 (1.18, 1.45)  1.32 (1.19, 1.46) 
- 29 Stroke     risperidone_Age_85+                 2592      54280.          47.8               72232  84.5    57.8  156.96   1.27 (1.14, 1.41)  1.26 (1.14, 1.39) 
- 30 Stroke     stroke_recency_1_5_years             556       2908.         191.                 4112  26.2    14.6  131.64   1.26 (1.05, 1.52)  1.27 (1.06, 1.51) 
- 31 Stroke     stroke_recency_1_year                264        518.         510.                  901  65.7    17.1  Inf      0.97 (0.74, 1.27)  0.97 (0.75, 1.27) 
- 32 Stroke     stroke_recency_over_5_years          430       3609.         119.                 5003 108.     30.8  Inf      1.08 (0.87, 1.35)  1.09 (0.88, 1.35) 
- 33 Stroke     under_75                             526      15572.          33.8               18603  56      36.8  116.91   1.51 (1.22, 1.87)  1.48 (1.21, 1.81) 
- 34 Stroke     with_stroke                         2975      15676.         190.                21866  38.5    23.7  102.58   1.19 (1.08, 1.31)  1.19 (1.08, 1.31) 
- 35 VTE        BMI_Normal_underweight               383      31066.          12.3               41164  87.4    67.1  125.38   2.23 (1.82, 2.75)  2.26 (1.84, 2.78) 
- 36 VTE        BMI_Obese_overweight                 420      24445.          17.2               31205  91.9    65.3  155.06   1.69 (1.39, 2.07)  1.75 (1.44, 2.14) 
- 37 VTE        CVD                                  685      51527.          13.3               66419 127.     89.1  222.75   1.70 (1.42, 2.03)  1.72 (1.44, 2.06) 
- 38 VTE        HES&ONS_stroke                      1743     131397.          13.3              165495  99.6    81.7  127.46   1.86 (1.66, 2.08)  1.92 (1.72, 2.14) 
- 39 VTE        HES_stroke                          1743     131397.          13.3              165495  99.6    81.7  127.46   1.86 (1.66, 2.08)  1.92 (1.72, 2.14) 
- 40 VTE        No_CVD                              1058      79870.          13.2               99076  87.5    69.9  117.04   1.97 (1.71, 2.27)  2.05 (1.78, 2.36) 
- 41 VTE        No_VTE                              1109     115378.           9.61             144821  96.2    79.9  120.87   2.30 (2.01, 2.62)  2.39 (2.10, 2.72) 
- 42 VTE        No_atrialFibrillation               1389      97042.          14.3              121560  88.5    72.5  113.72   1.93 (1.71, 2.17)  1.98 (1.76, 2.23) 
- 43 VTE        No_diabetes                         1242      92543.          13.4              117130  89.8    73.4  115.46   1.98 (1.74, 2.24)  2.04 (1.80, 2.31) 
- 44 VTE        PreCovidPeriod_all                  1603     121512.          13.2              150824 102.     82.6  131.55   1.85 (1.64, 2.07)  1.91 (1.70, 2.14) 
- 45 VTE        PreCovidPeriod_no_cvd                968      74109.          13.1               90646  94.1    73.9  129.72   1.90 (1.64, 2.20)  1.99 (1.71, 2.30) 
- 46 VTE        PreCovidPeriod_no_stroke            1417     106106.          13.4              131154  98.5    79.4  129.52   1.84 (1.63, 2.09)  1.91 (1.69, 2.16) 
- 47 VTE        PreCovidPeriod_with_cvd              635      47404.          13.4               60178 116.     82.4  196.63   1.76 (1.46, 2.12)  1.79 (1.49, 2.15) 
- 48 VTE        PreCovidPeriod_with_stroke           186      15407.          12.1               19670 128.     73.4  490.52   1.88 (1.35, 2.62)  1.86 (1.34, 2.59) 
- 49 VTE        With_VTE                              65       1020.          63.7                1483  54.9   116.   Inf      0.78 (0.46, 1.34)  0.72 (0.43, 1.21) 
- 50 VTE        all                                 1743     131397.          13.3              165495  99.6    81.7  127.46   1.86 (1.66, 2.08)  1.92 (1.72, 2.14) 
- 51 VTE        atrialFibrillation                    46       5332.           8.63               7537 220.    100.   Inf      1.70 (0.97, 2.98)  1.84 (1.05, 3.25) 
- 52 VTE        carehome_preIndexDate                 62       3845.          16.1                5991 132.     61.4  Inf      1.76 (1.05, 2.94)  1.75 (1.06, 2.90) 
- 53 VTE        diabetes                              91       6074.          15.0                8155 320.    104.   Inf      1.33 (0.87, 2.03)  1.33 (0.88, 2.01) 
- 54 VTE        haemorrhagicstroke                     5        378.          13.2                 528  96.5    27.7  Inf      4.50 (0.42, 48.51) 2.54 (0.43, 15.04)
- 55 VTE        hypertension_stage1AndHigher         183      13842.          13.2               19259 141.     85.0  411.28   1.64 (1.22, 2.20)  1.66 (1.24, 2.23) 
- 56 VTE        hypertension_stage2AndHigher          22       1348.          16.3                1938 104.    265.   Inf      0.61 (0.24, 1.58)  0.52 (0.20, 1.37) 
- 57 VTE        ischaemicstroke                      142      11772.          12.1               15265 230.     99.6  Inf      1.52 (1.02, 2.25)  1.49 (1.01, 2.19) 
- 58 VTE        no_other_drugs                       652      50775.          12.8               64895  94.2    72.2  135.33   2.03 (1.71, 2.40)  2.08 (1.75, 2.46) 
- 59 VTE        no_stroke                           1543     114580.          13.5              143629  95.9    78.1  124.32   1.87 (1.66, 2.10)  1.93 (1.72, 2.17) 
- 60 VTE        over_75                             1541     115699.          13.3              146892 105.     84.2  138.31   1.81 (1.61, 2.04)  1.88 (1.67, 2.11) 
- 61 VTE        risperidone_Age_65_74                202      15698.          12.9               18603  74.4    49.8  146.81   2.20 (1.61, 3.01)  2.25 (1.64, 3.08) 
- 62 VTE        risperidone_Age_75_84                814      60995.          13.4               74660  95.6    73.0  138.44   1.92 (1.63, 2.26)  1.97 (1.68, 2.31) 
- 63 VTE        risperidone_Age_85+                  727      54704.          13.3               72232 117.     84.0  190.36   1.70 (1.42, 2.03)  1.77 (1.48, 2.11) 
- 64 VTE        stroke_recency_1_5_years              41       3120.          13.1                4112 113.     52.6  Inf      2.11 (1.14, 3.94)  2.03 (1.10, 3.75) 
- 65 VTE        stroke_recency_1_year                 13        638.          20.4                 901  50.3    22.8  Inf      2.82 (0.82, 9.67)  2.65 (0.83, 8.49) 
- 66 VTE        stroke_recency_over_5_years           44       3748.          11.7                5003 705.    101.   Inf      1.22 (0.64, 2.33)  1.15 (0.62, 2.12) 
- 67 VTE        under_75                             202      15698.          12.9               18603  74.4    49.8  146.81   2.20 (1.61, 3.01)  2.25 (1.64, 3.08) 
- 68 VTE        with_stroke                          200      16817.          11.9               21866 133.     76.4  500.63   1.84 (1.33, 2.55)  1.83 (1.32, 2.52) 
- 69 stroke.hes BMI_Normal_underweight               641      31049.          20.6               41164 228.    121.   1972.38  1.24 (1.04, 1.47)  1.25 (1.05, 1.48) 
- 70 stroke.hes BMI_Obese_overweight                 640      24439.          26.2               31205 306.    125.   Inf      1.19 (1.00, 1.41)  1.16 (0.98, 1.37) 
- 71 stroke.hes CVD                                 1958      51245.          38.2               66419 167.     91.4  972.83   1.18 (1.05, 1.33)  1.19 (1.06, 1.34) 
- 72 stroke.hes HES&ONS_stroke                      2975     131308.          22.7              165495 216.    141.   458.7    1.23 (1.12, 1.36)  1.23 (1.12, 1.35) 
- 73 stroke.hes HES_stroke                          2975     131308.          22.7              165495 216.    141.   458.7    1.23 (1.12, 1.36)  1.23 (1.12, 1.35) 
- 74 stroke.hes No_CVD                              1017      80063           12.7               99076 257.    157.   710.1    1.33 (1.13, 1.57)  1.32 (1.12, 1.55) 
- 75 stroke.hes No_VTE                              2545     115079.          22.1              144821 179.    123.   330.92   1.28 (1.15, 1.41)  1.27 (1.15, 1.41) 
- 76 stroke.hes No_atrialFibrillation               1864      97114.          19.2              121560 165.    116.   285.36   1.31 (1.17, 1.47)  1.36 (1.22, 1.52) 
- 77 stroke.hes No_diabetes                         1923      92554.          20.8              117130 212.    136.   479.74   1.22 (1.09, 1.37)  1.25 (1.12, 1.40) 
- 78 stroke.hes PreCovidPeriod_all                  2941     121375.          24.2              150824 231.    145.   580.81   1.21 (1.09, 1.33)  1.20 (1.09, 1.32) 
- 79 stroke.hes PreCovidPeriod_no_cvd               1008      74264.          13.6               90646 275.    160.   963.37   1.29 (1.09, 1.52)  1.27 (1.08, 1.50) 
- 80 stroke.hes PreCovidPeriod_no_stroke            1583     106342.          14.9              131154 371.    203.   2163.21  1.24 (1.08, 1.41)  1.22 (1.07, 1.40) 
- 81 stroke.hes PreCovidPeriod_with_cvd             1933      47111.          41.0               60178 179.     92.3  3223.44  1.16 (1.03, 1.31)  1.17 (1.04, 1.32) 
- 82 stroke.hes PreCovidPeriod_with_stroke          1358      15033.          90.3               19670  84.4    40.6  Inf      1.17 (1.01, 1.34)  1.17 (1.01, 1.34) 
- 83 stroke.hes With_VTE                              30       1049.          28.6                1483 153.     36.7  Inf      1.42 (0.67, 2.99)  1.25 (0.60, 2.61) 
- 84 stroke.hes all                                 2975     131308.          22.7              165495 216.    141.   458.7    1.23 (1.12, 1.36)  1.23 (1.12, 1.35) 
- 85 stroke.hes atrialFibrillation                   227       5286.          42.9                7537 102.    724.   Inf      0.78 (0.57, 1.07)  0.71 (0.52, 0.96) 
- 86 stroke.hes carehome_preIndexDate                 82       3850.          21.3                5991 872.    125.   Inf      1.19 (0.73, 1.94)  1.11 (0.69, 1.78) 
- 87 stroke.hes diabetes                             184       6054.          30.4                8155 567.    141.   Inf      1.05 (0.77, 1.44)  0.97 (0.71, 1.32) 
- 88 stroke.hes haemorrhagicstroke                    48        368.         131.                  528  57.4    11.6  Inf      1.65 (0.87, 3.15)  1.30 (0.71, 2.39) 
- 89 stroke.hes hypertension_stage1AndHigher         327      13857.          23.6               19259 104.     64.1  271.26   1.48 (1.18, 1.85)  1.48 (1.19, 1.85) 
- 90 stroke.hes hypertension_stage2AndHigher          40       1352.          29.6                1938 154.     38.5  Inf      1.25 (0.66, 2.37)  1.15 (0.63, 2.10) 
- 91 stroke.hes ischaemicstroke                     1170      11449.         102.                15265  36.4    23.7  78.95    1.19 (1.03, 1.37)  1.37 (1.20, 1.57) 
- 92 stroke.hes no_other_drugs                      1129      50749.          22.2               64895 187.    111.   589.29   1.28 (1.10, 1.48)  1.29 (1.12, 1.49) 
- 93 stroke.hes no_stroke                           1596     114865.          13.9              143629 337.    197.   1170.29  1.27 (1.12, 1.45)  1.26 (1.11, 1.44) 
- 94 stroke.hes over_75                             2656     115632.          23.0              146892 248.    151.   701.86   1.22 (1.10, 1.35)  1.21 (1.09, 1.34) 
- 95 stroke.hes risperidone_Age_65_74                319      15676.          20.4               18603 113.     62.0  642.49   1.38 (1.04, 1.83)  1.38 (1.04, 1.82) 
- 96 stroke.hes risperidone_Age_75_84               1359      60929.          22.3               74660 206.    119.   772.3    1.27 (1.11, 1.47)  1.27 (1.11, 1.46) 
- 97 stroke.hes risperidone_Age_85+                 1297      54704.          23.7               72232 307.    141.   Inf      1.16 (0.99, 1.34)  1.14 (0.98, 1.33) 
- 98 stroke.hes stroke_recency_1_5_years             270       3051.          88.5                4112 123.     33.2  Inf      1.19 (0.91, 1.55)  1.14 (0.88, 1.48) 
- 99 stroke.hes stroke_recency_1_year                 84        614.         137.                  901  24.6    10.7  Inf      1.50 (0.97, 2.34)  1.46 (0.96, 2.23) 
-100 stroke.hes stroke_recency_over_5_years          229       3692.          62.0                5003 248.     45.9  Inf      1.07 (0.80, 1.44)  1.07 (0.80, 1.44) 
-101 stroke.hes under_75                             319      15676.          20.4               18603 113.     62.0  642.49   1.38 (1.04, 1.83)  1.38 (1.04, 1.82) 
-102 stroke.hes with_stroke                         1379      16443.          83.9               21866  81.0    41.1  3033.75  1.18 (1.02, 1.36)  1.18 (1.03, 1.36) 
+ 
+ 
+ 
 
 ```
 
@@ -1724,7 +1622,7 @@ ROC AUC Score: 0.578
 
 ****Treatment group****
 ```
-    outcome    subgroup                     event_count person_time incidence_rate number_of_patients   NNH ci.l_NNH ci.u_NNH Adjusted_HR        Unadjusted_HR     
+ outcome    subgroup                     event_count person_time incidence_rate number_of_patients   NNH ci.l_NNH ci.u_NNH Adjusted_HR        Unadjusted_HR     
   1 Stroke     BMI_Normal_underweight               378       7291.           51.8              41164  94.9    66.9     163.  1.28 (1.13, 1.44)  1.30 (1.16, 1.46) 
   2 Stroke     BMI_Obese_overweight                 317       5849.           54.2              31205 115.     72.3     277.  1.26 (1.11, 1.44)  1.24 (1.09, 1.41) 
   3 Stroke     CVD                                  681       6979.           97.6              66419  66      48.3     104   1.23 (1.13, 1.33)  1.23 (1.14, 1.34) 
@@ -1827,13 +1725,18 @@ ROC AUC Score: 0.578
 100 stroke.hes stroke_recency_over_5_years           60        915.           65.6               5003 248.     54.1     Inf   1.07 (0.80, 1.44)  1.07 (0.80, 1.44) 
 101 stroke.hes under_75                              63       2253.           28.0              18603 113.     67.4     352.  1.38 (1.04, 1.83)  1.38 (1.04, 1.82) 
 102 stroke.hes with_stroke                          239       2392.           99.9              21866  81.0    45.3     386.  1.18 (1.02, 1.36)  1.18 (1.03, 1.36) 
+
+ 
+
+
+ 
 ```
 
 
 ****Control group****
 
 ```
-     outcome    subgroup                     event_count person_time incidence_rate number_of_patients   NNH ci.l_NNH ci.u_NNH Adjusted_HR        Unadjusted_HR     
+  outcome    subgroup                     event_count person_time incidence_rate number_of_patients   NNH ci.l_NNH ci.u_NNH Adjusted_HR        Unadjusted_HR     
   1 Stroke     BMI_Normal_underweight               901      23532.          38.3               41164  94.9    66.9     163.  1.28 (1.13, 1.44)  1.30 (1.16, 1.46) 
   2 Stroke     BMI_Obese_overweight                 769      18403.          41.8               31205 115.     72.3     277.  1.26 (1.11, 1.44)  1.24 (1.09, 1.41) 
   3 Stroke     CVD                                 3250      43423.          74.8               66419  66      48.3     104   1.23 (1.13, 1.33)  1.23 (1.14, 1.34) 
@@ -1935,7 +1838,12 @@ ROC AUC Score: 0.578
  99 stroke.hes stroke_recency_1_year                 44        386.         114.                  901  24.6    11.8     Inf   1.50 (0.97, 2.34)  1.46 (0.96, 2.23) 
 100 stroke.hes stroke_recency_over_5_years          169       2777.          60.9                5003 248.     54.1     Inf   1.07 (0.80, 1.44)  1.07 (0.80, 1.44) 
 101 stroke.hes under_75                             256      13423.          19.1               18603 113.     67.4     352.  1.38 (1.04, 1.83)  1.38 (1.04, 1.82) 
-102 stroke.hes with_stroke                         1140      14051.          81.1               21866  81.0    45.3     386.  1.18 (1.02, 1.36)  1.18 (1.03, 1.36) 
+102 stroke.hes with_stroke                         1140      14051.          81.1               21866  81.0    45.3     386.  1.18 (1.02, 1.36)  1.18 (1.03, 1.36)  
+
+ 
+
+
+
 ```
 
 
