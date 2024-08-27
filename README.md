@@ -1429,6 +1429,7 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/RandomForest_cox_controls.png)
 
 ***Causal Survival Forest***
+![image](https://github.com/user-attachments/assets/6e60c9cd-0db9-47e1-9837-5c441681272a)
 
 
 ****No CVD****
@@ -1461,6 +1462,7 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 
 ***Causal Forest***
 
+![image](https://github.com/user-attachments/assets/6cc47cb0-48d6-4a25-8757-dd76bad271de)
 
 ****No CVD****
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_noCVD_CF.png)
