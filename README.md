@@ -1432,6 +1432,17 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 ![image](https://github.com/user-attachments/assets/36572410-1f92-43a1-a0d4-672b4fb8236b)
 
 
+****Heterogeneous Treatment Effect****
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_overall.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_noStroke.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_withStroke.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_noCVD.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_withCVD.png)
+
 
 ****No CVD****
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_noCVD.png)
@@ -1464,6 +1475,16 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 ***Causal Forest***
 
 ![image](https://github.com/user-attachments/assets/bbdaa69d-8ccf-4eba-8e55-2622a50bb103)
+****Heterogeneous Treatment Effect****
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_overall_CF.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_noStroke_CF.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_withStroke_CF.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_noCVD_CF.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_withCVD_CF.png)
 
 
 ****No CVD****
