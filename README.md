@@ -1433,7 +1433,10 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 
 
 ****Heterogeneous Treatment Effect****
+
+
 ****Overall****
+
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_overall.png)
 ****no stroke****
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_noStroke.png)
@@ -1475,7 +1478,9 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 ***Causal Forest***
 
 ![image](https://github.com/user-attachments/assets/bbdaa69d-8ccf-4eba-8e55-2622a50bb103)
+
 ****Heterogeneous Treatment Effect****
+
 ****Overall****
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_overall_CF.png)
 ****no stroke****
