@@ -1429,6 +1429,7 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/RandomForest_cox_controls.png)
 
 ***Causal Survival Forest***
+
  summary(treatment_effect_values)
  ```
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
