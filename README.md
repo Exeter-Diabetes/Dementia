@@ -1430,9 +1430,10 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 
 ***Causal Survival Forest***
  summary(treatment_effect_values)
+ ```
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
 -3.77192 -0.50565 -0.26139 -0.31458 -0.06619  1.90310 
-
+```
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CSF_ViolinPlot.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CSF_HistMedian.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CSF_HistMean.png)
@@ -1487,8 +1488,10 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 ***Causal Forest***
 
  summary(treatment_effects)
+ ```
       Min.    1st Qu.     Median       Mean    3rd Qu.       Max. 
--0.0400638  0.0004461  0.0038949  0.0045751  0.0079468  0.0481077 
+-0.0400638  0.0004461  0.0038949  0.0045751  0.0079468  0.0481077
+```
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CF_ViolinPlot.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CF_HistMedian.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CF_HistMean.png)
