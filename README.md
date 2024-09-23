@@ -1442,7 +1442,7 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 
 ****Heterogeneous Treatment Effect****
 
-**** Negative Treatment Effect < -0.1 and Positive Treatment Effect > 0.1 ****
+****Negative Treatment Effect < -0.1 and Positive Treatment Effect > 0.1****
 ```
                                      Stratified by effect_group
                                       level   Negative      Positive      p      test
@@ -1463,7 +1463,7 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 
 
 
-**** Negative Treatment Effect < 0 and Positive Treatment Effect > 0 ****
+****Negative Treatment Effect < 0 and Positive Treatment Effect > 0****
 ```
                                     Stratified by effect_group
                                       level   Negative      Positive      p      test
@@ -1501,7 +1501,7 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 ****Heterogeneous Treatment Effect****
 
 
-**** Negative Treatment Effect < 0 and Positive Treatment Effect > 0 ****
+****Negative Treatment Effect < 0 and Positive Treatment Effect > 0****
 ```
                                      Stratified by effect_group
                                       level   Negative      Positive      p      test
