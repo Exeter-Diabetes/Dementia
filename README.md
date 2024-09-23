@@ -1429,99 +1429,328 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/RandomForest_cox_controls.png)
 
 ***Causal Survival Forest***
-![image](https://github.com/user-attachments/assets/36572410-1f92-43a1-a0d4-672b4fb8236b)
+ summary(treatment_effect_values)
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+-3.77192 -0.50565 -0.26139 -0.31458 -0.06619  1.90310 
 
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CSF_ViolinPlot.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CSF_HistMedian.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CSF_HistMean.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CSF_DensityPlot.png)
 
 ****Heterogeneous Treatment Effect****
 
-
-****Overall****
-
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_overall.png)
-****no stroke****
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_noStroke.png)
-****with stroke****
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_withStroke.png)
-****no cvd****
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_noCVD.png)
-****with cvd****
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_withCVD.png)
-
-****No CVD****
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_noCVD.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_noCVD.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMean_noCVD.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMedian_noCVD.png)
-
-****With CVD****
-
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_withCVD.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_withCVD.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMean_withCVD.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMedian_withCVD.png)
+**** Negative Treatment Effect < -0.1 and Positive Treatment Effect > 0.1 ****
+```
+                                     Stratified by effect_group
+                                      level   Negative      Positive      p      test
+  n                                           35147          4745                    
+  age_diagnosis (mean (SD))                   80.41 (6.64)  81.13 (8.28)  <0.001     
+  sex (%)                             0       21549 (61.3)   3016 (63.6)   0.003     
+                                      1       13598 (38.7)   1729 (36.4)             
+  stroke_composite_pre_index_date (%) 0       30305 (86.2)   4160 (87.7)   0.007     
+                                      1        4842 (13.8)    585 (12.3)             
+  pre_index_date_cvd (%)              0       19830 (56.4)   3216 (67.8)  <0.001     
+                                      1       15317 (43.6)   1529 (32.2)             
+  age_risperidone (mean (SD))                 83.05 (6.68)  83.79 (7.73)  <0.001     
+  age_category (%)                    65 - 74  6925 (19.7)   1239 (26.1)  <0.001     
+                                      75 - 84 18710 (53.2)   1444 (30.4)             
+                                      85 - 94  9021 (25.7)   1907 (40.2)             
+                                      95+       491 ( 1.4)    155 ( 3.3)    
+```
 
 
-****No Stroke****
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_noStroke.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_noStroke.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMean_noStroke.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMedian_noStroke.png)
+**** Negative Treatment Effect < 0 and Positive Treatment Effect > 0 ****
+```
+                                    Stratified by effect_group
+                                      level   Negative      Positive      p      test
+  n                                           40739          8910                    
+  age_diagnosis (mean (SD))                   80.42 (6.70)  80.83 (7.86)  <0.001     
+  sex (%)                             0       25105 (61.6)   5671 (63.6)  <0.001     
+                                      1       15634 (38.4)   3239 (36.4)             
+  stroke_composite_pre_index_date (%) 0       35245 (86.5)   7837 (88.0)  <0.001     
+                                      1        5494 (13.5)   1073 (12.0)             
+  pre_index_date_cvd (%)              0       23616 (58.0)   6068 (68.1)  <0.001     
+                                      1       17123 (42.0)   2842 (31.9)             
+  age_risperidone (mean (SD))                 83.10 (6.68)  83.61 (7.37)  <0.001     
+  age_category (%)                    65 - 74  8024 (19.7)   2164 (24.3)  <0.001     
+                                      75 - 84 21410 (52.6)   3263 (36.6)             
+                                      85 - 94 10722 (26.3)   3246 (36.4)             
+                                      95+       583 ( 1.4)    237 ( 2.7)  
+```
 
-****With Stroke****
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_withStroke.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_withStroke.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMean_withStroke.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMedian_withStroke.png)
+
+
 
 ***Causal Forest***
 
-![image](https://github.com/user-attachments/assets/bbdaa69d-8ccf-4eba-8e55-2622a50bb103)
+ summary(treatment_effects)
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max. 
+-0.0400638  0.0004461  0.0038949  0.0045751  0.0079468  0.0481077 
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CF_ViolinPlot.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CF_HistMedian.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CF_HistMean.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CF_DensityPlot.png)
 
 ****Heterogeneous Treatment Effect****
 
-****Overall****
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_overall_CF.png)
-****no stroke****
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_noStroke_CF.png)
-****with stroke****
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_withStroke_CF.png)
-****no cvd****
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_noCVD_CF.png)
-****with cvd****
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/heterogeneous_CSF_withCVD_CF.png)
+
+**** Negative Treatment Effect < 0 and Positive Treatment Effect > 0 ****
+```
+                                     Stratified by effect_group
+                                      level   Negative      Positive      p      test
+  n                                           10967         38682                    
+  age_diagnosis (mean (SD))                   81.40 (7.46)  80.24 (6.74)  <0.001     
+  age_risperidone (mean (SD))                 84.00 (6.67)  82.96 (6.84)  <0.001     
+  sex (%)                             0        6941 (63.3)  23835 (61.6)   0.002     
+                                      1        4026 (36.7)  14847 (38.4)             
+  stroke_composite_pre_index_date (%) 0        9519 (86.8)  33563 (86.8)   0.947     
+                                      1        1448 (13.2)   5119 (13.2)             
+  pre_index_date_cvd (%)              0        6941 (63.3)  22743 (58.8)  <0.001     
+                                      1        4026 (36.7)  15939 (41.2)             
+  age_category (%)                    65 - 74  2417 (22.0)   7771 (20.1)  <0.001     
+                                      75 - 84  3874 (35.3)  20799 (53.8)             
+                                      85 - 94  4441 (40.5)   9527 (24.6)             
+                                      95+       235 ( 2.1)    585 ( 1.5)   
+```
 
 
-****No CVD****
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_noCVD_CF.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_noCVD_CF.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMean_noCVD_CF.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMedian_noCVD_CF.png)
 
-****With CVD****
+**** Discontinuation****
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_withCVD_CF.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_withCVD_CF.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMean_withCVD_CF.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMedian_withCVD_CF.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_Overall.png)
+```
+                                              Stratified by discontinued
+                                               Overall        0              1             p      test
+  n                                            28464          25217          3242                     
+  sex = 1 (%)                                  10847 ( 38.1)   9645 ( 38.2)  1202 ( 37.1)   0.203     
+  Prescribed_other_antipsychotic_Prior = 1 (%)  7377 ( 25.9)   6592 ( 26.1)   785 ( 24.2)   0.019     
+  ethnicity (%)                                                                            <0.001     
+     Black                                       487 (  1.7)    418 (  1.7)    69 (  2.1)             
+     Mixed                                        98 (  0.3)     84 (  0.3)    14 (  0.4)             
+     Other                                       151 (  0.5)    129 (  0.5)    22 (  0.7)             
+     South Asian                                 475 (  1.7)    391 (  1.6)    84 (  2.6)             
+     Unknown                                     454 (  1.6)    411 (  1.6)    43 (  1.3)             
+     White                                     26799 ( 94.2)  23784 ( 94.3)  3010 ( 92.8)             
+  death_composite = 1 (%)                      22331 ( 78.5)  19823 ( 78.6)  2505 ( 77.3)   0.084     
+  pre_index_date_angina = 1 (%)                 3344 ( 11.7)   2983 ( 11.8)   361 ( 11.1)   0.260     
+  pre_index_date_heartfailure = 1 (%)           2199 (  7.7)   1989 (  7.9)   210 (  6.5)   0.005     
+  pre_index_date_myocardialinfarction = 1 (%)   2316 (  8.1)   2086 (  8.3)   230 (  7.1)   0.023     
+  pre_index_date_tia = 1 (%)                    2641 (  9.3)   2354 (  9.3)   286 (  8.8)   0.360     
+  pre_index_date_falls = 1 (%)                 11748 ( 41.3)  10555 ( 41.9)  1192 ( 36.8)  <0.001     
+  pre_index_date_lowerlimbfracture = 1 (%)      4536 ( 15.9)   4050 ( 16.1)   486 ( 15.0)   0.123     
+  pre_index_date_ihd = 1 (%)                    4717 ( 16.6)   4224 ( 16.8)   493 ( 15.2)   0.028     
+  pre_index_date_pad = 1 (%)                    2207 (  7.8)   1983 (  7.9)   224 (  6.9)   0.060     
+  pre_index_date_revasc = 1 (%)                 1514 (  5.3)   1362 (  5.4)   152 (  4.7)   0.097     
+  pre_index_date_qof_diabetes = 1 (%)           4979 ( 17.5)   4483 ( 17.8)   496 ( 15.3)   0.001     
+  pre_index_date_fh_diabetes = 1 (%)            5824 ( 20.5)   5116 ( 20.3)   708 ( 21.8)   0.042     
+  pre_index_date_fh_premature_cvd = 1 (%)       2233 (  7.8)   1997 (  7.9)   236 (  7.3)   0.215     
+  pre_index_date_pulmonary_embolism = 1 (%)      728 (  2.6)    656 (  2.6)    72 (  2.2)   0.218     
+  pre_index_date_deep_vein_thrombosis = 1 (%)   1468 (  5.2)   1322 (  5.2)   146 (  4.5)   0.080     
+  pre_index_date_haem_cancer = 1 (%)             540 (  1.9)    489 (  1.9)    51 (  1.6)   0.171     
+  pre_index_date_solid_cancer = 1 (%)           4517 ( 15.9)   4037 ( 16.0)   480 ( 14.8)   0.082     
+  pre_index_date_hearing_loss = 1 (%)           7645 ( 26.9)   6788 ( 26.9)   857 ( 26.4)   0.573     
+  primary_death_stroke = 1 (%)                   730 (100.0)    666 (100.0)    64 (100.0)      NA     
+  stroke_composite_pre_index_date = 1 (%)       3880 ( 13.6)   3494 ( 13.9)   386 ( 11.9)   0.003     
+  pre_index_date_VTE = 1 (%)                    2020 (  7.1)   1817 (  7.2)   203 (  6.3)   0.053     
+  pre_index_date_cvd = 1 (%)                   11454 ( 40.2)  10273 ( 40.7)  1180 ( 36.4)  <0.001     
+  BMI (%)                                                                                   0.212     
+     Missing                                    5505 ( 19.3)   4893 ( 19.4)   612 ( 18.9)             
+     Normal                                    11024 ( 38.7)   9721 ( 38.5)  1299 ( 40.1)             
+     Obesity                                    2973 ( 10.4)   2653 ( 10.5)   320 (  9.9)             
+     Overweight                                 7175 ( 25.2)   6348 ( 25.2)   826 ( 25.5)             
+     Severely Obese                              189 (  0.7)    175 (  0.7)    14 (  0.4)             
+     Underweight                                1598 (  5.6)   1427 (  5.7)   171 (  5.3)             
+  pre_index_date_hypertension = 1 (%)          13620 ( 48.5)  12206 ( 49.1)  1413 ( 44.2)  <0.001
+```
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_NoStroke.png)
 
 
-****No Stroke****
+```
+                                             Stratified by discontinued
+                                               Overall        0              1             p      test
+  n                                            24584          21723          2856                     
+  sex = 1 (%)                                   9100 ( 37.0)   8064 ( 37.1)  1036 ( 36.3)   0.389     
+  Prescribed_other_antipsychotic_Prior = 1 (%)  6253 ( 25.4)   5580 ( 25.7)   673 ( 23.6)   0.015     
+  ethnicity (%)                                                                            <0.001     
+     Black                                       416 (  1.7)    355 (  1.6)    61 (  2.1)             
+     Mixed                                        86 (  0.3)     74 (  0.3)    12 (  0.4)             
+     Other                                       129 (  0.5)    110 (  0.5)    19 (  0.7)             
+     South Asian                                 372 (  1.5)    303 (  1.4)    69 (  2.4)             
+     Unknown                                     425 (  1.7)    383 (  1.8)    42 (  1.5)             
+     White                                     23156 ( 94.2)  20498 ( 94.4)  2653 ( 92.9)             
+  death_composite = 1 (%)                      19174 ( 78.0)  16975 ( 78.1)  2196 ( 76.9)   0.135     
+  pre_index_date_angina = 1 (%)                 2741 ( 11.1)   2433 ( 11.2)   308 ( 10.8)   0.527     
+  pre_index_date_heartfailure = 1 (%)           1748 (  7.1)   1585 (  7.3)   163 (  5.7)   0.002     
+  pre_index_date_myocardialinfarction = 1 (%)   1826 (  7.4)   1640 (  7.5)   186 (  6.5)   0.051     
+  pre_index_date_tia = 1 (%)                    1749 (  7.1)   1548 (  7.1)   200 (  7.0)   0.840     
+  pre_index_date_falls = 1 (%)                  9769 ( 39.7)   8745 ( 40.3)  1023 ( 35.8)  <0.001     
+  pre_index_date_lowerlimbfracture = 1 (%)      3838 ( 15.6)   3418 ( 15.7)   420 ( 14.7)   0.163     
+  pre_index_date_ihd = 1 (%)                    3847 ( 15.6)   3433 ( 15.8)   414 ( 14.5)   0.075     
+  pre_index_date_pad = 1 (%)                    1770 (  7.2)   1582 (  7.3)   188 (  6.6)   0.186     
+  pre_index_date_revasc = 1 (%)                 1200 (  4.9)   1075 (  4.9)   125 (  4.4)   0.198     
+  pre_index_date_qof_diabetes = 1 (%)           4090 ( 16.6)   3686 ( 17.0)   404 ( 14.1)  <0.001     
+  pre_index_date_fh_diabetes = 1 (%)            5021 ( 20.4)   4381 ( 20.2)   640 ( 22.4)   0.006     
+  pre_index_date_fh_premature_cvd = 1 (%)       1936 (  7.9)   1726 (  7.9)   210 (  7.4)   0.285     
+  pre_index_date_pulmonary_embolism = 1 (%)      601 (  2.4)    539 (  2.5)    62 (  2.2)   0.345     
+  pre_index_date_deep_vein_thrombosis = 1 (%)   1205 (  4.9)   1085 (  5.0)   120 (  4.2)   0.072     
+  pre_index_date_haem_cancer = 1 (%)             473 (  1.9)    431 (  2.0)    42 (  1.5)   0.071     
+  pre_index_date_solid_cancer = 1 (%)           3872 ( 15.8)   3441 ( 15.8)   431 ( 15.1)   0.314     
+  pre_index_date_hearing_loss = 1 (%)           6490 ( 26.4)   5748 ( 26.5)   742 ( 26.0)   0.600     
+  primary_death_stroke = 1 (%)                   523 (100.0)    475 (100.0)    48 (100.0)      NA     
+  stroke_composite_pre_index_date = 1 (%)          0 (  0.0)      0 (  0.0)     0 (  0.0)     NaN     
+  pre_index_date_VTE = 1 (%)                    1663 (  6.8)   1494 (  6.9)   169 (  5.9)   0.060     
+  pre_index_date_cvd = 1 (%)                    7774 ( 31.6)   6955 ( 32.0)   818 ( 28.6)  <0.001     
+  BMI (%)                                                                                   0.204     
+     Missing                                    4871 ( 19.8)   4329 ( 19.9)   542 ( 19.0)             
+     Normal                                     9536 ( 38.8)   8385 ( 38.6)  1147 ( 40.2)             
+     Obesity                                    2495 ( 10.1)   2218 ( 10.2)   277 (  9.7)             
+     Overweight                                 6128 ( 24.9)   5401 ( 24.9)   726 ( 25.4)             
+     Severely Obese                              152 (  0.6)    141 (  0.6)    11 (  0.4)             
+     Underweight                                1402 (  5.7)   1249 (  5.7)   153 (  5.4)             
+  pre_index_date_hypertension = 1 (%)          11896 ( 49.2)  10635 ( 49.7)  1260 ( 44.8)  <0.001   
+```
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_WithStroke.png)
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_noStroke_CF.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_noStroke_CF.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMean_noStroke_CF.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMedian_noStroke_CF.png)
+```
+                                             Stratified by discontinued
+                                               Overall       0             1             p      test
+  n                                            3880          3494           386                     
+  sex = 1 (%)                                  1747 ( 45.0)  1581 ( 45.2)   166 ( 43.0)   0.431     
+  Prescribed_other_antipsychotic_Prior = 1 (%) 1124 ( 29.0)  1012 ( 29.0)   112 ( 29.0)   1.000     
+  ethnicity (%)                                                                           0.418     
+     Black                                       71 (  1.8)    63 (  1.8)     8 (  2.1)             
+     Mixed                                       12 (  0.3)    10 (  0.3)     2 (  0.5)             
+     Other                                       22 (  0.6)    19 (  0.5)     3 (  0.8)             
+     South Asian                                103 (  2.7)    88 (  2.5)    15 (  3.9)             
+     Unknown                                     29 (  0.7)    28 (  0.8)     1 (  0.3)             
+     White                                     3643 ( 93.9)  3286 ( 94.0)   357 ( 92.5)             
+  death_composite = 1 (%)                      3157 ( 81.4)  2848 ( 81.5)   309 ( 80.1)   0.529     
+  pre_index_date_angina = 1 (%)                 603 ( 15.5)   550 ( 15.7)    53 ( 13.7)   0.337     
+  pre_index_date_heartfailure = 1 (%)           451 ( 11.6)   404 ( 11.6)    47 ( 12.2)   0.785     
+  pre_index_date_myocardialinfarction = 1 (%)   490 ( 12.6)   446 ( 12.8)    44 ( 11.4)   0.493     
+  pre_index_date_tia = 1 (%)                    892 ( 23.0)   806 ( 23.1)    86 ( 22.3)   0.775     
+  pre_index_date_falls = 1 (%)                 1979 ( 51.0)  1810 ( 51.8)   169 ( 43.8)   0.003     
+  pre_index_date_lowerlimbfracture = 1 (%)      698 ( 18.0)   632 ( 18.1)    66 ( 17.1)   0.681     
+  pre_index_date_ihd = 1 (%)                    870 ( 22.4)   791 ( 22.6)    79 ( 20.5)   0.364     
+  pre_index_date_pad = 1 (%)                    437 ( 11.3)   401 ( 11.5)    36 (  9.3)   0.237     
+  pre_index_date_revasc = 1 (%)                 314 (  8.1)   287 (  8.2)    27 (  7.0)   0.462     
+  pre_index_date_qof_diabetes = 1 (%)           889 ( 22.9)   797 ( 22.8)    92 ( 23.8)   0.696     
+  pre_index_date_fh_diabetes = 1 (%)            803 ( 20.7)   735 ( 21.0)    68 ( 17.6)   0.132     
+  pre_index_date_fh_premature_cvd = 1 (%)       297 (  7.7)   271 (  7.8)    26 (  6.7)   0.539     
+  pre_index_date_pulmonary_embolism = 1 (%)     127 (  3.3)   117 (  3.3)    10 (  2.6)   0.520     
+  pre_index_date_deep_vein_thrombosis = 1 (%)   263 (  6.8)   237 (  6.8)    26 (  6.7)   1.000     
+  pre_index_date_haem_cancer = 1 (%)             67 (  1.7)    58 (  1.7)     9 (  2.3)   0.450     
+  pre_index_date_solid_cancer = 1 (%)           645 ( 16.6)   596 ( 17.1)    49 ( 12.7)   0.035     
+  pre_index_date_hearing_loss = 1 (%)          1155 ( 29.8)  1040 ( 29.8)   115 ( 29.8)   1.000     
+  primary_death_stroke = 1 (%)                  207 (100.0)   191 (100.0)    16 (100.0)      NA     
+  stroke_composite_pre_index_date = 1 (%)      3880 (100.0)  3494 (100.0)   386 (100.0)     NaN     
+  pre_index_date_VTE = 1 (%)                    357 (  9.2)   323 (  9.2)    34 (  8.8)   0.850     
+  pre_index_date_cvd = 1 (%)                   3680 ( 94.8)  3318 ( 95.0)   362 ( 93.8)   0.382     
+  BMI (%)                                                                                 0.863     
+     Missing                                    634 ( 16.3)   564 ( 16.1)    70 ( 18.1)             
+     Normal                                    1488 ( 38.4)  1336 ( 38.2)   152 ( 39.4)             
+     Obesity                                    478 ( 12.3)   435 ( 12.4)    43 ( 11.1)             
+     Overweight                                1047 ( 27.0)   947 ( 27.1)   100 ( 25.9)             
+     Severely Obese                              37 (  1.0)    34 (  1.0)     3 (  0.8)             
+     Underweight                                196 (  5.1)   178 (  5.1)    18 (  4.7)             
+  pre_index_date_hypertension = 1 (%)          1724 ( 44.7)  1571 ( 45.2)   153 ( 40.1)   0.062  
+```
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_NoCVD.png)
 
-****With Stroke****
+```
+                                              Stratified by discontinued
+                                               Overall        0              1             p      test
+  n                                            17010          14944          2062                     
+  sex = 1 (%)                                   5823 ( 34.2)   5130 ( 34.3)   693 ( 33.6)   0.535     
+  Prescribed_other_antipsychotic_Prior = 1 (%)  4060 ( 23.9)   3604 ( 24.1)   456 ( 22.1)   0.049     
+  ethnicity (%)                                                                             0.001     
+     Black                                       314 (  1.8)    274 (  1.8)    40 (  1.9)             
+     Mixed                                        60 (  0.4)     53 (  0.4)     7 (  0.3)             
+     Other                                        94 (  0.6)     80 (  0.5)    14 (  0.7)             
+     South Asian                                 238 (  1.4)    187 (  1.3)    51 (  2.5)             
+     Unknown                                     327 (  1.9)    294 (  2.0)    33 (  1.6)             
+     White                                     15977 ( 93.9)  14056 ( 94.1)  1917 ( 93.0)             
+  death_composite = 1 (%)                      12988 ( 76.4)  11426 ( 76.5)  1560 ( 75.7)   0.437     
+  pre_index_date_angina = 1 (%)                    0 (  0.0)      0 (  0.0)     0 (  0.0)     NaN     
+  pre_index_date_heartfailure = 1 (%)              0 (  0.0)      0 (  0.0)     0 (  0.0)     NaN     
+  pre_index_date_myocardialinfarction = 1 (%)      0 (  0.0)      0 (  0.0)     0 (  0.0)     NaN     
+  pre_index_date_tia = 1 (%)                       0 (  0.0)      0 (  0.0)     0 (  0.0)     NaN     
+  pre_index_date_falls = 1 (%)                  6200 ( 36.4)   5535 ( 37.0)   664 ( 32.2)  <0.001     
+  pre_index_date_lowerlimbfracture = 1 (%)      2527 ( 14.9)   2233 ( 14.9)   294 ( 14.3)   0.432     
+  pre_index_date_ihd = 1 (%)                       0 (  0.0)      0 (  0.0)     0 (  0.0)     NaN     
+  pre_index_date_pad = 1 (%)                       0 (  0.0)      0 (  0.0)     0 (  0.0)     NaN     
+  pre_index_date_revasc = 1 (%)                   40 (  0.2)     36 (  0.2)     4 (  0.2)   0.865     
+  pre_index_date_qof_diabetes = 1 (%)           2361 ( 13.9)   2108 ( 14.1)   253 ( 12.3)   0.026     
+  pre_index_date_fh_diabetes = 1 (%)            3393 ( 19.9)   2955 ( 19.8)   438 ( 21.2)   0.125     
+  pre_index_date_fh_premature_cvd = 1 (%)       1124 (  6.6)   1002 (  6.7)   122 (  5.9)   0.192     
+  pre_index_date_pulmonary_embolism = 1 (%)      335 (  2.0)    299 (  2.0)    36 (  1.7)   0.486     
+  pre_index_date_deep_vein_thrombosis = 1 (%)    753 (  4.4)    675 (  4.5)    78 (  3.8)   0.144     
+  pre_index_date_haem_cancer = 1 (%)             292 (  1.7)    266 (  1.8)    26 (  1.3)   0.107     
+  pre_index_date_solid_cancer = 1 (%)           2599 ( 15.3)   2301 ( 15.4)   298 ( 14.5)   0.278     
+  pre_index_date_hearing_loss = 1 (%)           4102 ( 24.1)   3582 ( 24.0)   520 ( 25.2)   0.224     
+  primary_death_stroke = 1 (%)                   339 (100.0)    310 (100.0)    29 (100.0)      NA     
+  stroke_composite_pre_index_date = 1 (%)        200 (  1.2)    176 (  1.2)    24 (  1.2)   1.000     
+  pre_index_date_VTE = 1 (%)                    1010 (  5.9)    902 (  6.0)   108 (  5.2)   0.165     
+  pre_index_date_cvd = 1 (%)                       0 (  0.0)      0 (  0.0)     0 (  0.0)     NaN     
+  BMI (%)                                                                                   0.280     
+     Missing                                    3702 ( 21.8)   3269 ( 21.9)   433 ( 21.0)             
+     Normal                                     6625 ( 38.9)   5779 ( 38.7)   842 ( 40.8)             
+     Obesity                                    1545 (  9.1)   1373 (  9.2)   172 (  8.3)             
+     Overweight                                 4063 ( 23.9)   3565 ( 23.9)   498 ( 24.2)             
+     Severely Obese                               91 (  0.5)     83 (  0.6)     8 (  0.4)             
+     Underweight                                 984 (  5.8)    875 (  5.9)   109 (  5.3)             
+  pre_index_date_hypertension = 1 (%)           8420 ( 50.5)   7466 ( 51.0)   953 ( 47.2)   0.001  
+```
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Violin_TestVsTrain_withStroke_CF.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DensityPlot_withStroke_CF.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMean_withStroke_CF.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/HistogramMedian_withStroke_CF.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_WithCVD.png)
 
-
+```
+                                              Stratified by discontinued
+                                               Overall        0              1             p      test
+  n                                            11454          10273          1180                     
+  sex = 1 (%)                                   5024 ( 43.9)   4515 ( 44.0)   509 ( 43.1)   0.615     
+  Prescribed_other_antipsychotic_Prior = 1 (%)  3317 ( 29.0)   2988 ( 29.1)   329 ( 27.9)   0.406     
+  ethnicity (%)                                                                             0.007     
+     Black                                       173 (  1.5)    144 (  1.4)    29 (  2.5)             
+     Mixed                                        38 (  0.3)     31 (  0.3)     7 (  0.6)             
+     Other                                        57 (  0.5)     49 (  0.5)     8 (  0.7)             
+     South Asian                                 237 (  2.1)    204 (  2.0)    33 (  2.8)             
+     Unknown                                     127 (  1.1)    117 (  1.1)    10 (  0.8)             
+     White                                     10822 ( 94.5)   9728 ( 94.7)  1093 ( 92.6)             
+  death_composite = 1 (%)                       9343 ( 81.6)   8397 ( 81.7)   945 ( 80.1)   0.178     
+  pre_index_date_angina = 1 (%)                 3344 ( 29.2)   2983 ( 29.0)   361 ( 30.6)   0.280     
+  pre_index_date_heartfailure = 1 (%)           2199 ( 19.2)   1989 ( 19.4)   210 ( 17.8)   0.210     
+  pre_index_date_myocardialinfarction = 1 (%)   2316 ( 20.2)   2086 ( 20.3)   230 ( 19.5)   0.534     
+  pre_index_date_tia = 1 (%)                    2641 ( 23.1)   2354 ( 22.9)   286 ( 24.2)   0.324     
+  pre_index_date_falls = 1 (%)                  5548 ( 48.4)   5020 ( 48.9)   528 ( 44.7)   0.008     
+  pre_index_date_lowerlimbfracture = 1 (%)      2009 ( 17.5)   1817 ( 17.7)   192 ( 16.3)   0.242     
+  pre_index_date_ihd = 1 (%)                    4717 ( 41.2)   4224 ( 41.1)   493 ( 41.8)   0.684     
+  pre_index_date_pad = 1 (%)                    2207 ( 19.3)   1983 ( 19.3)   224 ( 19.0)   0.822     
+  pre_index_date_revasc = 1 (%)                 1474 ( 12.9)   1326 ( 12.9)   148 ( 12.5)   0.757     
+  pre_index_date_qof_diabetes = 1 (%)           2618 ( 22.9)   2375 ( 23.1)   243 ( 20.6)   0.055     
+  pre_index_date_fh_diabetes = 1 (%)            2431 ( 21.2)   2161 ( 21.0)   270 ( 22.9)   0.152     
+  pre_index_date_fh_premature_cvd = 1 (%)       1109 (  9.7)    995 (  9.7)   114 (  9.7)   1.000     
+  pre_index_date_pulmonary_embolism = 1 (%)      393 (  3.4)    357 (  3.5)    36 (  3.1)   0.500     
+  pre_index_date_deep_vein_thrombosis = 1 (%)    715 (  6.2)    647 (  6.3)    68 (  5.8)   0.512     
+  pre_index_date_haem_cancer = 1 (%)             248 (  2.2)    223 (  2.2)    25 (  2.1)   0.991     
+  pre_index_date_solid_cancer = 1 (%)           1918 ( 16.7)   1736 ( 16.9)   182 ( 15.4)   0.214     
+  pre_index_date_hearing_loss = 1 (%)           3543 ( 30.9)   3206 ( 31.2)   337 ( 28.6)   0.067     
+  primary_death_stroke = 1 (%)                   391 (100.0)    356 (100.0)    35 (100.0)      NA     
+  stroke_composite_pre_index_date = 1 (%)       3680 ( 32.1)   3318 ( 32.3)   362 ( 30.7)   0.273     
+  pre_index_date_VTE = 1 (%)                    1010 (  8.8)    915 (  8.9)    95 (  8.1)   0.353     
+  pre_index_date_cvd = 1 (%)                   11454 (100.0)  10273 (100.0)  1180 (100.0)     NaN     
+  BMI (%)                                                                                   0.793     
+     Missing                                    1803 ( 15.7)   1624 ( 15.8)   179 ( 15.2)             
+     Normal                                     4399 ( 38.4)   3942 ( 38.4)   457 ( 38.7)             
+     Obesity                                    1428 ( 12.5)   1280 ( 12.5)   148 ( 12.5)             
+     Overweight                                 3112 ( 27.2)   2783 ( 27.1)   328 ( 27.8)             
+     Severely Obese                               98 (  0.9)     92 (  0.9)     6 (  0.5)             
+     Underweight                                 614 (  5.4)    552 (  5.4)    62 (  5.3)             
+  pre_index_date_hypertension = 1 (%)           5200 ( 45.7)   4740 ( 46.4)   460 ( 39.2)  <0.001   
+```
 
 
 
