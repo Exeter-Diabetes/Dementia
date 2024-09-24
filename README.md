@@ -56,38 +56,18 @@ flowchart TD
 
 ```
 
-**This is the distribution of number of diagnosis per year for patients diagnosed after registration**
-
-
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AfterRegistrationOverlap.png)
 
 
 
 
-**This is the distribution of number of diagnosis per year for patients diagnosed after 2000**
-
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/After2000Overlap.png)
 
 
 
-**This is the distribution of number of prescriptions per year for patients diagnosed after 2004**
 
-
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/After2004Overlap.png)
-
-
-**BMJ codes vs ours**
-
-
-```
-BMJ codes	279
-Our codes	631
-Common codes	86
-```
 **Flow chart of the final cohorts**
 
-![image](https://github.com/Exeter-Diabetes/Dementia/assets/145013232/737f579f-2aaa-4080-b6ce-1c3c6f53e0dc)
 
+![image](https://github.com/user-attachments/assets/5e1b5403-efd6-4c10-90ff-4d69959b6fa3)
 
 
 
@@ -1075,7 +1055,7 @@ Score (logrank) test = 1352  on 3 df,   p=<2e-16
 
 **Matching**
 
-***Updated Algorithm - exact match on: Sex, stroke history, cvd, deprivation and risperidone age category (65-74, 75-84, 85+)***
+***Updated Algorithm - exact match on: Sex, stroke history, cvd and risperidone age category (65-74, 75-84, 85+)***
 
 ```
                                                         Stratified by risperidone
