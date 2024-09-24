@@ -6,7 +6,7 @@ library(lubridate)
 rm(list=ls())
 library(bit64)
 library(tableone)
-
+library(venn)
 library(survival)
 library(survminer)
 
@@ -99,26 +99,6 @@ earliest_obs %>% select(date_of_birth)
 completeData <- earliest_obs %>%
   mutate(
     age_diagnosis = floor(as.numeric(datediff(as.Date(earliest_obsdate), as.Date(date_of_birth))) / 365.25),
-    
-    # Diff_start_endOfFollowup = as.numeric((as.Date(pmin(regenddate, cprd_ddate, lcd, na.rm = TRUE)) - as.Date(pmax(obsdate, regstartdate, na.rm = TRUE)))/365.25),
-    # endoffollowup = pmin(regenddate, cprd_ddate, lcd, na.rm = TRUE),
-    # endoffollowup = if_else(
-    #   !is.na(regenddate) & (is.na(cprd_ddate) | regenddate <= cprd_ddate) & (is.na(lcd) | regenddate <= lcd), 
-    #   regenddate, 
-    #   if_else(!is.na(cprd_ddate) & (is.na(lcd) | cprd_ddate <= lcd), 
-    #           cprd_ddate, 
-    #           lcd)
-    # ),
-    # 
-    # Diff_start_endOfFollowup = as.numeric(datediff(
-    #   endoffollowup, 
-    #   if_else(
-    #     !is.na(obsdate) & (is.na(regstartdate) | obsdate >= regstartdate),
-    #     obsdate,
-    #     regstartdate
-    #   )
-    # )) / 365.25,
-    
     age_category = case_when(
       age_diagnosis >= 65 & age_diagnosis <= 74 ~ '65 - 74',
       age_diagnosis >= 75 & age_diagnosis <= 84 ~ '75 - 84',
@@ -313,15 +293,7 @@ left_join(analysis_at_diag$cached(name = "alcohol"), by = "patid") %>%
   filter(DiagnosedAfterCompositeDeath==0 | is.na(DiagnosedAfterCompositeDeath))%>%
  analysis$cached(name = "final_dementia_after2004", indexes = "patid")
 
-view(Over65 %>% filter(DiagnosedAfterCompositeDeath==0 | is.na(DiagnosedAfterCompositeDeath)) %>% select(regenddate,DiagnosedAfterCompositeDeath, death_composite_date, cprd_ddate,ONS_date_of_death, lcd,earliest_obsdate ))
-view(Over65 %>%  select(FollowUp,Diff_start_endOfFollowup,stroke_compositeDate, stroke_earliest_gp_obsdate, epistart, regenddate,DiagnosedAfterCompositeDeath, death_composite_date, cprd_ddate,ONS_date_of_death,endoffollowup, lcd,earliest_obsdate ))
 
-
-
-unique((Over65%>%collect())$DiagnosedAfterCompositeDeath)
-
-count(Over65 %>% filter(DiagnosedAfterCompositeDeath==0 | is.na(DiagnosedAfterCompositeDeath))) ###577887
-count(Over65)
 Over65_cohort <- Over65 %>% collect()
 table(Over65_cohort$gender)
 
@@ -501,18 +473,11 @@ my_tableone <- CreateTableOne(vars = variables_of_interest, data = R_cohort_link
 print(my_tableone)
 
 #############################################
-# Load necessary libraries
-library(dplyr)
-library(venn)
-# Sample data frame
+
 df <- LinkedData %>% collect()
 
 confusion_matrix <- table(df$died, df$ONS_died)
-
-# Print the confusion matrix
 print(confusion_matrix)
-
-# Convert the confusion matrix to a data frame for ggplot2
 confusion_df <- as.data.frame(as.table(prop.table(confusion_matrix) * 100)) # Converting to percentages
 
 # Create a heatmap plot
@@ -527,11 +492,7 @@ ggplot(confusion_df, aes(x = Var2, y = Var1, fill = Freq)) +
 
 
 confusion_matrix <- table(df$GP_stroke, df$HES_stroke)
-
-# Print the confusion matrix
 print(confusion_matrix)
-
-# Convert the confusion matrix to a data frame for ggplot2
 confusion_df <- as.data.frame(as.table(prop.table(confusion_matrix) * 100)) # Converting to percentages
 
 # Create a heatmap plot
@@ -545,15 +506,9 @@ ggplot(confusion_df, aes(x = Var2, y = Var1, fill = Freq)) +
 
 
 
-
-
 # Create the confusion matrix for the ethnicity variable
 confusion_matrix <- table(df$gp_5cat_ethnicity, df$hes_5cat_ethnicity)
-
-# Print the confusion matrix
 print(confusion_matrix)
-
-# Convert the confusion matrix to a data frame for ggplot2
 confusion_df <- as.data.frame(as.table(prop.table(confusion_matrix) * 100)) # Converting to percentages
 
 # Create a heatmap plot
@@ -566,110 +521,3 @@ ggplot(confusion_df, aes(x = Var2, y = Var1, fill = Freq)) +
 
 
 
-df <- df %>%
-mutate(
-  FollowUp_2 =  as.numeric((as.Date(pmin(regenddate, cprd_ddate, lcd, na.rm = TRUE)) - as.Date(earliest_obsdate))/365.25)
-) 
-
-df$death_composite <- as.numeric(as.character(df$death_composite))
-library(survminer)
-# fit <- survfit(Surv(time, status) ~ sex, data = lung)
-fit <- survfit(Surv(FollowUp,death_composite) ~ gender_decode,data=df)
-ggsurv <- ggsurvplot(
-  fit,                     # survfit object with calculated statistics.
-  data = df,             # data used to fit survival curves.
-  risk.table = TRUE,       # show risk table.
-  pval = TRUE,             # show p-value of log-rank test.
-  conf.int = TRUE,         # show confidence intervals for 
-  # point estimates of survival curves.
-  palette = c("#E7B800", "#2E9FDF"),
-  xlim = c(0,22),         # present narrower X axis, but not affect
-  # survival estimates.
-  xlab = "Time in years",   # customize X axis label.
-  break.time.by = 3,     # break X axis in time intervals by 500.
-  ggtheme = theme_light(), # customize plot and risk table with a theme.
-  risk.table.y.text.col = T,# colour risk table text annotations.
-  risk.table.height = 0.25, # the height of the risk table
-  risk.table.y.text = FALSE,# show bars instead of names in text annotations
-  # in legend of risk table.
-  # ncensor.plot = TRUE,      # plot the number of censored subjects at time t
-  # ncensor.plot.height = 0.25,
-  conf.int.style = "step",  # customize style of confidence intervals
-  surv.median.line = "hv",  # add the median survival pointer.
-  legend.labs =
-    c("Female", "Male")    # change legend labels.
-)
-ggsurv
-
-
-median_times <- surv_median(fit)
-
-# Print the median survival times
-print(median_times)
-
-
-
-
-
-unique_age_categories <- levels(df$age_category)
-fit <- survfit(Surv(FollowUp,death_composite) ~ gender_decode,data=df)
-
-fit <- survfit(Surv(FollowUp, death_composite) ~ age_category, data = df)
-
-ggsurv <- ggsurvplot(
-  fit,
-  data = df,
-  risk.table = TRUE,
-  pval = TRUE,
-  conf.int = TRUE,
-  palette = c("#E7B800", "#2E9FDF", "#55CC00", "#FF0000"),
-  xlim = c(0, 22),
-  xlab = "Time in years",
-  break.time.by = 3,
-  ggtheme = theme_light(),
-  risk.table.y.text.col = TRUE,
-  risk.table.height = 0.35,
-  risk.table.y.text = FALSE,
-  conf.int.style = "step",
-  surv.median.line = "hv",
-  legend.labs = unique_age_categories,
-  risk.table.y.text.size = 3,          # Adjust the size of the risk table numbers
-  risk.table.y.text.fontsize = 3,      # Adjust the font size of the risk table numbers
-  size = 1  # Adjust the size of the plot
-)
-
-# Explicitly print the plot before saving
-print(ggsurv)
-
-median_times <- surv_median(fit)
-
-# Print the median survival times
-print(median_times)
-
-
-
-
-
-
-
-library(dplyr)
-library(ggplot2)
-
-# Assuming your data frame is named df and your date columns are named 'cprd_ddate' and 'ONS_date_of_death'
-df <- df %>%
-  mutate(dates_match = ifelse(is.na(cprd_ddate) | is.na(ONS_date_of_death), "No Match",
-                              ifelse(cprd_ddate == ONS_date_of_death, "Match", "No Match")))
-
-# Summarize the number of matches and mismatches
-match_summary <- df %>%
-  group_by(dates_match) %>%
-  summarise(count = n()) %>%
-  mutate(percentage = count / sum(count) * 100)
-
-# Create a bar plot to visualize the matches and mismatches in percentages
-ggplot(match_summary, aes(x = dates_match, y = percentage, fill = dates_match)) +
-  geom_bar(stat = "identity") +
-  geom_text(aes(label = sprintf("%.1f%%", percentage)), vjust = -0.3) +  # Add percentage labels
-  labs(x = "Date Match", y = "Percentage", title = "Percentage of Matching Death Dates") +
-  scale_fill_manual(values = c("Match" = "steelblue", "No Match" = "blue")) +
-  theme_minimal()
