@@ -44,56 +44,6 @@ clean_alcohol_medcodes <- raw_alcohol_medcodes %>%
   analysis$cached("clean_alcohol_medcodes", indexes=c("patid", "date", "alcohol_cat"))
 
 
-# clean_alcohol_medcodes <- raw_alcohol_medcodes %>%
-#   inner_join(cprd$tables$practice %>%
-#                select(pracid, lcd), by="pracid") %>%
-#   inner_join(cprd$tables$patient %>%
-#                select(patid, regenddate, cprd_ddate), by="patid") %>%
-#   filter()
-#   filter(obsdate>=min_dob & obsdate<=gp_ons_end_date) %>%
-#   select(patid, date=obsdate, alcohol_cat) %>%
-#   distinct() %>%
-#   analysis$cached("clean_alcohol_medcodes", indexes=c("patid", "date", "alcohol_cat"))
-
-############################################################################################
-risperidone_prescriptions <- risperidone_prescriptions %>% analysis$cached("risperidone_prescriptions") 
-clean_risperidone_prescriptions <- risperidone_prescriptions %>%
-  inner_join(cprd$tables$validDateLookup, by="patid") %>%
-  #filter(obsdate>=min_dob & obsdate<=gp_ons_end_date) %>%  #gp_ons_end_date not available on this dataset
-  filter(issuedate>=min_dob & issuedate<=gp_end_date) %>%
-  analysis$cached("clean_risperidone_prescriptions", indexes=c("patid"))
-
-
-Other_Antipsychotic_prescriptions <- Other_Antipsychotic_prescriptions %>% analysis$cached("Other_Antipsychotic_Prescriptions") 
-clean_Other_Antipsychotic_prescriptions <- Other_Antipsychotic_prescriptions %>%
-  inner_join(cprd$tables$validDateLookup, by="patid") %>%
-  #filter(obsdate>=min_dob & obsdate<=gp_ons_end_date) %>%  #gp_ons_end_date not available on this dataset
-  filter(issuedate>=min_dob & issuedate<=gp_end_date) %>%
-  analysis$cached("clean_Other_Antipsychotic_prescriptions", indexes=c("patid"))
-
-
-earliest_Prescription <- Other_Antipsychotic_prescriptions %>%
-  group_by(patid) %>%
-  slice_min(order_by = issuedate) %>%
-  ungroup() %>%
-  distinct(patid, .keep_all = TRUE) %>%
-  analysis$cached(name = "Other_Antipsychotic_Earliest_prescriptions", indexes = "patid")
-
-############################################################################################
-BMJ_paper_prescriptions <- BMJ_paper_prescriptions %>% analysis$cached("BMJ_Antipsychotic_Prescriptions") 
-clean_BMJ_paper_prescriptions <- BMJ_paper_prescriptions %>%
-  inner_join(cprd$tables$validDateLookup, by="patid") %>%
-  #filter(obsdate>=min_dob & obsdate<=gp_ons_end_date) %>%  #gp_ons_end_date not available on this dataset
-  filter(issuedate>=min_dob & issuedate<=gp_end_date) %>%
-  analysis$cached("clean_BMJ_Antipsychotic_prescriptions", indexes=c("patid"))
-
-earliest_Prescription <- BMJ_paper_prescriptions %>%
-  group_by(patid) %>%
-  slice_min(order_by = issuedate) %>%
-  ungroup() %>%
-  distinct(patid, .keep_all = TRUE) %>%
-  analysis$cached(name = "BMJ_Antipsychotic_Earliest_prescriptions", indexes = "patid")
-
 
 #####################################################################################################################
 clean_consultation <- cprd$tables$consultation %>%
