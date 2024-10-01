@@ -1504,7 +1504,287 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 
 **** Discontinuation****
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_Overall.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_StrokeVsNoStroke.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_CvdVsNoCvd.png)
+
+
+****Overall****
+```
+Call:
+coxph(formula = Surv(stime.1, discontinued) ~ sex + age_risperidone + 
+    ethnicity + pre_index_date_stroke + pre_index_date_qof_diabetes + 
+    pre_index_date_haem_cancer + pre_index_date_ihd + pre_index_date_af + 
+    pre_index_date_myocardialinfarction + pre_index_date_heartfailure + 
+    pre_index_date_hypertension, data = dat, weights = weights, 
+    robust = TRUE, cluster = subclass)
+
+  n= 28053, number of events= 3194 
+   (411 observations deleted due to missingness)
+
+                                          coef exp(coef)  se(coef) robust se      z Pr(>|z|)    
+sex1                                  0.019024  1.019206  0.037551  0.037526  0.507 0.612191    
+age_risperidone                      -0.009074  0.990967  0.002661  0.002670 -3.399 0.000677 ***
+ethnicityMixed                        0.028725  1.029142  0.293353  0.296991  0.097 0.922949    
+ethnicityOther                        0.034699  1.035308  0.245066  0.243998  0.142 0.886915    
+ethnicitySouth Asian                  0.288754  1.334763  0.163562  0.165862  1.741 0.081696 .  
+ethnicityUnknown                     -0.328603  0.719929  0.196723  0.197650 -1.663 0.096402 .  
+ethnicityWhite                       -0.194681  0.823097  0.122813  0.124406 -1.565 0.117610    
+pre_index_date_stroke                -0.148224  0.862238  0.058933  0.058922 -2.516 0.011883 *  
+pre_index_date_qof_diabetes1         -0.161481  0.850883  0.050241  0.050348 -3.207 0.001340 ** 
+pre_index_date_haem_cancer1          -0.124679  0.882780  0.144042  0.144652 -0.862 0.388729    
+pre_index_date_ihd1                  -0.012084  0.987988  0.054100  0.053501 -0.226 0.821300    
+pre_index_date_af                    -0.091285  0.912758  0.053758  0.053967 -1.691 0.090744 .  
+pre_index_date_myocardialinfarction1 -0.060367  0.941419  0.075249  0.074368 -0.812 0.416945    
+pre_index_date_heartfailure1         -0.029706  0.970731  0.074815  0.074870 -0.397 0.691542    
+pre_index_date_hypertension1          0.009536  1.009582  0.035801  0.035736  0.267 0.789589    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                     exp(coef) exp(-coef) lower .95 upper .95
+sex1                                    1.0192     0.9812    0.9469    1.0970
+age_risperidone                         0.9910     1.0091    0.9858    0.9962
+ethnicityMixed                          1.0291     0.9717    0.5750    1.8419
+ethnicityOther                          1.0353     0.9659    0.6418    1.6702
+ethnicitySouth Asian                    1.3348     0.7492    0.9643    1.8475
+ethnicityUnknown                        0.7199     1.3890    0.4887    1.0605
+ethnicityWhite                          0.8231     1.2149    0.6450    1.0504
+pre_index_date_stroke                   0.8622     1.1598    0.7682    0.9678
+pre_index_date_qof_diabetes1            0.8509     1.1753    0.7709    0.9391
+pre_index_date_haem_cancer1             0.8828     1.1328    0.6649    1.1721
+pre_index_date_ihd1                     0.9880     1.0122    0.8896    1.0972
+pre_index_date_af                       0.9128     1.0956    0.8211    1.0146
+pre_index_date_myocardialinfarction1    0.9414     1.0622    0.8137    1.0891
+pre_index_date_heartfailure1            0.9707     1.0302    0.8382    1.1242
+pre_index_date_hypertension1            1.0096     0.9905    0.9413    1.0828
+
+Concordance= 0.538  (se = 0.005 )
+Likelihood ratio test= 59.67  on 15 df,   p=3e-07
+Wald test            = 58.89  on 15 df,   p=4e-07
+Score (logrank) test = 61  on 15 df,   p=2e-07,   Robust = 56.18  p=1e-06
+
+  (Note: the likelihood ratio and score tests assume independence of
+     observations within a cluster, the Wald and robust score tests do not).
+```
+
+****No Stroke****
+
+```
+Call:
+coxph(formula = Surv(stime.1, discontinued) ~ sex + age_risperidone + 
+    ethnicity + pre_index_date_stroke + pre_index_date_qof_diabetes + 
+    pre_index_date_haem_cancer + pre_index_date_ihd + pre_index_date_af + 
+    pre_index_date_myocardialinfarction + pre_index_date_heartfailure + 
+    pre_index_date_hypertension, data = no_stroke)
+
+  n= 24195, number of events= 2812 
+   (389 observations deleted due to missingness)
+
+                                          coef exp(coef)  se(coef)      z Pr(>|z|)    
+sex1                                  0.030991  1.031476  0.040074  0.773 0.439318    
+age_risperidone                      -0.009160  0.990881  0.002833 -3.233 0.001224 ** 
+ethnicityMixed                       -0.023587  0.976689  0.316072 -0.075 0.940511    
+ethnicityOther                       -0.001310  0.998691  0.262927 -0.005 0.996026    
+ethnicitySouth Asian                  0.276529  1.318545  0.177134  1.561 0.118494    
+ethnicityUnknown                     -0.323348  0.723722  0.203027 -1.593 0.111242    
+ethnicityWhite                       -0.227896  0.796207  0.130590 -1.745 0.080963 .  
+pre_index_date_stroke                       NA        NA  0.000000     NA       NA    
+pre_index_date_qof_diabetes1         -0.207068  0.812964  0.055168 -3.753 0.000174 ***
+pre_index_date_haem_cancer1          -0.228094  0.796050  0.159324 -1.432 0.152248    
+pre_index_date_ihd1                  -0.004100  0.995908  0.058415 -0.070 0.944043    
+pre_index_date_af                    -0.074517  0.928192  0.059494 -1.253 0.210383    
+pre_index_date_myocardialinfarction1 -0.053970  0.947460  0.083013 -0.650 0.515603    
+pre_index_date_heartfailure1         -0.084594  0.918885  0.084378 -1.003 0.316073    
+pre_index_date_hypertension1          0.004519  1.004529  0.038103  0.119 0.905602    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                     exp(coef) exp(-coef) lower .95 upper .95
+sex1                                    1.0315     0.9695    0.9536    1.1158
+age_risperidone                         0.9909     1.0092    0.9854    0.9964
+ethnicityMixed                          0.9767     1.0239    0.5257    1.8147
+ethnicityOther                          0.9987     1.0013    0.5965    1.6720
+ethnicitySouth Asian                    1.3185     0.7584    0.9318    1.8658
+ethnicityUnknown                        0.7237     1.3817    0.4861    1.0774
+ethnicityWhite                          0.7962     1.2560    0.6164    1.0285
+pre_index_date_stroke                       NA         NA        NA        NA
+pre_index_date_qof_diabetes1            0.8130     1.2301    0.7296    0.9058
+pre_index_date_haem_cancer1             0.7960     1.2562    0.5825    1.0878
+pre_index_date_ihd1                     0.9959     1.0041    0.8882    1.1167
+pre_index_date_af                       0.9282     1.0774    0.8260    1.0430
+pre_index_date_myocardialinfarction1    0.9475     1.0555    0.8052    1.1149
+pre_index_date_heartfailure1            0.9189     1.0883    0.7788    1.0841
+pre_index_date_hypertension1            1.0045     0.9955    0.9322    1.0824
+
+Concordance= 0.536  (se = 0.006 )
+Likelihood ratio test= 51.69  on 14 df,   p=3e-06
+Wald test            = 52.65  on 14 df,   p=2e-06
+Score (logrank) test = 52.9  on 14 df,   p=2e-06
+```
+
+****With Stroke****
+```
+Call:
+coxph(formula = Surv(stime.1, discontinued) ~ sex + age_risperidone + 
+    ethnicity + pre_index_date_stroke + pre_index_date_qof_diabetes + 
+    pre_index_date_haem_cancer + pre_index_date_ihd + pre_index_date_af + 
+    pre_index_date_myocardialinfarction + pre_index_date_heartfailure + 
+    pre_index_date_hypertension, data = with_stroke)
+
+  n= 3858, number of events= 382 
+   (22 observations deleted due to missingness)
+
+                                          coef exp(coef)  se(coef)      z Pr(>|z|)
+sex1                                 -0.057648  0.943982  0.107858 -0.534    0.593
+age_risperidone                      -0.008081  0.991951  0.007901 -1.023    0.306
+ethnicityMixed                        0.298613  1.347988  0.792988  0.377    0.706
+ethnicityOther                        0.324099  1.382784  0.679506  0.477    0.633
+ethnicitySouth Asian                  0.436795  1.547739  0.439604  0.994    0.320
+ethnicityUnknown                     -1.005812  0.365748  1.062741 -0.946    0.344
+ethnicityWhite                        0.034425  1.035025  0.361892  0.095    0.924
+pre_index_date_stroke                -0.188723  0.828016  0.146272 -1.290    0.197
+pre_index_date_qof_diabetes1          0.074922  1.077800  0.124470  0.602    0.547
+pre_index_date_haem_cancer1           0.503003  1.653679  0.339273  1.483    0.138
+pre_index_date_ihd1                  -0.063149  0.938804  0.143776 -0.439    0.661
+pre_index_date_af                    -0.175271  0.839230  0.125680 -1.395    0.163
+pre_index_date_myocardialinfarction1 -0.081609  0.921632  0.179618 -0.454    0.650
+pre_index_date_heartfailure1          0.179570  1.196702  0.163699  1.097    0.273
+pre_index_date_hypertension1          0.036947  1.037638  0.104872  0.352    0.725
+
+                                     exp(coef) exp(-coef) lower .95 upper .95
+sex1                                    0.9440     1.0593   0.76411     1.166
+age_risperidone                         0.9920     1.0081   0.97671     1.007
+ethnicityMixed                          1.3480     0.7418   0.28490     6.378
+ethnicityOther                          1.3828     0.7232   0.36505     5.238
+ethnicitySouth Asian                    1.5477     0.6461   0.65389     3.663
+ethnicityUnknown                        0.3657     2.7341   0.04556     2.936
+ethnicityWhite                          1.0350     0.9662   0.50922     2.104
+pre_index_date_stroke                   0.8280     1.2077   0.62163     1.103
+pre_index_date_qof_diabetes1            1.0778     0.9278   0.84448     1.376
+pre_index_date_haem_cancer1             1.6537     0.6047   0.85048     3.215
+pre_index_date_ihd1                     0.9388     1.0652   0.70826     1.244
+pre_index_date_af                       0.8392     1.1916   0.65600     1.074
+pre_index_date_myocardialinfarction1    0.9216     1.0850   0.64814     1.311
+pre_index_date_heartfailure1            1.1967     0.8356   0.86825     1.649
+pre_index_date_hypertension1            1.0376     0.9637   0.84485     1.274
+
+Concordance= 0.539  (se = 0.015 )
+Likelihood ratio test= 12.93  on 15 df,   p=0.6
+Wald test            = 13.02  on 15 df,   p=0.6
+Score (logrank) test = 13.25  on 15 df,   p=0.6
+
+
+```
+
+
+***No CVD***
+```
+Call:
+coxph(formula = Surv(stime.1, discontinued) ~ sex + age_risperidone + 
+    ethnicity + pre_index_date_stroke + pre_index_date_qof_diabetes + 
+    pre_index_date_haem_cancer + pre_index_date_ihd + pre_index_date_af + 
+    pre_index_date_myocardialinfarction + pre_index_date_heartfailure + 
+    pre_index_date_hypertension, data = No_CVD)
+
+  n= 16669, number of events= 2021 
+   (341 observations deleted due to missingness)
+
+                                          coef exp(coef)  se(coef)      z Pr(>|z|)   
+sex1                                  0.019490  1.019682  0.047579  0.410  0.68207   
+age_risperidone                      -0.009715  0.990332  0.003292 -2.951  0.00317 **
+ethnicityMixed                       -0.110132  0.895715  0.410142 -0.269  0.78830   
+ethnicityOther                        0.151112  1.163127  0.310822  0.486  0.62685   
+ethnicitySouth Asian                  0.509543  1.664530  0.213153  2.391  0.01683 * 
+ethnicityUnknown                     -0.156704  0.854957  0.238641 -0.657  0.51140   
+ethnicityWhite                       -0.042857  0.958048  0.161193 -0.266  0.79033   
+pre_index_date_stroke                       NA        NA  0.000000     NA       NA   
+pre_index_date_qof_diabetes1         -0.149835  0.860850  0.068721 -2.180  0.02923 * 
+pre_index_date_haem_cancer1          -0.305251  0.736938  0.201341 -1.516  0.12950   
+pre_index_date_ihd1                         NA        NA  0.000000     NA       NA   
+pre_index_date_af                    -0.135940  0.872895  0.081665 -1.665  0.09599 . 
+pre_index_date_myocardialinfarction1        NA        NA  0.000000     NA       NA   
+pre_index_date_heartfailure1                NA        NA  0.000000     NA       NA   
+pre_index_date_hypertension1          0.043759  1.044731  0.044760  0.978  0.32825   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                     exp(coef) exp(-coef) lower .95 upper .95
+sex1                                    1.0197     0.9807    0.9289    1.1193
+age_risperidone                         0.9903     1.0098    0.9840    0.9967
+ethnicityMixed                          0.8957     1.1164    0.4009    2.0012
+ethnicityOther                          1.1631     0.8598    0.6325    2.1389
+ethnicitySouth Asian                    1.6645     0.6008    1.0961    2.5277
+ethnicityUnknown                        0.8550     1.1696    0.5356    1.3648
+ethnicityWhite                          0.9580     1.0438    0.6985    1.3140
+pre_index_date_stroke                       NA         NA        NA        NA
+pre_index_date_qof_diabetes1            0.8608     1.1616    0.7524    0.9850
+pre_index_date_haem_cancer1             0.7369     1.3570    0.4966    1.0935
+pre_index_date_ihd1                         NA         NA        NA        NA
+pre_index_date_af                       0.8729     1.1456    0.7438    1.0244
+pre_index_date_myocardialinfarction1        NA         NA        NA        NA
+pre_index_date_heartfailure1                NA         NA        NA        NA
+pre_index_date_hypertension1            1.0447     0.9572    0.9570    1.1405
+
+Concordance= 0.532  (se = 0.007 )
+Likelihood ratio test= 34.77  on 11 df,   p=3e-04
+Wald test            = 36.2  on 11 df,   p=2e-04
+Score (logrank) test = 36.57  on 11 df,   p=1e-04
+
+```
+
+***With CVD***
+```
+Call:
+coxph(formula = Surv(stime.1, discontinued) ~ sex + age_risperidone + 
+    ethnicity + pre_index_date_stroke + pre_index_date_qof_diabetes + 
+    pre_index_date_haem_cancer + pre_index_date_ihd + pre_index_date_af + 
+    pre_index_date_myocardialinfarction + pre_index_date_heartfailure + 
+    pre_index_date_hypertension, data = CVD)
+
+  n= 11384, number of events= 1173 
+   (70 observations deleted due to missingness)
+
+                                          coef exp(coef)  se(coef)      z Pr(>|z|)  
+sex1                                  0.023752  1.024037  0.061564  0.386   0.6996  
+age_risperidone                      -0.006780  0.993243  0.004618 -1.468   0.1421  
+ethnicityMixed                        0.182474  1.200183  0.421483  0.433   0.6651  
+ethnicityOther                       -0.171906  0.842058  0.399844 -0.430   0.6672  
+ethnicitySouth Asian                 -0.068042  0.934221  0.254991 -0.267   0.7896  
+ethnicityUnknown                     -0.662257  0.515686  0.368095 -1.799   0.0720 .
+ethnicityWhite                       -0.458243  0.632394  0.189885 -2.413   0.0158 *
+pre_index_date_stroke                -0.118844  0.887946  0.068785 -1.728   0.0840 .
+pre_index_date_qof_diabetes1         -0.170967  0.842849  0.073871 -2.314   0.0206 *
+pre_index_date_haem_cancer1           0.106377  1.112242  0.206500  0.515   0.6065  
+pre_index_date_ihd1                   0.017707  1.017864  0.063585  0.278   0.7807  
+pre_index_date_af                    -0.052137  0.949198  0.072076 -0.723   0.4695  
+pre_index_date_myocardialinfarction1 -0.046902  0.954181  0.076790 -0.611   0.5413  
+pre_index_date_heartfailure1         -0.024305  0.975988  0.079780 -0.305   0.7606  
+pre_index_date_hypertension1         -0.056020  0.945520  0.060037 -0.933   0.3508  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                     exp(coef) exp(-coef) lower .95 upper .95
+sex1                                    1.0240     0.9765    0.9076    1.1554
+age_risperidone                         0.9932     1.0068    0.9843    1.0023
+ethnicityMixed                          1.2002     0.8332    0.5254    2.7417
+ethnicityOther                          0.8421     1.1876    0.3846    1.8437
+ethnicitySouth Asian                    0.9342     1.0704    0.5668    1.5399
+ethnicityUnknown                        0.5157     1.9392    0.2506    1.0610
+ethnicityWhite                          0.6324     1.5813    0.4359    0.9175
+pre_index_date_stroke                   0.8879     1.1262    0.7760    1.0161
+pre_index_date_qof_diabetes1            0.8428     1.1865    0.7292    0.9742
+pre_index_date_haem_cancer1             1.1122     0.8991    0.7420    1.6671
+pre_index_date_ihd1                     1.0179     0.9824    0.8986    1.1530
+pre_index_date_af                       0.9492     1.0535    0.8241    1.0932
+pre_index_date_myocardialinfarction1    0.9542     1.0480    0.8209    1.1092
+pre_index_date_heartfailure1            0.9760     1.0246    0.8347    1.1412
+pre_index_date_hypertension1            0.9455     1.0576    0.8406    1.0636
+
+Concordance= 0.545  (se = 0.009 )
+Likelihood ratio test= 23.97  on 15 df,   p=0.07
+Wald test            = 25.2  on 15 df,   p=0.05
+Score (logrank) test = 25.4  on 15 df,   p=0.04
+```
+
 ```
                                               Stratified by discontinued
                                                Overall        0              1             p      test
