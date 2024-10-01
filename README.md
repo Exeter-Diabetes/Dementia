@@ -1502,7 +1502,7 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 
 
 
-**** Discontinuation****
+****Discontinuation****
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_StrokeVsNoStroke.png)
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_CvdVsNoCvd.png)
@@ -1784,7 +1784,8 @@ Likelihood ratio test= 23.97  on 15 df,   p=0.07
 Wald test            = 25.2  on 15 df,   p=0.05
 Score (logrank) test = 25.4  on 15 df,   p=0.04
 ```
-
+****Discontinuation baseline characteristics****
+****Overall***
 ```
                                               Stratified by discontinued
                                                Overall        0              1             p      test
@@ -1829,8 +1830,7 @@ Score (logrank) test = 25.4  on 15 df,   p=0.04
      Underweight                                1598 (  5.6)   1427 (  5.7)   171 (  5.3)             
   pre_index_date_hypertension = 1 (%)          13620 ( 48.5)  12206 ( 49.1)  1413 ( 44.2)  <0.001
 ```
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_NoStroke.png)
-
+****No stroke****
 
 ```
                                              Stratified by discontinued
@@ -1876,8 +1876,7 @@ Score (logrank) test = 25.4  on 15 df,   p=0.04
      Underweight                                1402 (  5.7)   1249 (  5.7)   153 (  5.4)             
   pre_index_date_hypertension = 1 (%)          11896 ( 49.2)  10635 ( 49.7)  1260 ( 44.8)  <0.001   
 ```
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_WithStroke.png)
-
+****with stroke****
 ```
                                              Stratified by discontinued
                                                Overall       0             1             p      test
@@ -1922,8 +1921,7 @@ Score (logrank) test = 25.4  on 15 df,   p=0.04
      Underweight                                196 (  5.1)   178 (  5.1)    18 (  4.7)             
   pre_index_date_hypertension = 1 (%)          1724 ( 44.7)  1571 ( 45.2)   153 ( 40.1)   0.062  
 ```
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_NoCVD.png)
-
+****No CVD****
 ```
                                               Stratified by discontinued
                                                Overall        0              1             p      test
@@ -1969,8 +1967,7 @@ Score (logrank) test = 25.4  on 15 df,   p=0.04
   pre_index_date_hypertension = 1 (%)           8420 ( 50.5)   7466 ( 51.0)   953 ( 47.2)   0.001  
 ```
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_WithCVD.png)
-
+****CVD****
 ```
                                               Stratified by discontinued
                                                Overall        0              1             p      test
