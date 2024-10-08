@@ -1610,7 +1610,12 @@ Score (logrank) test = 1935  on 1 df,   p=<2e-16
 ****Discontinuation 30 days window****
 
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_StrokeVsNoStroke_30days.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_StrokeVsNoStroke_30days_extended.png)
+
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_CvdVsNoCvd_30days.png)
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/Discontinuation_CvdVsNoCvd_30days_extended.png)
 
 ****Overall****
 ```
