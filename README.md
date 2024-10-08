@@ -1391,7 +1391,7 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 
 ****Competing Risk****
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/CompetingRisk_12weeks.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CompetingRisk_12weeks.png)
 
 ```# Cause-specific Cox model for stroke (competing event: death)
 > cox_stroke_cs <- coxph(Surv(Stroke_censtime_yrs, Stroke.cr == 1) ~ risperidone, data = dat)
@@ -1440,7 +1440,7 @@ Score (logrank) test = 530.8  on 1 df,   p=<2e-16
 ```
 
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/CompetingRisk_OneYear.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/CompetingRisk_OneYear.png)
 
 
 
