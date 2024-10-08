@@ -1389,11 +1389,109 @@ Score (logrank) test = 6.59  on 1 df,   p=0.01
 
 
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/CompetingRisk_Stroke.png)
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/CompetingRisk_VTE.png)
+****Competing Risk****
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/CompetingRisk_12weeks.png)
+
+```# Cause-specific Cox model for stroke (competing event: death)
+> cox_stroke_cs <- coxph(Surv(Stroke_censtime_yrs, Stroke.cr == 1) ~ risperidone, data = dat)
+> summary(cox_stroke_cs)
+Call:
+coxph(formula = Surv(Stroke_censtime_yrs, Stroke.cr == 1) ~ risperidone, 
+    data = dat)
+
+  n= 165495, number of events= 1943 
+
+               coef exp(coef) se(coef)     z Pr(>|z|)    
+risperidone 0.33040   1.39152  0.05493 6.015  1.8e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+            exp(coef) exp(-coef) lower .95 upper .95
+risperidone     1.392     0.7186     1.249      1.55
+
+Concordance= 0.526  (se = 0.005 )
+Likelihood ratio test= 33.94  on 1 df,   p=6e-09
+Wald test            = 36.18  on 1 df,   p=2e-09
+Score (logrank) test = 36.51  on 1 df,   p=2e-09
+
+> 
+> # Cause-specific Cox model for death (competing event: stroke)
+> cox_death_cs <- coxph(Surv(Stroke_censtime_yrs, Stroke.cr == 2) ~ risperidone, data = dat)
+> summary(cox_death_cs)
+Call:
+coxph(formula = Surv(Stroke_censtime_yrs, Stroke.cr == 2) ~ risperidone, 
+    data = dat)
+
+  n= 165495, number of events= 7474 
+
+               coef exp(coef) se(coef)    z Pr(>|z|)    
+risperidone 0.59437   1.81188  0.02618 22.7   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+            exp(coef) exp(-coef) lower .95 upper .95
+risperidone     1.812     0.5519     1.721     1.907
+
+Concordance= 0.549  (se = 0.003 )
+Likelihood ratio test= 466.1  on 1 df,   p=<2e-16
+Wald test            = 515.4  on 1 df,   p=<2e-16
+Score (logrank) test = 530.8  on 1 df,   p=<2e-16
+```
+
+
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/AnalysisPlots/CompetingRisk_OneYear.png)
 
 
 
+
+```
+> # Cause-specific Cox model for stroke (competing event: death)
+> cox_stroke_cs <- coxph(Surv(Stroke_censtime_yrs, Stroke.cr == 1) ~ risperidone, data = dat)
+> summary(cox_stroke_cs)
+Call:
+coxph(formula = Surv(Stroke_censtime_yrs, Stroke.cr == 1) ~ risperidone, 
+    data = dat)
+
+  n= 165495, number of events= 5581 
+
+               coef exp(coef) se(coef)   z Pr(>|z|)    
+risperidone 0.28814   1.33395  0.03472 8.3   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+            exp(coef) exp(-coef) lower .95 upper .95
+risperidone     1.334     0.7497     1.246     1.428
+
+Concordance= 0.52  (se = 0.003 )
+Likelihood ratio test= 64.77  on 1 df,   p=8e-16
+Wald test            = 68.89  on 1 df,   p=<2e-16
+Score (logrank) test = 69.37  on 1 df,   p=<2e-16
+
+> 
+> # Cause-specific Cox model for death (competing event: stroke)
+> cox_death_cs <- coxph(Surv(Stroke_censtime_yrs, Stroke.cr == 2) ~ risperidone, data = dat)
+> summary(cox_death_cs)
+Call:
+coxph(formula = Surv(Stroke_censtime_yrs, Stroke.cr == 2) ~ risperidone, 
+    data = dat)
+
+  n= 165495, number of events= 25807 
+
+               coef exp(coef) se(coef)     z Pr(>|z|)    
+risperidone 0.63665   1.89014  0.01472 43.26   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+            exp(coef) exp(-coef) lower .95 upper .95
+risperidone      1.89     0.5291     1.836     1.945
+
+Concordance= 0.548  (se = 0.001 )
+Likelihood ratio test= 1661  on 1 df,   p=<2e-16
+Wald test            = 1871  on 1 df,   p=<2e-16
+Score (logrank) test = 1935  on 1 df,   p=<2e-16
+
+```
 
 
 
