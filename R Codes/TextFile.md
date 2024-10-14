@@ -2,6 +2,7 @@
 **Data Preparation**
 
 1. ***CohortDataPreparationScript.R***
+   
    This script interacts with the data on the server using the Aurum package. We used the script to create both the dementia and risperidone cohorts. 
 - **Final dementia incident cohort**
    * This script reads information from the observation table using the dementia codelist and links patient and practice information, creating a table called **all_raw_dementia_patients**.
@@ -24,3 +25,15 @@
    * The final cohort if defined from **final_risperidone_afterdiagnosis_cohort_2004** by selecting only patients with a linked data and the cohort is cached as **final_risperidone_cohortLinkedData**
 
    
+2. ***Matching_YearPartitions_Final.R***
+
+   This is the script we used to create the matched control
+
+- The script reads data from the following tables:
+   * Final dementia incident cohort (**final_dementia_cohortLinkedData**) this will be used to create the matched control patients
+   * Risperidone prescriptions (**risperidone_prescriptions**)
+   * Other antipsychotic prescriptions (**Other_Antipsychotic_Prescriptions**)
+   * Final risperidone cohort (**final_risperidone_cohortLinkedData**)
+- Since the matching is done by calender year. We have partitioned the script to loop through the years, starting from 2004 upto 2023.
+  - Treatment Group:
+  - Control Group:
