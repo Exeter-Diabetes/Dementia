@@ -11,9 +11,12 @@
    * Create a variable marking the earliest date of diagnosis and a binary variable for diagnosis before registration. Use the earliest date of diagnosis to filter out patients diagnosed before 1980-01-01 (to remove old codes). The resulting table, **all_dementia_observation_after_2004**, contains patients with a dementia code after 2004-01-01 (the study period).
    * Select patients who were active after 2004-01-01; the deregistration date and `cprd_ddate` (if not null) must be after 2004-01-01.
    * Select only patients diagnosed at age 65 and above, and cache the table as **final_dementia_after2004**. This table is linked to the following tables:
-      - Alcohol level at diagnosis (**alcohol**)
-      - Smoking status at diagnosis (**smoking**)
-      - GP ethnicity (**gp_ethnicity**)
+      - [Alcohol level at diagnosis](https://github.com/Exeter-Diabetes/Dementia/blob/main/R%20Codes/DataPreparation/At_diag_alcohol.R)
+        - Implemented [diabetes alcohol algorithm](https://github.com/Exeter-Diabetes/CPRD-Codelists?tab=readme-ov-file#alcohol-consumption)
+      - [Smoking status at diagnosis](https://github.com/Exeter-Diabetes/Dementia/blob/main/R%20Codes/DataPreparation/At_diag_smoking.R)
+         - Implemented [diabetes smoking algorithm](https://github.com/Exeter-Diabetes/CPRD-Codelists?tab=readme-ov-file#smoking) 
+      - [GP ethnicity](https://github.com/Exeter-Diabetes/Dementia/blob/main/R%20Codes/DataPreparation/All_patid_ethnicity.R)
+        - Implemented [diabetes ethnicity algorithm](https://github.com/Exeter-Diabetes/CPRD-Codelists?tab=readme-ov-file#sociodemographics-algorithms)
       - HES ethnicity (**hes_ethnicity**)
       - Stroke (**clean_stroke_medcodes** and **clean_stroke_icd10**)
       - ONS death (**onsDeath**)
@@ -66,5 +69,15 @@
 1. ### AllMatchedAnalysis_Final_IR_OneYearFollowUp.R
 
    This script performs the analysis. The details of how it works are outlined below
-   - In this script we analyse the matched data. However, during this period we had to censor patients who stopped taking risperidone. For this reason, the script starts by reading the prescription data and identify discontinuation by 90 days or more gaps in between prescription dates. We then infer the stop date as the last date of prescription plus 30 days. 
+   - In this script we analyse the matched data. However, during this period we had to censor patients who stopped taking risperidone. For this reason, the script starts by reading the prescription data and identify discontinuation by 90 days or more gaps in between prescription dates. We then infer the stop date as the last date of prescription plus 30 days.
+   - Censoring date is defined as the minimum of the following: inferred last date of prescription, deregistration date, death, last day of collection and one year follow up
+   - Defined all the subgroups
+   - Plot a Kaplan-meier survival plot for each subgroup and showing the absolute risk difference between the matched control and treatment group at 12 weeks and one year follow up period
+   - Fit a Cox model, both adjusted and undjusted
+   - Computed metrics:
+     - Hazard ratio 
+     - Absolute risk difference
+     - Numbers needed to harm
+     - Incidence rate per 1000 person-year
+   - Competing risk
    
