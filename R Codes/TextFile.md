@@ -26,6 +26,24 @@
 - #### Final risperidone cohort
    * This part of the code starts by reading in the prescription data (**clean_risperidone_prescriptions**) and select the earliest data of prescription which is then joined to the final dementia cohort to select patients with risperidone prescription and keeping those prescribed after 2004-01-01 (**final_risperidone_After2004**). We then identity patients who were prescribed: after diagnosis, within a year prior to diagnosis and more than a year before diagnosis
    * The final cohort if defined from **final_risperidone_afterdiagnosis_cohort_2004** by selecting only patients with a linked data and the cohort is cached as **final_risperidone_cohortLinkedData**
+      - [1] "patid"                        "consid"                       "pracid"                       "obsid"
+      - [5] "obsdate"                      "enterdate"                    "staffid"                      "parentsobsid"
+      - [9] "medcodeid"                    "testvalue"                    "numunitid"                    "obstypeid"
+      - 13] "numrangelow"                  "numrangehigh"                 "probobsid"                    "dementiadementiacodelist_cat"
+      - [17] "usualgpstaffid"               "gender"                       "yob"                          "mob"
+      - [21] "emis_ddate"                   "regstartdate"                 "patienttypeid"                "regenddate"
+      - [25] "acceptable"                   "cprd_ddate"                   "lcd"                          "uts"
+      - [29] "region"                       "died"                         "gender_decode"                "date_of_birth"
+      - [33] "earliest_obsdate"             "diagnosedbeforeRegistration"  "age_diagnosis"                "age_category"
+      - [37] "year_of_diagnosis"            "alcohol_cat"                  "smoking_cat"                  "qrisk2_smoking_cat"
+      - [41] "qrisk2_smoking_cat_uncoded"   "gp_5cat_ethnicity"            "gp_16cat_ethnicity"           "gp_qrisk2_ethnicity"
+      - [45] "hes_5cat_ethnicity"           "hes_16cat_ethnicity"          "hes_qrisk2_ethnicity"         "epistart"
+      - [49] "epiend"                       "ICD"                          "stroke_earliest_gp_obsdate"   "stroke_cat"
+      - [53] "ONS_date_of_death"            "ONS_died"                     "HES_stroke"                   "GP_stroke"
+      - [57] "stroke_composite"             "death_composite"              "death_composite_date"         "endoffollowup"
+      - [61] "Diff_start_endOfFollowup"     "stroke_compositeDate"         "stroke_date_of_death"         "primary_death_cause"
+      - [65] "primary_death_stroke"         "cause_of_death_stroke_type"   "ethnicity"                    "FollowUp"
+      - [69] "DiagnosedAfterCompositeDeath" "deprivation"                 
 
    
 2. ### Matching_YearPartitions_Final.R 
