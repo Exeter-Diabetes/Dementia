@@ -112,8 +112,48 @@
    - Create a composite stroke variable
    - Defined VTE from pulmonary_embolism or deep_vein_thrombosis)
    - Processed the biomarkers
-     
+- Matching variables
+  - Exact matching
+    - Sex
+    - History of stroke
+    - History of CVD
+    - Current age categorised (65 - 74, 75 - 84 and 85+ years)
+ 
+  - Nearest neighbour matching
+     - Care home status before index date,
+     - deprivation,
+     - age at risperidone prescription,
+     - Angina,
+     - Cardiovascular disease (CVD),
+     - Venous thromboembolism (VTE),
+     - Heart failure,
+     - Body mass index (BMI),
+     - Prescribed other antipsychotic prior to index date,
+     - Disease duration before prescription,
+     - Myocardial infarction,
+     - Stroke,
+     - Transient ischemic attack (TIA),
+     - Falls,
+     - Lower limb fracture,
+     - Ischemic heart disease (IHD),
+     - Peripheral arterial disease (PAD),
+     - Atrial fibrillation (AF),
+     - Revascularization,
+     - Diabetes,
+     - Anxiety disorders,
+     - Family history of diabetes,
+     - Family history of premature cardiovascular disease (CVD),
+     - Pulmonary embolism,
+     - Deep vein thrombosis (DVT),
+     - Hematologic cancer,
+     - Solid cancer,
+     - Hearing loss,
+     - Ethnicity,
+     - Hypertension,
+     - Total cholesterol
+- The matching uses 1:5 (each risperidone user was matched with up to five people with dementia not prescribed risperidone ) ratio and it is done with replacement
 - Finally ran the matching algorithm to create the matched controls then move to the following calendar year
+
 
 
 
