@@ -70,11 +70,7 @@ final_risperidone_prescriptions <- risperidone_with_gaps %>%
 
 risperidone_prescriptions <- analysis$cached(name = "risperidone_prescriptions")
 
-matched <- read.table("C:/Users/njc232/OneDrive - University of Exeter/Documents/MatchedData_exact_final_paperDraft/Joshua_cumulative_matched_data_paperDraft.txt", header = TRUE, sep = "\t") %>%
-  mutate(patid = as.character(patid))
-# dat <- read.table("C:/Users/njc232/OneDrive - University of Exeter/Documents/MatchedData_exact_final/Joshua_cumulative_matched_data.txt", header = TRUE, sep = "\t") %>%
-#   mutate(patid = as.character(patid))
-# 
+
 # dat <- dat %>%
 #   left_join(final_risperidone_prescriptions, by = "patid") %>%
 #   mutate(
@@ -82,9 +78,9 @@ matched <- read.table("C:/Users/njc232/OneDrive - University of Exeter/Documents
 #   ) %>%
 #   select(-FirstPrescriptionDate)
 
-# matched <- analysis$cached(name = "finalMatchedData")  %>%
-#   collect() #%>%
-# mutate(patid = as.character(patid))
+ matched <- analysis$cached(name = "finalMatchedData")  %>%
+   collect() %>%
+ mutate(patid = as.character(patid))
 
 dat <-  matched %>%  # Convert patid to character
   left_join(final_risperidone_prescriptions, by = "patid") %>%
