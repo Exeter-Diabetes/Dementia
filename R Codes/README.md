@@ -162,8 +162,8 @@
 
 1. ### AllMatchedAnalysis_Final_IR_OneYearFollowUp.R
 
-   This script performs the analysis. The details of how it works are outlined below
-   - In this script we analyse the matched data. However, during this period we had to censor patients who stopped taking risperidone. For this reason, the script starts by reading the prescription data and identify discontinuation by 90 days or more gaps in between prescription dates. We then infer the stop date as the last date of prescription plus 30 days.
+   This script performs the analysis for both one year (top part of the script) and 12 weeks (bottom part of the script) follow-up. The details of how it works are outlined below
+   - In this script we analyse the matched data. 
    - Censoring date is defined as the minimum of the following: inferred last date of prescription, deregistration date, death, last day of collection and one year follow up
    - Defined all the subgroups
    - Plot a Kaplan-meier survival plot for each subgroup and showing the absolute risk difference between the matched control and treatment group at 12 weeks and one year follow up period
@@ -174,4 +174,6 @@
      - Numbers needed to harm
      - Incidence rate per 1000 person-year
    - Competing risk
+2. ### Discontinuation: 
+    This script forms part of the senstivity analysis, focusing on discontinuation. The script is the same as the one used above, besides that it censors patients who stopped taking risperidone. For this reason,      the script starts by reading the prescription data and identify discontinuation by 90 days or more gaps in between prescription dates. We then infer the stop date as the last date of prescription plus 30 days.
    
