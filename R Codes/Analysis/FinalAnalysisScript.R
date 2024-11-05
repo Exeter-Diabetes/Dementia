@@ -28,14 +28,6 @@ FinalMatched <- analysis$cached(name = "finalMatchedData")  %>%
   collect() %>%
 mutate(patid = as.character(patid))
 
-
-# FinalMatched <- read.table("C:/Users/njc232/OneDrive - University of Exeter/Documents/MatchedData_exact_final/Joshua_cumulative_matched_data.txt", header = TRUE, sep = "\t") %>%
-# FinalMatched <- read.table("C:/Users/njc232/OneDrive - University of Exeter/Documents/MatchedData_exact_final_paperDraft/Joshua_cumulative_matched_data_paperDraft.txt", header = TRUE, sep = "\t") %>%
-#   mutate(patid = as.character(patid))
-# Final <- read.table("C:/Users/njc232/OneDrive - University of Exeter/Documents/MatchedData_exact_final_paperDraft/Joshua_cumulative_matched_data_paperDraft.txt", header = TRUE, sep = "\t") %>%
-#     mutate(patid = as.character(patid))
-# view(Final)
-
 table(FinalMatched$risperidone)
 
 output_dir <- "C:/Users/njc232/OneDrive - University of Exeter/Documents/GitHub/Dementia/NewDataDownload/images/AnalysisPlots/"
