@@ -160,7 +160,7 @@
 
 ## Analysis 
 
-1. ### AllMatchedAnalysis_Final_IR_OneYearFollowUp.R
+1. ### FinalAnalysisScript.R
 
    This script performs the analysis for both one year (top part of the script) and 12 weeks (bottom part of the script) follow-up. The details of how it works are outlined below
    - In this script we analyse the matched data. 
@@ -174,6 +174,6 @@
      - Numbers needed to harm
      - Incidence rate per 1000 person-year
    - Competing risk
-2. ### Discontinuation: 
+2. ### Discontinuation: RisperidoneDiscontinuationData_SensetivityAnalysis.R
     This script forms part of the senstivity analysis, focusing on discontinuation. The script is the same as the one used above, besides that it censors patients who stopped taking risperidone. For this reason,      the script starts by reading the prescription data and identify discontinuation by 90 days or more gaps in between prescription dates. We then infer the stop date as the last date of prescription plus 30 days.
    
