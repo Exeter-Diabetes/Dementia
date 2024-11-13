@@ -1,0 +1,32 @@
+ProdCodeId	dmdid	Term
+1173841000033113#	343311000001101#	Risperdal 1mg/ml oral solution (Janssen-Cilag Ltd)
+1173941000033117#	321597002#	Risperidone 1mg/ml oral solution sugar free
+1176241000033115#	589911000001105#	Risperdal 1mg tablets (Janssen-Cilag Ltd)
+1176341000033113#	858911000001109#	Risperdal 2mg tablets (Janssen-Cilag Ltd)
+1176441000033119#	518911000001100#	Risperdal 3mg tablets (Janssen-Cilag Ltd)
+1176541000033118#	429611000001104#	Risperdal 4mg tablets (Janssen-Cilag Ltd)
+1176641000033117#	321589009#	Risperidone 1mg tablets
+1176741000033114#	321590000#	Risperidone 2mg tablets
+1176841000033116#	321591001#	Risperidone 3mg tablets
+1176941000033112#	321592008#	Risperidone 4mg tablets
+1177641000033119#	153111000001109#	Risperdal 6mg tablets (Janssen-Cilag Ltd)
+1177741000033111#	321599004#	Risperidone 6mg tablets
+2188141000033115#	526611000001101#	Risperdal 500microgram tablets (Janssen-Cilag Ltd)
+2188241000033110#	321602009#	Risperidone 500microgram tablets
+2779841000033118#	4520711000001102#	Risperdal Consta 25mg powder and solvent for suspension for injection vials (Janssen-Cilag Ltd)
+2779941000033114#	4166711000001102#	Risperdal Consta 37.5mg powder and solvent for suspension for injection vials (Janssen-Cilag Ltd)
+2780041000033113#	4167011000001101#	Risperdal Consta 50mg powder and solvent for suspension for injection vials (Janssen-Cilag Ltd)
+2780141000033112#	4559111000001109#	Risperidone 25mg powder and solvent for suspension for injection vials
+2780241000033117#	4176911000001105#	Risperidone 37.5mg powder and solvent for suspension for injection vials
+2780341000033110#	4177011000001109#	Risperidone 50mg powder and solvent for suspension for injection vials
+2868841000033116#	4054011000001109#	Risperidone 1mg orodispersible tablets sugar free
+2868941000033112#	4054111000001105#	Risperidone 2mg orodispersible tablets sugar free
+2869041000033115#	4039211000001101#	Risperdal Quicklet 1mg orodispersible tablets (Janssen-Cilag Ltd)
+2869141000033116#	4039711000001108#	Risperdal Quicklet 2mg orodispersible tablets (Janssen-Cilag Ltd)
+3246041000033119#	9045911000001108#	Risperidone 500microgram orodispersible tablets sugar free
+3246141000033115#	9044211000001100#	Risperdal Quicklet 500microgram orodispersible tablets (Janssen-Cilag Ltd)
+4012041000033116#	11140811000001105#	Risperidone 3mg orodispersible tablets sugar free
+4012141000033117#	11140911000001100#	Risperidone 4mg orodispersible tablets sugar free
+4012241000033112#	11134611000001103#	Risperdal Quicklet 3mg orodispersible tablets (Janssen-Cilag Ltd)
+4012341000033119#	11134311000001108#	Risperdal Quicklet 4mg orodispersible tablets (Janssen-Cilag Ltd)
+13581641000033117#	38696711000001103#	Risperidone 250microgram tablets
