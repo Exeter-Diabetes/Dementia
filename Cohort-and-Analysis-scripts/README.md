@@ -11,11 +11,11 @@
    * Create a variable marking the earliest date of diagnosis and a binary variable for diagnosis before registration. Use the earliest date of diagnosis to filter out patients diagnosed before 1980-01-01 (to remove old codes). The resulting table, **all_dementia_observation_after_2004**, contains patients with a dementia code after 2004-01-01 (the study period).
    * Select patients who were active after 2004-01-01; the deregistration date and `cprd_ddate` (if not null) must be after 2004-01-01.
    * Select only patients diagnosed at age 65 and above, and cache the table as **final_dementia_after2004**. This table is linked to the following tables:
-      - [Alcohol level at diagnosis](https://github.com/Exeter-Diabetes/Dementia/blob/main/R%20Codes/DataPreparation/At_diag_alcohol.R)
+      - [Alcohol level at diagnosis](https://github.com/Exeter-Diabetes/Dementia/blob/main/Cohort-and-Analysis-scripts/DataPreparation/At_diag_alcohol.R)
         - Implemented [diabetes alcohol algorithm](https://github.com/Exeter-Diabetes/CPRD-Codelists?tab=readme-ov-file#alcohol-consumption)
-      - [Smoking status at diagnosis](https://github.com/Exeter-Diabetes/Dementia/blob/main/R%20Codes/DataPreparation/At_diag_smoking.R)
+      - [Smoking status at diagnosis](https://github.com/Exeter-Diabetes/Dementia/blob/main/Cohort-and-Analysis-scripts/DataPreparation/At_diag_smoking.R)
          - Implemented [diabetes smoking algorithm](https://github.com/Exeter-Diabetes/CPRD-Codelists?tab=readme-ov-file#smoking) 
-      - [GP ethnicity](https://github.com/Exeter-Diabetes/Dementia/blob/main/R%20Codes/DataPreparation/All_patid_ethnicity.R)
+      - [GP ethnicity](https://github.com/Exeter-Diabetes/Dementia/blob/main/Cohort-and-Analysis-scripts/DataPreparation/All_patid_ethnicity.R)
         - Implemented [diabetes ethnicity algorithm](https://github.com/Exeter-Diabetes/CPRD-Codelists?tab=readme-ov-file#sociodemographics-algorithms)
       - HES ethnicity (**hes_ethnicity**)
       - Stroke (**clean_stroke_medcodes** and **clean_stroke_icd10**)
