@@ -2314,43 +2314,43 @@ stroke.hes_adjusted_haemorrhagicstroke.2                     Stroke type Haemorr
 ***Discontinuation results***
 
 ```
-   outcome subgroup                             Group             N.events Person.years.at.risk Incidence_rate_per_1000_PY Adjusted_HR          NNH Lower_CI_NNH Upper_CI_NNH    ARR
- 1 Stroke  CVD history                          Matched Controls      3278               44309.                       74.0 1.26 (1.16, 1.36)  57.8         43.9          84.9 0.0173
- 2 Stroke  CVD history                          Risperidone Users      707                7150.                       98.9 1.26 (1.16, 1.36)  57.8         43.9          84.9 0.0173
- 3 Stroke  HES stroke                           Matched Controls      4479              112584.                       39.8 1.35 (1.26, 1.45)  75.6         62.6          95.4 0.0132
- 4 Stroke  HES stroke                           Risperidone Users     1026               18229.                       56.3 1.35 (1.26, 1.45)  75.6         62.6          95.4 0.0132
- 5 Stroke  No CVD history                       Matched Controls      1201               68275.                       17.6 1.62 (1.43, 1.84)  94.9         75.9         127.  0.0105
- 6 Stroke  No CVD history                       Risperidone Users      319               11079.                       28.8 1.62 (1.43, 1.84)  94.9         75.9         127.  0.0105
- 7 Stroke  Pre-Covid period (Overall)           Matched Controls      4302              103818.                       41.4 1.32 (1.23, 1.41)  79.7         64.8         104.  0.0125
- 8 Stroke  Pre-Covid period (Overall)           Risperidone Users      982               17134.                       57.3 1.32 (1.23, 1.41)  79.7         64.8         104.  0.0125
- 9 Stroke  Pre-Covid period (No CVD history)    Matched Controls      1154               63142.                       18.3 1.59 (1.39, 1.80)  96.0         75.8         131.  0.0104
-10 Stroke  Pre-Covid period (No CVD history)    Risperidone Users      306               10447.                       29.3 1.59 (1.39, 1.80)  96.0         75.8         131.  0.0104
-11 Stroke  Pre-Covid period (No stroke history) Matched Controls      1942               91184.                       21.3 1.47 (1.32, 1.62) 107.          85.4         144.  0.0093
-12 Stroke  Pre-Covid period (No stroke history) Risperidone Users      474               14985.                       31.6 1.47 (1.32, 1.62) 107.          85.4         144.  0.0093
-13 Stroke  Pre-Covid period (CVD history)       Matched Controls      3148               40676.                       77.4 1.22 (1.12, 1.33)  63.3         46.3         100.  0.0158
-14 Stroke  Pre-Covid period (CVD history)       Risperidone Users      676                6687.                      101.  1.22 (1.12, 1.33)  63.3         46.3         100.  0.0158
-15 Stroke  Pre-Covid period (Stroke history)    Matched Controls      2360               12634.                      187.  1.20 (1.09, 1.32)  35.9         23.9          72.5 0.0278
-16 Stroke  Pre-Covid period (Stroke history)    Risperidone Users      508                2149.                      236.  1.20 (1.09, 1.32)  35.9         23.9          72.5 0.0278
-17 Stroke  all                                  Matched Controls      4479              112584.                       39.8 1.35 (1.26, 1.45)  75.6         62.6          95.4 0.0132
-18 Stroke  all                                  Risperidone Users     1026               18229.                       56.3 1.35 (1.26, 1.45)  75.6         62.6          95.4 0.0132
-19 Stroke  Stroke type - haemorrhagic           Matched Controls        28                 198.                      141.  2.69 (1.64, 4.42)   6.31         4.33         11.6 0.158 
-20 Stroke  Stroke type - haemorrhagic           Risperidone Users       45                 125.                      359.  2.69 (1.64, 4.42)   6.31         4.33         11.6 0.158 
-21 Stroke  Stroke type - ischaemic              Matched Controls      1848                8615.                      214.  1.24 (1.13, 1.37)  16.6         13.1          22.9 0.0601
-22 Stroke  Stroke type - ischaemic              Risperidone Users      584                1886.                      310.  1.24 (1.13, 1.37)  16.6         13.1          22.9 0.0601
-23 Stroke  No stroke history                    Matched Controls      2025               98709.                       20.5 1.50 (1.36, 1.66) 104.          84.3         136.  0.0096
-24 Stroke  No stroke history                    Risperidone Users      495               15914.                       31.1 1.50 (1.36, 1.66) 104.          84.3         136.  0.0096
-25 Stroke  Prescription age 65 - 74 years       Matched Controls       439               13395.                       32.8 1.47 (1.20, 1.82)  56.6         39.1         102.  0.0177
-26 Stroke  Prescription age 65 - 74 years       Risperidone Users      118                2240.                       52.7 1.47 (1.20, 1.82)  56.6         39.1         102.  0.0177
-27 Stroke  Prescription age 75 - 84 years       Matched Controls      1974               52198.                       37.8 1.33 (1.20, 1.48)  82.3         61.9         123.  0.0122
-28 Stroke  Prescription age 75 - 84 years       Risperidone Users      452                8454.                       53.5 1.33 (1.20, 1.48)  82.3         61.9         123.  0.0122
-29 Stroke  risperidone_Age_85+                  Matched Controls      2066               46991.                       44.0 1.34 (1.21, 1.48)  75.3         56.8         112.  0.0133
-30 Stroke  risperidone_Age_85+                  Risperidone Users      456                7535.                       60.5 1.34 (1.21, 1.48)  75.3         56.8         112.  0.0133
-31 Stroke  Stroke recency 1 - 5 years           Matched Controls       384                2227.                      172.  1.24 (1.03, 1.49)  29.2         17.0         103.  0.0342
-32 Stroke  Stroke recency 1 - 5 years           Risperidone Users      179                 811.                      221.  1.24 (1.03, 1.49)  29.2         17.0         103.  0.0342
-33 Stroke  Stroke recency less than 1 year      Matched Controls       172                 354.                      485.  1.07 (0.83, 1.38)  46.1         12.1         Inf   0.0217
-34 Stroke  Stroke recency less than 1 year      Risperidone Users      121                 208.                      581.  1.07 (0.83, 1.38)  46.1         12.1         Inf   0.0217
-35 Stroke  Stroke recency over 5 years          Matched Controls       297                2713.                      109.  1.17 (0.93, 1.46)  76.0         31.1         Inf   0.0132
-36 Stroke  Stroke recency over 5 years          Risperidone Users      118                 902.                      131.  1.17 (0.93, 1.46)  76.0         31.1         Inf   0.0132
-37 Stroke  Stroke history                       Matched Controls      2454               13875.                      177.  1.23 (1.12, 1.35)  32.2         22.6          56.1 0.0311
-38 Stroke  Stroke history                       Risperidone Users      531                2315.                      229.  1.23 (1.12, 1.35)  32.2         22.6          56.1 0.0311
+                                                                subgroup outcome             Group N_total N_events Person_years_at_risk Incidence_rate_per_1000_PY Adjusted_HR_with_CI    NNH NNH_CI_lower NNH_CI_upper    ARR
+Stroke_adjusted_all.1                                             Overall  Stroke  Matched Controls  137622     4479               112575            39.8 (38.6, 41)   1.35 (1.26, 1.44)  75.66        62.62        95.56 0.0132
+Stroke_adjusted_all.2                                             Overall  Stroke Risperidone Users   28542     1026                18227          56.3 (52.8, 59.7)   1.35 (1.26, 1.44)  75.66        62.62        95.56 0.0132
+Stroke_adjusted_no_stroke.1                             No stroke history  Stroke  Matched Controls  119028     2025                98701          20.5 (19.6, 21.4)    1.5 (1.36, 1.66) 104.28        84.33       136.60 0.0096
+Stroke_adjusted_no_stroke.2                             No stroke history  Stroke Risperidone Users   24599      495                15912          31.1 (28.4, 33.8)    1.5 (1.36, 1.66) 104.28        84.33       136.60 0.0096
+Stroke_adjusted_with_stroke.1                              Stroke history  Stroke  Matched Controls   18594     2454                13874       176.9 (169.9, 183.9)   1.23 (1.12, 1.35)  32.26        22.61        56.26 0.0310
+Stroke_adjusted_with_stroke.2                              Stroke history  Stroke Risperidone Users    3943      531                 2315       229.4 (209.9, 248.9)   1.23 (1.12, 1.35)  32.26        22.61        56.26 0.0310
+Stroke_adjusted_No_CVD.1                                   No CVD history  Stroke  Matched Controls   81434     1201                68270          17.6 (16.6, 18.6)   1.62 (1.43, 1.84)  94.98        75.92       126.82 0.0105
+Stroke_adjusted_No_CVD.2                                   No CVD history  Stroke Risperidone Users   16820      319                11077            28.8 (25.6, 32)   1.62 (1.43, 1.84)  94.98        75.92       126.82 0.0105
+Stroke_adjusted_CVD.1                                         CVD history  Stroke  Matched Controls   56188     3278                44305            74 (71.5, 76.5)   1.25 (1.16, 1.36)  57.94        43.94        85.05 0.0173
+Stroke_adjusted_CVD.2                                         CVD history  Stroke Risperidone Users   11722      707                 7149         98.9 (91.6, 106.2)   1.25 (1.16, 1.36)  57.94        43.94        85.05 0.0173
+Stroke_adjusted_HES_stroke.1                                   HES_stroke  Stroke  Matched Controls  137622     4479               112575            39.8 (38.6, 41)   1.35 (1.26, 1.44)  75.66        62.62        95.56 0.0132
+Stroke_adjusted_HES_stroke.2                                   HES_stroke  Stroke Risperidone Users   28542     1026                18227          56.3 (52.8, 59.7)   1.35 (1.26, 1.44)  75.66        62.62        95.56 0.0132
+Stroke_adjusted_PreCovidPeriod_all.1                   PreCovidPeriod_all  Stroke  Matched Controls  125088     4302               103810          41.4 (40.2, 42.7)   1.32 (1.23, 1.41)  79.79        64.82       103.76 0.0125
+Stroke_adjusted_PreCovidPeriod_all.2                   PreCovidPeriod_all  Stroke Risperidone Users   26382      982                17132          57.3 (53.7, 60.9)   1.32 (1.23, 1.41)  79.79        64.82       103.76 0.0125
+Stroke_adjusted_PreCovidPeriod_no_stroke.1       PreCovidPeriod_no_stroke  Stroke  Matched Controls  108378     1942                91177          21.3 (20.4, 22.2)   1.47 (1.32, 1.62) 107.39        85.51       144.30 0.0093
+Stroke_adjusted_PreCovidPeriod_no_stroke.2       PreCovidPeriod_no_stroke  Stroke Risperidone Users   22785      474                14983          31.6 (28.8, 34.5)   1.47 (1.32, 1.62) 107.39        85.51       144.30 0.0093
+Stroke_adjusted_PreCovidPeriod_with_stroke.1   PreCovidPeriod_with_stroke  Stroke  Matched Controls   16710     2360                12633       186.8 (179.3, 194.3)    1.2 (1.09, 1.32)  36.01        23.92        72.76 0.0278
+Stroke_adjusted_PreCovidPeriod_with_stroke.2   PreCovidPeriod_with_stroke  Stroke Risperidone Users    3597      508                 2149       236.4 (215.8, 256.9)    1.2 (1.09, 1.32)  36.01        23.92        72.76 0.0278
+Stroke_adjusted_PreCovidPeriod_no_cvd.1             PreCovidPeriod_no_cvd  Stroke  Matched Controls   74267     1154                63137          18.3 (17.2, 19.3)    1.59 (1.39, 1.8)  96.09        75.86       131.04 0.0104
+Stroke_adjusted_PreCovidPeriod_no_cvd.2             PreCovidPeriod_no_cvd  Stroke Risperidone Users   15611      306                10446            29.3 (26, 32.6)    1.59 (1.39, 1.8)  96.09        75.86       131.04 0.0104
+Stroke_adjusted_PreCovidPeriod_with_cvd.1         PreCovidPeriod_with_cvd  Stroke  Matched Controls   50821     3148                40673          77.4 (74.7, 80.1)   1.22 (1.12, 1.33)  63.45        46.37       100.46 0.0158
+Stroke_adjusted_PreCovidPeriod_with_cvd.2         PreCovidPeriod_with_cvd  Stroke Risperidone Users   10771      676                 6687        101.1 (93.5, 108.7)   1.22 (1.12, 1.33)  63.45        46.37       100.46 0.0158
+Stroke_adjusted_risperidone_Age_65_74.1             risperidone_Age_65_74  Stroke  Matched Controls   15390      439                13394          32.8 (29.7, 35.8)    1.47 (1.2, 1.81)  56.68        39.16       102.57 0.0176
+Stroke_adjusted_risperidone_Age_65_74.2             risperidone_Age_65_74  Stroke Risperidone Users    3304      118                 2239          52.7 (43.2, 62.2)    1.47 (1.2, 1.81)  56.68        39.16       102.57 0.0176
+Stroke_adjusted_risperidone_Age_75_84.1             risperidone_Age_75_84  Stroke  Matched Controls   62093     1974                52194          37.8 (36.2, 39.5)    1.33 (1.2, 1.48)  82.39        62.00       122.77 0.0121
+Stroke_adjusted_risperidone_Age_75_84.2             risperidone_Age_75_84  Stroke Risperidone Users   12858      452                 8453          53.5 (48.5, 58.4)    1.33 (1.2, 1.48)  82.39        62.00       122.77 0.0121
+Stroke_adjusted_risperidone_Age_85+.1                 risperidone_Age_85+  Stroke  Matched Controls   60139     2066                46987            44 (42.1, 45.9)   1.34 (1.21, 1.48)  75.43        56.87       112.00 0.0133
+Stroke_adjusted_risperidone_Age_85+.2                 risperidone_Age_85+  Stroke Risperidone Users   12380      456                 7534            60.5 (55, 66.1)   1.34 (1.21, 1.48)  75.43        56.87       112.00 0.0133
+Stroke_adjusted_stroke_recency_1_year.1             stroke_recency_1_year  Stroke  Matched Controls     561      172                  354       485.5 (412.9, 558.1)   1.07 (0.83, 1.38)  46.55        12.14          Inf 0.0215
+Stroke_adjusted_stroke_recency_1_year.2             stroke_recency_1_year  Stroke Risperidone Users     420      121                  208         581 (477.4, 684.5)   1.07 (0.83, 1.38)  46.55        12.14          Inf 0.0215
+Stroke_adjusted_stroke_recency_1_5_years.1       stroke_recency_1_5_years  Stroke  Matched Controls    2964      384                 2227       172.4 (155.2, 189.7)   1.24 (1.03, 1.49)  29.27        17.03       103.91 0.0342
+Stroke_adjusted_stroke_recency_1_5_years.2       stroke_recency_1_5_years  Stroke Risperidone Users    1345      179                  811       220.8 (188.5, 253.2)   1.24 (1.03, 1.49)  29.27        17.03       103.91 0.0342
+Stroke_adjusted_stroke_recency_over_5_years.1 stroke_recency_over_5_years  Stroke  Matched Controls    3539      297                 2713          109.5 (97, 121.9)   1.17 (0.93, 1.46)  76.18        31.09          Inf 0.0131
+Stroke_adjusted_stroke_recency_over_5_years.2 stroke_recency_over_5_years  Stroke Risperidone Users    1474      118                  902       130.9 (107.3, 154.5)   1.17 (0.93, 1.46)  76.18        31.09          Inf 0.0131
+Stroke_adjusted_ischaemicstroke.1                         ischaemicstroke  Stroke  Matched Controls   10839     1613                 8069       199.9 (190.1, 209.7)    1.22 (1.1, 1.36)  24.90        17.69        42.04 0.0402
+Stroke_adjusted_ischaemicstroke.2                         ischaemicstroke  Stroke Risperidone Users    2966      463                 1733       267.2 (242.9, 291.5)    1.22 (1.1, 1.36)  24.90        17.69        42.04 0.0402
+Stroke_adjusted_haemorrhagicstroke.1                   haemorrhagicstroke  Stroke  Matched Controls     237       19                  174              109 (60, 158)     2.6 (1.41, 4.8)   7.21         4.76        14.83 0.1387
+Stroke_adjusted_haemorrhagicstroke.2                   haemorrhagicstroke  Stroke Risperidone Users     194       32                  114       280.1 (183.1, 377.2)     2.6 (1.41, 4.8)   7.21         4.76        14.83 0.1387
 ```
