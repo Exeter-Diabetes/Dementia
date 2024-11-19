@@ -178,3 +178,20 @@
     This script forms part of the senstivity analysis, focusing on discontinuation. The script is the same as the one used above, besides that it censors patients who stopped taking risperidone. For this reason,      the script starts by reading the prescription data and identify discontinuation by 90 days or more gaps in between prescription dates. We then infer the stop date as the last date of prescription plus 30 days.
    
 
+
+
+
+
+## Data Preparation
+This section links and explain how the other parts of the raw data was built.
+1. [Comorbidities](https://github.com/Exeter-Diabetes/Dementia/blob/main/Cohort-and-Analysis-scripts/DataPreparation/Comorbidities.R)
+   This processes the comorbidities of interest by using medcodes and ICD10, and linking this to the observation table. The output of this script is both the raw and cleaned up tables in the server, named according to their respective comorbidity. The last part of the script defines and prepares data for comorbidity as a primary cause of death.
+
+2. [Alcohol at diagnosis](https://github.com/Exeter-Diabetes/Dementia/blob/main/Cohort-and-Analysis-scripts/DataPreparation/At_diag_alcohol.R)
+   This processes the alcohol level at diagnosis using medcodes and linking this to the observation table. The output of this script is both the raw and cleaned up tables. The last part of the script processes the consultation table for everyone who has ever taken a risperidone prescription. This was used to workout how many time the patients have consulted during the follow-up period.
+
+3. [Smoking at diagnosis](https://github.com/Exeter-Diabetes/Dementia/blob/main/Cohort-and-Analysis-scripts/DataPreparation/At_diag_smoking.R)
+   This process smoking status at index date and it implements the algorithm developed in the diabetes study
+
+4. [Ethnicity](https://github.com/Exeter-Diabetes/Dementia/edit/main/Cohort-and-Analysis-scripts/DataPreparation/All_patid_ethnicity.R)
+   This processes the ethnicities for the population.
