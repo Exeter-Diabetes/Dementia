@@ -81,8 +81,8 @@
             [88] "HES_post_stroke"                            "deprivation"
 
          ```
-   
-2. ### Matching_YearPartitions_Final.R 
+
+   2. ### Matching_YearPartitions_Final.R 
 
    This is the script we used to create the matched control
 
@@ -104,6 +104,7 @@
      - Remove those who were prescribed other antipsychotics other than prochlorperazine three months before the generated date
      - If these patients get prescribed risperidone within a year of follow up, mark their prescription date as their end of follow up. Suppose we are in 2004 and our follow up starts on September 24 and this patient gets prescribed risperidone in March of 2005. We then censor this patient
      - Also censor those prescrbed any other antipsychotic within the follow up period
+
        
 - Then the two groups are combined to form one table which is used to process:
    - CPRD Comorbidities (**pre index and post index**)
