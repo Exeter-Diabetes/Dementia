@@ -365,6 +365,12 @@ flowchart TD
      thioridazine                                  8 ( 0.0) 
      trifluoperazine                             557 ( 0.7) 
      zuclopenthixol                               81 ( 0.1)
+     deprivation (%)                                           
+         1                                        99147 ( 22.3) 
+         2                                       101004 ( 22.7) 
+         3                                        88017 ( 19.8) 
+         4                                        80715 ( 18.2) 
+         5                                        75596 ( 17.0) 
 ```
 ![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/MatchingDeathDates.png)
 
