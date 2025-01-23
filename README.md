@@ -858,7 +858,7 @@ flowchart TD
 ```
 
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/KM_by_stroke_history.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/RisperidoneCohort.png)
 
 
 
