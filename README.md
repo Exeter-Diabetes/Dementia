@@ -422,6 +422,9 @@ flowchart TD
 ```
 
 **Risperidone incident cohort**
+
+![image](https://github.com/user-attachments/assets/f9cce4e2-8fb0-4482-a0c1-3b1cb98ab835)
+
 ```                                                      
                                                           Overall       
   n                                                        30709        
