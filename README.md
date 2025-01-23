@@ -876,6 +876,10 @@ flowchart TD
 
 
 ****Matchit algorithm****
+
+![image](https://github.com/user-attachments/assets/43808e84-d16e-478c-8fa9-7d34906689a3)
+
+
 ```
                                               Stratified by risperidone
                                                0              1              p      test SMD   
