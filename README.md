@@ -835,25 +835,25 @@ flowchart TD
 ```
 
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_death_risperidone.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/RisperidoneCohort_SurvivalAnalysis_Gender.png)
 
 ```
            strata   median    lower    upper
-1 gender_decode=F 4.654346 4.591376 4.717317
-2 gender_decode=M 4.101300 4.035592 4.175222
+1 gender_decode=F 4.626968 4.569473 4.698152
+2 gender_decode=M 4.071184 4.002738 4.153320
 ```
 
 
 
 
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_ageCat_risperidone.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/RisperidoneCohort_SurvivalAnalysis_AgeCat.png)
 
 ```
                 strata   median    lower    upper
-1 age_category=65 - 74 6.308008 6.179329 6.461328
-2 age_category=75 - 84 4.692676 4.624230 4.761123
-3     age_category=85+ 3.063655 2.997947 3.126626
+1 age_category=65 - 74 6.286105 6.151951 6.444901
+2 age_category=75 - 84 4.668036 4.605065 4.736482
+3     age_category=85+ 3.036277 2.970568 3.101985
 
 ```
 
