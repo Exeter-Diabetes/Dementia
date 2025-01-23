@@ -66,8 +66,8 @@ flowchart TD
 
 **Flow chart of the final cohorts**
 
+![image](https://github.com/user-attachments/assets/61c66282-3435-404a-9c79-9e651df1da2c)
 
-![image](https://github.com/user-attachments/assets/76932b69-b718-4782-9a51-ec93a3996875)
 
 
 
