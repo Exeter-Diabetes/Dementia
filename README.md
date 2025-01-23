@@ -970,7 +970,7 @@ flowchart TD
 
 **Analysis**
 
-![image](https://github.com/user-attachments/assets/c8469a35-3083-4f12-8f78-e173fae1ded8)
+![image](https://github.com/user-attachments/assets/318f071e-c679-4045-a9d7-e4765284474b)
 
 
 ***One year follow-up results***
