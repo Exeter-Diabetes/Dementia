@@ -73,9 +73,15 @@ flowchart TD
 
 
 
+![image](https://github.com/user-attachments/assets/38bb5d80-9991-42bc-9607-324f03c46e0d)
 
 
+![image](https://github.com/user-attachments/assets/67487ba4-0da0-443c-ab98-7b3cf18f637d)
 
+
+![image](https://github.com/user-attachments/assets/43dd35a4-05ae-416c-a0d9-a0ee567b839c)
+
+![image](https://github.com/user-attachments/assets/fd2ea23d-d1c8-488c-85b9-033141927965)
 
 **Dementia incident cohort**
 
