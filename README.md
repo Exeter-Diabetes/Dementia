@@ -90,7 +90,7 @@ flowchart TD
                                              Overall       
   n                                           445332        
   diagnosedbeforeRegistration = 1 (%)         351487 (78.9) 
-  gender = 2 (%)                              282903 (63.5) 
+  gender = F (%)                              282903 (63.5) 
   died = 1 (%)                                223185 (50.1) 
   death_composite = 1 (%)                     325118 (73.0) 
   ONS_died = 1 (%)                            291514 (65.5) 
