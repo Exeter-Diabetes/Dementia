@@ -411,7 +411,7 @@ flowchart TD
 
 
 
-![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/SA_ageCat.png)
+![image](https://github.com/Exeter-Diabetes/Dementia/blob/main/images/DementiaCohort_SurvivalAnalysis_AgeCat.png)
 
 ```
                 strata   median    lower    upper
