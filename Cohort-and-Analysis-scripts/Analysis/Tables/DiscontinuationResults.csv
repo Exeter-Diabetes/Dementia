@@ -1,0 +1,23 @@
+"subgroup","outcome","Group","N_total","N_events","Person_years_at_risk","Incidence_rate_per_1000_PY","Adjusted_HR_with_CI","NNH","NNH_CI_lower","NNH_CI_upper","ARR"
+"Overall","Stroke","Matched Controls",136624,4534,111733,"40.6 (39.4, 41.8)","1.32 (1.23, 1.41)",82.13,66.96,106.18,0.0122
+"Overall","Stroke","Risperidone Users",28403,1016,18125,"56.1 (52.6, 59.5)","1.32 (1.23, 1.41)",82.13,66.96,106.18,0.0122
+"No stroke history","Stroke","Matched Controls",118124,2111,98017,"21.5 (20.6, 22.5)","1.41 (1.28, 1.56)",120.51,94.59,166,0.0083
+"No stroke history","Stroke","Risperidone Users",24462,487,15811,"30.8 (28.1, 33.5)","1.41 (1.28, 1.56)",120.51,94.59,166,0.0083
+"Stroke history","Stroke","Matched Controls",18500,2423,13716,"176.7 (169.6, 183.7)","1.24 (1.13, 1.36)",33.1,23.03,58.78,0.0302
+"Stroke history","Stroke","Risperidone Users",3941,529,2314,"228.6 (209.1, 248.1)","1.24 (1.13, 1.36)",33.1,23.03,58.78,0.0302
+"No CVD history","Stroke","Matched Controls",80738,1278,67719,"18.9 (17.8, 19.9)","1.52 (1.34, 1.72)",108.03,83.88,151.7,0.0093
+"No CVD history","Stroke","Risperidone Users",16717,317,10999,"28.8 (25.6, 32)","1.52 (1.34, 1.72)",108.03,83.88,151.7,0.0093
+"CVD history","Stroke","Matched Controls",55886,3256,44014,"74 (71.4, 76.5)","1.25 (1.15, 1.36)",60.72,45.54,91.07,0.0165
+"CVD history","Stroke","Risperidone Users",11686,699,7126,"98.1 (90.8, 105.4)","1.25 (1.15, 1.36)",60.72,45.54,91.07,0.0165
+"HES_stroke","Stroke","Matched Controls",136624,4534,111733,"40.6 (39.4, 41.8)","1.32 (1.23, 1.41)",82.13,66.96,106.18,0.0122
+"HES_stroke","Stroke","Risperidone Users",28403,1016,18125,"56.1 (52.6, 59.5)","1.32 (1.23, 1.41)",82.13,66.96,106.18,0.0122
+"PreCovidPeriod_all","Stroke","Matched Controls",124117,4343,102938,"42.2 (40.9, 43.4)","1.29 (1.2, 1.39)",86.15,68.92,114.85,0.0116
+"PreCovidPeriod_all","Stroke","Risperidone Users",26255,973,17034,"57.1 (53.5, 60.7)","1.29 (1.2, 1.39)",86.15,68.92,114.85,0.0116
+"PreCovidPeriod_no_stroke","Stroke","Matched Controls",107505,2024,90452,"22.4 (21.4, 23.4)","1.38 (1.25, 1.53)",125.33,96.47,178.84,0.008
+"PreCovidPeriod_no_stroke","Stroke","Risperidone Users",22661,466,14889,"31.3 (28.5, 34.1)","1.38 (1.25, 1.53)",125.33,96.47,178.84,0.008
+"PreCovidPeriod_with_stroke","Stroke","Matched Controls",16612,2319,12486,"185.7 (178.2, 193.3)","1.21 (1.1, 1.34)",35.2,23.57,69.5,0.0284
+"PreCovidPeriod_with_stroke","Stroke","Risperidone Users",3594,507,2144,"236.4 (215.8, 257)","1.21 (1.1, 1.34)",35.2,23.57,69.5,0.0284
+"PreCovidPeriod_no_cvd","Stroke","Matched Controls",73621,1233,62595,"19.7 (18.6, 20.8)","1.48 (1.3, 1.68)",110.69,84.5,160.41,0.009
+"PreCovidPeriod_no_cvd","Stroke","Risperidone Users",15512,304,10369,"29.3 (26, 32.6)","1.48 (1.3, 1.68)",110.69,84.5,160.41,0.009
+"PreCovidPeriod_with_cvd","Stroke","Matched Controls",50496,3110,40343,"77.1 (74.4, 79.8)","1.22 (1.12, 1.33)",65.02,47.23,104.31,0.0154
+"PreCovidPeriod_with_cvd","Stroke","Risperidone Users",10743,669,6665,"100.4 (92.8, 108)","1.22 (1.12, 1.33)",65.02,47.23,104.31,0.0154

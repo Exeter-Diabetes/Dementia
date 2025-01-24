@@ -1,0 +1,77 @@
+"subgroup","outcome","Group","N_total","N_events","Person_years_at_risk","Incidence_rate_per_1000_PY","Adjusted_HR_with_CI","NNH","NNH_CI_lower","NNH_CI_upper","ARR"
+"Overall","Stroke","Matched Controls",136624,4534,111733,"40.6 (39.4, 41.8)","1.28 (1.2, 1.37)",96.74,76.61,131.24,0.0103
+"Overall","Stroke","Risperidone Users",28403,1075,20194,"53.2 (50.1, 56.4)","1.28 (1.2, 1.37)",96.74,76.61,131.24,0.0103
+"Overall","stroke.hes","Matched Controls",136624,2461,112550,"21.9 (21, 22.7)","1.24 (1.13, 1.36)",233.73,159.49,437.28,0.0043
+"Overall","stroke.hes","Risperidone Users",28403,550,20377,"27 (24.7, 29.2)","1.24 (1.13, 1.36)",233.73,159.49,437.28,0.0043
+"No stroke history","Stroke","Matched Controls",118124,2111,98017,"21.5 (20.6, 22.5)","1.34 (1.22, 1.48)",149.79,112.4,224.45,0.0067
+"No stroke history","Stroke","Risperidone Users",24462,512,17658,"29 (26.5, 31.5)","1.34 (1.22, 1.48)",149.79,112.4,224.45,0.0067
+"No stroke history","stroke.hes","Matched Controls",118124,1359,98206,"13.8 (13.1, 14.6)","1.19 (1.04, 1.35)",527,279.07,4722.85,0.0019
+"No stroke history","stroke.hes","Risperidone Users",24462,284,17707,"16 (14.2, 17.9)","1.19 (1.04, 1.35)",527,279.07,4722.85,0.0019
+"Stroke history","Stroke","Matched Controls",18500,2423,13716,"176.7 (169.6, 183.7)","1.23 (1.12, 1.35)",34.54,23.74,63.36,0.029
+"Stroke history","Stroke","Risperidone Users",3941,563,2536,"222 (203.7, 240.4)","1.23 (1.12, 1.35)",34.54,23.74,63.36,0.029
+"Stroke history","stroke.hes","Matched Controls",18500,1102,14344,"76.8 (72.3, 81.4)","1.29 (1.13, 1.48)",57.55,36.97,129.86,0.0174
+"Stroke history","stroke.hes","Risperidone Users",3941,266,2670,"99.6 (87.7, 111.6)","1.29 (1.13, 1.48)",57.55,36.97,129.86,0.0174
+"CVD history","Stroke","Matched Controls",55886,3256,44014,"74 (71.4, 76.5)","1.22 (1.13, 1.33)",68.48,49.89,109.17,0.0146
+"CVD history","Stroke","Risperidone Users",11686,741,7876,"94.1 (87.3, 100.9)","1.22 (1.13, 1.33)",68.48,49.89,109.17,0.0146
+"CVD history","stroke.hes","Matched Controls",55886,1652,44706,"37 (35.2, 38.7)","1.24 (1.1, 1.38)",134.92,87.71,292.2,0.0074
+"CVD history","stroke.hes","Risperidone Users",11686,370,8024,"46.1 (41.4, 50.8)","1.24 (1.1, 1.38)",134.92,87.71,292.2,0.0074
+"No CVD history","Stroke","Matched Controls",80738,1278,67719,"18.9 (17.8, 19.9)","1.44 (1.27, 1.62)",130.58,97.49,197.66,0.0077
+"No CVD history","Stroke","Risperidone Users",16717,334,12318,"27.1 (24.2, 30)","1.44 (1.27, 1.62)",130.58,97.49,197.66,0.0077
+"No CVD history","stroke.hes","Matched Controls",80738,809,67844,"11.9 (11.1, 12.7)","1.26 (1.07, 1.47)",431.41,235.01,2626.1,0.0023
+"No CVD history","stroke.hes","Risperidone Users",16717,180,12353,"14.6 (12.4, 16.7)","1.26 (1.07, 1.47)",431.41,235.01,2626.1,0.0023
+"HES Stroke","Stroke","Matched Controls",136624,4534,111733,"40.6 (39.4, 41.8)","1.28 (1.2, 1.37)",96.74,76.61,131.24,0.0103
+"HES Stroke","Stroke","Risperidone Users",28403,1075,20194,"53.2 (50.1, 56.4)","1.28 (1.2, 1.37)",96.74,76.61,131.24,0.0103
+"HES Stroke","stroke.hes","Matched Controls",136624,2461,112550,"21.9 (21, 22.7)","1.24 (1.13, 1.36)",233.73,159.49,437.28,0.0043
+"HES Stroke","stroke.hes","Risperidone Users",28403,550,20377,"27 (24.7, 29.2)","1.24 (1.13, 1.36)",233.73,159.49,437.28,0.0043
+"Pre-COVID overall","Stroke","Matched Controls",124117,4343,102938,"42.2 (40.9, 43.4)","1.25 (1.17, 1.34)",103.27,79.74,146.5,0.0097
+"Pre-COVID overall","Stroke","Risperidone Users",26255,1029,19009,"54.1 (50.8, 57.4)","1.25 (1.17, 1.34)",103.27,79.74,146.5,0.0097
+"Pre-COVID overall","stroke.hes","Matched Controls",124117,2433,103701,"23.5 (22.5, 24.4)","1.21 (1.1, 1.33)",254.24,165.08,552.83,0.0039
+"Pre-COVID overall","stroke.hes","Risperidone Users",26255,541,19181,"28.2 (25.8, 30.6)","1.21 (1.1, 1.33)",254.24,165.08,552.83,0.0039
+"Pre-COVID No stroke history","Stroke","Matched Controls",107505,2024,90452,"22.4 (21.4, 23.4)","1.31 (1.18, 1.45)",159.88,116.5,254.7,0.0063
+"Pre-COVID No stroke history","Stroke","Risperidone Users",22661,489,16650,"29.4 (26.8, 32)","1.31 (1.18, 1.45)",159.88,116.5,254.7,0.0063
+"Pre-COVID No stroke history","stroke.hes","Matched Controls",107505,1343,90623,"14.8 (14, 15.6)","1.15 (1.01, 1.31)",640.61,298.26,Inf,0.0016
+"Pre-COVID No stroke history","stroke.hes","Risperidone Users",22661,278,16695,"16.7 (14.7, 18.6)","1.15 (1.01, 1.31)",640.61,298.26,Inf,0.0016
+"Pre-COVID Stroke history","Stroke","Matched Controls",16612,2319,12486,"185.7 (178.2, 193.3)","1.2 (1.09, 1.32)",37.14,24.45,77.28,0.0269
+"Pre-COVID Stroke history","Stroke","Risperidone Users",3594,540,2358,"229 (209.7, 248.3)","1.2 (1.09, 1.32)",37.14,24.45,77.28,0.0269
+"Pre-COVID Stroke history","stroke.hes","Matched Controls",16612,1090,13078,"83.3 (78.4, 88.3)","1.27 (1.11, 1.45)",58.89,36.48,152.78,0.017
+"Pre-COVID Stroke history","stroke.hes","Risperidone Users",3594,263,2486,"105.8 (93, 118.6)","1.27 (1.11, 1.45)",58.89,36.48,152.78,0.017
+"Pre-COVID No CVD history","Stroke","Matched Controls",73621,1233,62595,"19.7 (18.6, 20.8)","1.4 (1.24, 1.59)",134.64,98.43,212.97,0.0074
+"Pre-COVID No CVD history","Stroke","Risperidone Users",15512,321,11624,"27.6 (24.6, 30.6)","1.4 (1.24, 1.59)",134.64,98.43,212.97,0.0074
+"Pre-COVID No CVD history","stroke.hes","Matched Controls",73621,802,62709,"12.8 (11.9, 13.7)","1.21 (1.03, 1.43)",489.61,243.94,Inf,0.002
+"Pre-COVID No CVD history","stroke.hes","Risperidone Users",15512,176,11657,"15.1 (12.9, 17.3)","1.21 (1.03, 1.43)",489.61,243.94,Inf,0.002
+"Pre-COVID CVD history","Stroke","Matched Controls",50496,3110,40343,"77.1 (74.4, 79.8)","1.2 (1.1, 1.3)",75.39,52.62,132.87,0.0133
+"Pre-COVID CVD history","Stroke","Risperidone Users",10743,708,7384,"95.9 (88.8, 102.9)","1.2 (1.1, 1.3)",75.39,52.62,132.87,0.0133
+"Pre-COVID CVD history","stroke.hes","Matched Controls",50496,1631,40992,"39.8 (37.9, 41.7)","1.21 (1.08, 1.36)",143.84,89.06,373.6,0.007
+"Pre-COVID CVD history","stroke.hes","Risperidone Users",10743,365,7524,"48.5 (43.5, 53.5)","1.21 (1.08, 1.36)",143.84,89.06,373.6,0.007
+"Prescription age 65-74","Stroke","Matched Controls",15050,413,13162,"31.4 (28.4, 34.4)","1.59 (1.29, 1.95)",63.22,42.46,123.74,0.0158
+"Prescription age 65-74","Stroke","Risperidone Users",3250,121,2496,"48.5 (39.8, 57.1)","1.59 (1.29, 1.95)",63.22,42.46,123.74,0.0158
+"Prescription age 65-74","stroke.hes","Matched Controls",15050,238,13245,"18 (15.7, 20.3)","1.55 (1.18, 2.03)",110.21,66.59,319.56,0.0091
+"Prescription age 65-74","stroke.hes","Risperidone Users",3250,68,2520,"27 (20.6, 33.4)","1.55 (1.18, 2.03)",110.21,66.59,319.56,0.0091
+"Prescription age 75-84","Stroke","Matched Controls",61688,2026,51759,"39.1 (37.4, 40.8)","1.23 (1.11, 1.36)",113.53,78.44,205.44,0.0088
+"Prescription age 75-84","Stroke","Risperidone Users",12807,473,9387,"50.4 (45.8, 54.9)","1.23 (1.11, 1.36)",113.53,78.44,205.44,0.0088
+"Prescription age 75-84","stroke.hes","Matched Controls",61688,1119,52154,"21.5 (20.2, 22.7)","1.25 (1.09, 1.43)",218.58,132.79,617.6,0.0046
+"Prescription age 75-84","stroke.hes","Risperidone Users",12807,259,9474,"27.3 (24, 30.7)","1.25 (1.09, 1.43)",218.58,132.79,617.6,0.0046
+"Prescription age 85 years and above","Stroke","Matched Controls",59886,2095,46812,"44.8 (42.8, 46.7)","1.27 (1.15, 1.41)",93.94,67.01,157.1,0.0106
+"Prescription age 85 years and above","Stroke","Risperidone Users",12346,481,8311,"57.9 (52.7, 63.1)","1.27 (1.15, 1.41)",93.94,67.01,157.1,0.0106
+"Prescription age 85 years and above","stroke.hes","Matched Controls",59886,1104,47151,"23.4 (22, 24.8)","1.16 (1, 1.34)",381.31,177.1,Inf,0.0026
+"Prescription age 85 years and above","stroke.hes","Risperidone Users",12346,223,8384,"26.6 (23.1, 30.1)","1.16 (1, 1.34)",381.31,177.1,Inf,0.0026
+"Stroke recency less than 1 year","Stroke","Matched Controls",578,171,372,"459.5 (390.6, 528.3)","0.79 (0.61, 1.04)",17.69,8.8,Inf,0.0565
+"Stroke recency less than 1 year","Stroke","Risperidone Users",435,97,258,"376.3 (301.4, 451.2)","0.79 (0.61, 1.04)",17.69,8.8,Inf,0.0565
+"Stroke recency less than 1 year","stroke.hes","Matched Controls",578,52,439,"118.4 (86.2, 150.6)","1.05 (0.66, 1.68)",71.96,18.71,Inf,0.0139
+"Stroke recency less than 1 year","stroke.hes","Risperidone Users",435,39,286,"136.6 (93.7, 179.4)","1.05 (0.66, 1.68)",71.96,18.71,Inf,0.0139
+"Stroke recency 1-5 years","Stroke","Matched Controls",3022,399,2249,"177.4 (160, 194.8)","1.22 (1.02, 1.46)",34.21,18.63,209.13,0.0292
+"Stroke recency 1-5 years","Stroke","Risperidone Users",1343,192,872,"220.1 (188.9, 251.2)","1.22 (1.02, 1.46)",34.21,18.63,209.13,0.0292
+"Stroke recency 1-5 years","stroke.hes","Matched Controls",3022,188,2349,"80 (68.6, 91.5)","1.27 (0.98, 1.65)",80.59,33.15,Inf,0.0124
+"Stroke recency 1-5 years","stroke.hes","Risperidone Users",1343,90,916,"98.2 (77.9, 118.5)","1.27 (0.98, 1.65)",80.59,33.15,Inf,0.0124
+"Stroke recency Over 5 years","Stroke","Matched Controls",3481,271,2675,"101.3 (89.2, 113.4)","1.31 (1.06, 1.62)",40.17,22.68,175.31,0.0249
+"Stroke recency Over 5 years","Stroke","Risperidone Users",1485,133,988,"134.7 (111.8, 157.6)","1.31 (1.06, 1.62)",40.17,22.68,175.31,0.0249
+"Stroke recency Over 5 years","stroke.hes","Matched Controls",3481,156,2722,"57.3 (48.3, 66.3)","1.2 (0.9, 1.6)",88.41,38.36,Inf,0.0113
+"Stroke recency Over 5 years","stroke.hes","Risperidone Users",1485,71,1012,"70.2 (53.9, 86.5)","1.2 (0.9, 1.6)",88.41,38.36,Inf,0.0113
+"Stroke type Ischaemic","Stroke","Matched Controls",15246,2074,11289,"183.7 (175.8, 191.6)","1.24 (1.12, 1.36)",32.53,22.24,60.56,0.0307
+"Stroke type Ischaemic","Stroke","Risperidone Users",3528,527,2266,"232.5 (212.7, 252.4)","1.24 (1.12, 1.36)",32.53,22.24,60.56,0.0307
+"Stroke type Ischaemic","stroke.hes","Matched Controls",15246,942,11826,"79.7 (74.6, 84.7)","1.32 (1.15, 1.52)",50.05,32.77,105.92,0.02
+"Stroke type Ischaemic","stroke.hes","Risperidone Users",3528,252,2390,"105.4 (92.4, 118.4)","1.32 (1.15, 1.52)",50.05,32.77,105.92,0.02
+"Stroke type Haemorrhagic","Stroke","Matched Controls",172,11,137,"80.5 (32.9, 128.1)","0.98 (0.39, 2.44)",112.72,15.18,Inf,0.0089
+"Stroke type Haemorrhagic","Stroke","Risperidone Users",143,8,89,"89.7 (27.6, 151.9)","0.98 (0.39, 2.44)",112.72,15.18,Inf,0.0089
+"Stroke type Haemorrhagic","stroke.hes","Matched Controls",172,5,141,"35.6 (4.4, 66.7)","0.23 (0.08, 0.67)",34.51,16.67,Inf,0.029
+"Stroke type Haemorrhagic","stroke.hes","Risperidone Users",143,1,95,"10.6 (-10.1, 31.3)","0.23 (0.08, 0.67)",34.51,16.67,Inf,0.029
